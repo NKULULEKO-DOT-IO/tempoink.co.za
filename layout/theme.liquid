@@ -14,6 +14,8 @@
     {% include 'social-meta-tags' %}    
     <!-- CSS  -->
     {% include 'header-css' %}
+    <!-- TEMPOINK Custom CSS -->
+    {{ 'tempoink-theme.css' | asset_url | stylesheet_tag }}
     <!-- Primary JS files  -->
     {% include 'header-js' %}
     

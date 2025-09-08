@@ -1,0 +1,30 @@
+{
+  "title": "Geisha", 
+  "body_html": "<p>Beautiful traditional Japanese geisha design with delicate features and flowing elements. Perfect for arm or back placement.</p>",
+  "vendor": "TEMPOINK™",
+  "product_type": "Temporary Tattoo",
+  "tags": ["japanese", "geisha", "traditional", "medium", "on-sale"],
+  "status": "active",
+  "images": [
+    {
+      "alt": "Geisha Temporary Tattoo"
+    }
+  ],
+  "variants": [
+    {
+      "title": "4 x 7 inch",
+      "price": "149.00",
+      "compare_at_price": "229.00",
+      "sku": "TEMP-GEISHA-001",
+      "inventory_quantity": 75,
+      "weight": 0.02,
+      "requires_shipping": true
+    }
+  ],
+  "options": [
+    {
+      "name": "Size", 
+      "values": ["4 x 7 inch"]
+    }
+  ]
+}

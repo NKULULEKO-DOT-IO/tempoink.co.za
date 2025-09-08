@@ -1,0 +1,361 @@
+/* TEMPOINK Custom Theme Styles - Clean White Design */
+
+/* Global Theme Reset to White Background */
+body {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* Header Styling */
+.site-header {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #e5e5e5 !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+.site-header .logo h1,
+.site-header .logo a {
+  color: #000000 !important;
+  font-weight: 700 !important;
+  font-size: 24px !important;
+  text-decoration: none !important;
+}
+
+/* Navigation Styling */
+.dt-nav a,
+.dt-desktop-menu a {
+  color: #000000 !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  font-size: 14px !important;
+  letter-spacing: 0.5px !important;
+}
+
+.dt-nav a:hover,
+.dt-desktop-menu a:hover {
+  color: #333333 !important;
+}
+
+/* Announcement Bar */
+.announcement-bar {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-bottom: 1px solid #e5e5e5 !important;
+  padding: 8px 0 !important;
+  font-size: 12px !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.5px !important;
+}
+
+/* Hero Section */
+.tempoink-hero {
+  background-color: #ffffff !important;
+  padding: 80px 0 !important;
+}
+
+.tempoink-hero .slide-content {
+  text-align: center !important;
+  max-width: 800px !important;
+  margin: 0 auto !important;
+}
+
+.tempoink-hero h2 {
+  color: #000000 !important;
+  font-weight: 700 !important;
+  font-size: 48px !important;
+  margin-bottom: 20px !important;
+}
+
+.tempoink-hero .slide-subtitle {
+  color: #000000 !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  margin-bottom: 15px !important;
+}
+
+.tempoink-hero p {
+  color: #666666 !important;
+  font-size: 18px !important;
+  margin-bottom: 30px !important;
+}
+
+/* Buttons */
+.tempoink-hero .btn,
+.dt-sc-btn,
+.btn {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid #000000 !important;
+  padding: 12px 30px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  margin: 5px 10px !important;
+}
+
+.tempoink-hero .btn:hover,
+.dt-sc-btn:hover,
+.btn:hover {
+  background-color: #333333 !important;
+  border-color: #333333 !important;
+  color: #ffffff !important;
+}
+
+.btn-secondary {
+  background-color: transparent !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+}
+
+.btn-secondary:hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Section Styling */
+.section {
+  background-color: #ffffff !important;
+  padding: 80px 0 !important;
+}
+
+.section-heading {
+  color: #000000 !important;
+  font-weight: 700 !important;
+  font-size: 36px !important;
+  margin-bottom: 15px !important;
+}
+
+.section-description {
+  color: #666666 !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  margin-bottom: 50px !important;
+}
+
+/* Product Grid */
+.product-item {
+  background-color: #ffffff !important;
+  border: 1px solid #e5e5e5 !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+  margin-bottom: 30px !important;
+}
+
+.product-item:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
+  border-color: #ccc !important;
+}
+
+.product-title {
+  color: #000000 !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  margin: 15px 0 10px 0 !important;
+}
+
+.product-price {
+  color: #000000 !important;
+  font-weight: 700 !important;
+  font-size: 18px !important;
+}
+
+.product-price .compare-price {
+  color: #999999 !important;
+  text-decoration: line-through !important;
+  font-weight: 400 !important;
+}
+
+/* Category Grid */
+.tempoink-categories .block-content,
+.tempoink-size-categories .block-content {
+  background-color: #f8f8f8 !important;
+  border-radius: 8px !important;
+  padding: 40px 20px !important;
+  text-align: center !important;
+  transition: all 0.3s ease !important;
+  min-height: 200px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.tempoink-categories .block-content:hover,
+.tempoink-size-categories .block-content:hover {
+  background-color: #eeeeee !important;
+  transform: translateY(-5px) !important;
+}
+
+.tempoink-categories h3,
+.tempoink-size-categories h3 {
+  color: #000000 !important;
+  font-weight: 700 !important;
+  font-size: 18px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+}
+
+/* Style Categories - Dark Theme */
+.tempoink-styles .block-content {
+  background-color: #333333 !important;
+  border-radius: 8px !important;
+  padding: 40px 20px !important;
+  text-align: center !important;
+  transition: all 0.3s ease !important;
+  min-height: 250px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.tempoink-styles .block-content:hover {
+  background-color: #555555 !important;
+  transform: translateY(-5px) !important;
+}
+
+.tempoink-styles h3 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 18px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+}
+
+/* Reviews Section */
+.tempoink-reviews {
+  background-color: #f8f8f8 !important;
+  padding: 80px 0 !important;
+}
+
+.testimonial-item {
+  background-color: #ffffff !important;
+  border-radius: 8px !important;
+  padding: 30px !important;
+  margin: 0 15px !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+}
+
+.testimonial-content {
+  color: #333333 !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  margin-bottom: 20px !important;
+}
+
+.testimonial-author {
+  color: #000000 !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+}
+
+/* Comparison Section */
+.tempoink-comparison {
+  background-color: #f8f8f8 !important;
+  padding: 80px 0 !important;
+  text-align: center !important;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #ffffff !important;
+  border-top: 1px solid #e5e5e5 !important;
+  color: #000000 !important;
+  padding: 60px 0 30px 0 !important;
+}
+
+.footer-heading {
+  color: #000000 !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  margin-bottom: 20px !important;
+}
+
+.footer-links a {
+  color: #666666 !important;
+  text-decoration: none !important;
+  font-size: 14px !important;
+  line-height: 2 !important;
+}
+
+.footer-links a:hover {
+  color: #000000 !important;
+}
+
+/* Cart and Header Icons */
+.site-header__icon,
+.cart-link {
+  color: #000000 !important;
+}
+
+.site-header__icon:hover,
+.cart-link:hover {
+  color: #333333 !important;
+}
+
+/* Search */
+.search-bar {
+  border: 2px solid #e5e5e5 !important;
+  border-radius: 4px !important;
+  background-color: #ffffff !important;
+}
+
+.search-bar input {
+  border: none !important;
+  background-color: transparent !important;
+  color: #000000 !important;
+  padding: 12px 15px !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .tempoink-hero h2 {
+    font-size: 36px !important;
+  }
+  
+  .section-heading {
+    font-size: 28px !important;
+  }
+  
+  .section {
+    padding: 50px 0 !important;
+  }
+  
+  .tempoink-categories .block-content,
+  .tempoink-size-categories .block-content,
+  .tempoink-styles .block-content {
+    min-height: 150px !important;
+    padding: 30px 15px !important;
+  }
+}
+
+/* Override any existing dark backgrounds */
+.dt-sc-dark-bg,
+.dark-bg,
+.dt-custom-bg {
+  background-color: #ffffff !important;
+}
+
+/* Clean up any existing styling that conflicts */
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+}
+
+/* Ensure all text is readable */
+h1, h2, h3, h4, h5, h6, p, span, div, a {
+  color: inherit;
+}

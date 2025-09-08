@@ -1,0 +1,30 @@
+{
+  "title": "3 Sleeve Mystery Pack",
+  "body_html": "<p>Get three surprise full sleeve designs at an amazing price! Each pack contains three different premium sleeve tattoos chosen from our best designs. Perfect for those who love variety and want to save money.</p>",
+  "vendor": "TEMPOINK™",
+  "product_type": "Tattoo Pack",
+  "tags": ["mystery-pack", "sleeve", "bundle", "big-savings", "value"],
+  "status": "active",
+  "images": [
+    {
+      "alt": "3 Sleeve Mystery Pack - Surprise Bundle"
+    }
+  ],
+  "variants": [
+    {
+      "title": "3 Sleeve Bundle",
+      "price": "599.00",
+      "compare_at_price": "899.00", 
+      "sku": "TEMP-MYSTERY-3SLEEVE-001",
+      "inventory_quantity": 25,
+      "weight": 0.15,
+      "requires_shipping": true
+    }
+  ],
+  "options": [
+    {
+      "name": "Bundle Size",
+      "values": ["3 Sleeve Bundle"]
+    }
+  ]
+}

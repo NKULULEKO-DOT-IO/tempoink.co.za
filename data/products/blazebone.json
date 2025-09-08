@@ -1,0 +1,29 @@
+{
+  "title": "Blazebone",
+  "body_html": "<p>Fierce skull design with flame elements creating a powerful statement piece. Detailed artwork perfect for those who want an edgy look.</p>",
+  "vendor": "TEMPOINK™",
+  "product_type": "Temporary Tattoo", 
+  "tags": ["skull", "flames", "edgy", "medium", "new"],
+  "status": "active",
+  "images": [
+    {
+      "alt": "Blazebone Skull and Flames Temporary Tattoo"
+    }
+  ],
+  "variants": [
+    {
+      "title": "4 x 7 inch",
+      "price": "229.00", 
+      "sku": "TEMP-BLAZEBONE-001",
+      "inventory_quantity": 30,
+      "weight": 0.02,
+      "requires_shipping": true
+    }
+  ],
+  "options": [
+    {
+      "name": "Size",
+      "values": ["4 x 7 inch"]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Japanese Dragon Sleeve",
+  "body_html": "<p>Traditional Japanese dragon design perfect for full arm coverage. Features intricate detail work and classic Japanese aesthetic elements.</p>",
+  "vendor": "TEMPOINK™",
+  "product_type": "Temporary Tattoo",
+  "tags": ["japanese", "dragon", "sleeve", "traditional", "large", "best-seller"],
+  "status": "active",
+  "images": [
+    {
+      "alt": "Japanese Dragon Sleeve Temporary Tattoo"
+    }
+  ],
+  "variants": [
+    {
+      "title": "7 x 19 inch",
+      "price": "299.00",
+      "sku": "TEMP-DRAGON-JPZ-001",
+      "inventory_quantity": 50,
+      "weight": 0.05,
+      "requires_shipping": true
+    }
+  ],
+  "options": [
+    {
+      "name": "Size",
+      "values": ["7 x 19 inch"]
+    }
+  ]
+}
