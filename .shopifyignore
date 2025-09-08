@@ -1,0 +1,41 @@
+# Development files
+.DS_Store
+node_modules/
+.env
+.env.local
+.vscode/
+.idea/
+
+# Git
+.git/
+.gitignore
+
+# Logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Build files
+dist/
+build/
+
+# Backup files
+*.backup
+*~
+
+# Temporary files
+.tmp/
+temp/
+
+# OS generated files
+Thumbs.db
+.DS_Store?
+ehthumbs.db
+
+# Playwright
+.playwright-mcp/

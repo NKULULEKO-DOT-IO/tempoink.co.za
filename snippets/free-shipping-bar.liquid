@@ -1,0 +1,151 @@
+{% liquid
+	assign cartGoalRange = settings.cart_goal_range | escape
+    
+    assign cartGoalPrice = cartGoalRange | split: cart.currency.iso_code
+    
+    assign cartGoalPriceTemp = cartGoalPrice[1] | split: ","
+
+    assign cartGoalPrice = cartGoalPriceTemp[0] | replace: "[" | replace: "]" | strip
+
+%}
+{% if cartGoalPriceTemp[0] != '' and cartGoalPriceTemp[0] != null %}
+<form oninput="x.value=parseInt(cost.value)" class="free-shipping-form">
+  <input type="hidden" max="{{cartGoalPrice | escape}}" id="cost" name="cost" value="{{cart.total_price | money_without_currency | remove: '.00' }}" >
+  <output name="x" for="cost"></output>
+  <div class="greybar">
+    <p class="message" id="haz-free-shipping"></p>
+    <div class="progress"></div>
+  </div>
+</form>
+{% endif %}
+
+
+{% if cartGoalPriceTemp[0] != '' and cartGoalPriceTemp[0] != null %}
+<script type="text/javascript">
+  var $freeShip = function(){  
+    var cost =  $('#cost').val();   
+    //var req = DT_THEME.cartGoalPrice;
+    var req = {{ cartGoalPrice | escape}};
+    const result = Math.round((cost / req) * 100)
+    
+    $('.progress').animate({left:  result +'%'});
+    
+    var dif = req - cost;
+    
+    var dif = Math.round(dif);
+    
+    if (dif > 0) {
+      $("#haz-free-shipping").html("{{settings.text}} " + "{{ cart.currency.symbol }}" + dif + " {{settings.text1}}");
+      $(".greybar > div").removeClass("stop");
+      $(".progress, .message , .greybar").removeClass("freeship");
+    }
+    else {
+      $("#haz-free-shipping").html("{{settings.text2}}");
+      $(".greybar > div").addClass("stop");
+      $(".progress, .message , .greybar").addClass("freeship");
+    }
+  }
+
+  $('input[name="cost"]').change($freeShip);
+  $(document).ready($freeShip);
+
+</script>
+{% endif %}
+
+<style type="text/css">
+  .free-shipping-form {
+    display: inline-block;
+    width:100%;
+}
+  .greybar{
+   background: #c7c7c7;
+    position: relative;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+  }
+  .progress{
+   position: absolute;
+    width: 100%;
+    height: 32px;
+    background: var(--DTBodyBGColor);
+    z-index: 9999;
+    transition: background 300ms, color 300ms;
+    opacity: 0.5;
+    top: 0;
+  }
+  .progress.freeship{
+    background:white;
+  }
+  .message{
+    font-weight:600;
+  }
+  .message.freeship{
+    color: var(--DT_Button_Text_Color);
+      background: var(--DT_Button_BG_Color);
+        }
+  .greybar.freeship{
+    background:white;
+  }
+  .progress.stop:after{
+    display:none;
+    -webkit-animation-play-state: paused; 
+    animation-play-state: paused;
+  }
+  .progress:after {
+    content: '';
+    left: -100%;
+    background-image: -webkit-linear-gradient(left,hsla(0,0%,100%,0),#fff 50%,hsla(0,0%,100%,0));
+    background-image: linear-gradient(90deg,hsla(0,0%,100%,0) 0,#fff 50%,hsla(0,0%,100%,0));
+    -webkit-animation: wow 2s ease 1s infinite;
+    animation: wow 2s ease 1s infinite;
+    -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
+    animation-delay: 2s;
+    opacity: .35;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .message{
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    color: white;
+    top: 0;
+    background: var(--DTPrimaryColor);
+  }
+
+  @-webkit-keyframes wow {
+    0% {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0)
+    }
+
+    50% {
+      -webkit-transform: translate3d(200%,0,0);
+      transform: translate3d(200%,0,0)
+    }
+    100%{
+      -webkit-transform: translate3d(200%,0,0);
+      transform: translate3d(200%,0,0)
+    }
+  }
+  @keyframes wow {
+    0% {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0)
+    }
+
+    50% {
+      -webkit-transform: translate3d(200%,0,0);
+      transform: translate3d(200%,0,0)
+    }
+    100%{
+      -webkit-transform: translate3d(200%,0,0);
+      transform: translate3d(200%,0,0)
+    }
+  }
+
+</style>
+

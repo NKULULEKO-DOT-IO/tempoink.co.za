@@ -1,0 +1,54 @@
+<div class="{{ footer_column_alignment}}">
+  {% if block.settings.title != blank  and section.settings.show_footer_title %}        
+  <h5 class="footer__title ">{{ block.settings.title }}</h5>
+  {% endif %}
+  <ul>
+    {% for article in blogs[block.settings.blog].articles limit: block.settings.post_limit %}
+    <li>
+
+      <a href="{{ article.url }}">
+        {%- if article.image -%}
+        <img class="article-image" src="{{ article.image | img_url: '100x100' }}" alt="">
+        <noscript>
+          <p>
+            {{ article | img_url: '100x100' | img_tag: article.title }}
+          </p>
+        </noscript>
+        {%- endif -%}
+      </a>
+      <div class="footer_blog_content">
+        <h6 class="article-title"><a href="{{ article.url }}">{{ article.title }}</a></h6>
+
+        {%- if block.settings.blog_show_date -%}
+        <p>
+          {{ article.published_at | time_tag: format: 'month_day_year' }}
+        </p>
+        {%- endif -%}
+        {%- if block.settings.blog_show_excerpt -%}	
+        <p>
+          {%- if article.excerpt.size > 0 -%}
+          {{ article.excerpt | strip_html | truncate: 70 }}
+          {%- else -%}
+          {{ article.content | strip_html | truncate: 70 }}
+          {%- endif -%}
+        </p>
+        {%- endif -%}
+
+        {%- if block.settings.blog_show_comment -%}	
+
+        {%- if blog.comments_enabled? and article.comments_count > 0 -%}     
+        <ul> 
+          <li>
+            <a href="{{ article.url }}#comments">
+              {{ article.comments_count }}
+            </a>
+          </li>
+        </ul>
+        {%- endif -%}
+
+        {%- endif -%}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

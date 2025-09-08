@@ -1,0 +1,53 @@
+{%- if section.settings.home_page_only == false or template.name == 'index' -%}
+<section class="text-center announcement-bar {% if section.settings.hide_announcement_mobile %}  hide-mobile{% endif %}">
+
+ 
+  {%- if section.settings.text != blank -%}  
+   {% if section.settings.enable_marquee %}
+     <div class="announcement-marquee">
+       <div class="announcement-marquee-first-child">
+       {{ section.settings.text }}      
+       </div>
+       <div class="announcement-marquee-second-child">
+       {{ section.settings.text }}  
+       </div>
+       <div class="announcement-marquee-last-child">
+       {{ section.settings.text }}  
+     </div>
+    </div>    
+  {% else %}
+  {{ section.settings.text }} 
+    <a href="javascript:void(0)" class="close close-icon dt-sc-btn"></a>
+  {%- endif -%}
+  {% endif %}
+ 
+</section>
+{%- endif -%}
+
+<style>
+  
+  .announcement-bar{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:relative; 
+    clear:both; 
+    width:100%; 
+    transition: all .3s linear; 
+  }
+  .announcement-bar>*{ margin:0; }
+  .announcement-bar .close-icon{ background: transparent; position: absolute; transform: translateY(-50%); top: 50%; right: 15px;}
+  .announcement-bar:empty{ display:none;}
+  .announcement-bar .announcement-marquee>*{position:relative; white-space: nowrap; animation: marqueeScrollAlternate 30s infinite linear;}
+  .announcement-marquee-first-child{margin-right:140px;}
+  .announcement-marquee-second-child{margin-right:140px;}
+  .announcement-marquee {display: flex;}
+  @-webkit-keyframes marqueeScrollAlternate {
+ 0% {
+     left: 100%;
+  }
+ 100% {
+    left: -100%;
+  }
+}
+</style>

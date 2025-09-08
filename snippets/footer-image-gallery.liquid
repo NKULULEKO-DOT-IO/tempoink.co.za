@@ -1,0 +1,210 @@
+<div class="{{ footer_column_alignment}}">
+  {% if block.settings.title != blank  and section.settings.show_footer_title %}        
+  <h5 class="footer__title ">{{ block.settings.title }}</h5>
+  {% endif %}
+  <div class="image-bar__section">
+                
+          <ul class="image-bar__section-inner  dt-sc-column {{column}}">
+            
+            <li class="image-bar__item" {{ block.shopify_attributes }} >
+              {%- if block.settings.link != blank -%}
+              <a href="{{ block.settings.link }}">
+                {%- endif -%}
+                {%- if block.settings.image != blank -%}              
+                {%- assign img_url = block.settings.image | img_url: 'master' | replace: '_1x1.', '_{width}x.' -%}
+                <img class="lazyload"
+                     src="{{ 'loading.gif' | asset_url }}"
+                     data-src="{{ img_url }}"
+                     data-widths="[180, 360, 470, 600, 770, 970, 1060, 1280, 1512, 1728, 2048]"
+                     data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                     data-sizes="auto"            
+                     alt="{{ block.settings.image.alt}}">            
+                <noscript>
+                  {{ block.settings.image | img_url: '480x480', scale: 2 | img_tag: block.settings.image.alt, 'dt-sc-noscript-image' }}
+                </noscript>              
+                {%- else -%}
+                {{ 'image' | placeholder_svg_tag }}
+                {%- endif -%}
+                <div class="image-gallery-overlay">
+                  
+                  {%- if block.settings.icon_class != blank -%}
+                  <i class="{{block.settings.icon_class}}"></i>
+                  {%- endif -%}
+                  
+                  {%- if block.settings.overlay_title != blank -%}
+                  <h6 class="image-overlay-title">{{block.settings.overlay_title}}</h6>
+                  {%- endif -%}
+                </div>
+                {%- if block.settings.link != blank -%}
+              </a>
+              {%- endif -%}
+            </li>
+            <li class="image-bar__item" {{ block.shopify_attributes }} >
+              {%- if block.settings.link2!= blank -%}
+              <a href="{{ block.settings.link2 }}">
+                {%- endif -%}
+                {%- if block.settings.image2 != blank -%}              
+                {%- assign img_url = block.settings.image2 | img_url: 'master' | replace: '_1x1.', '_{width}x.' -%}
+                <img class="lazyload"
+                     src="{{ 'loading.gif' | asset_url }}"
+                     data-src="{{ img_url }}"
+                     data-widths="[180, 360, 470, 600, 770, 970, 1060, 1280, 1512, 1728, 2048]"
+                     data-aspectratio="{{ block.settings.image2.aspect_ratio }}"
+                     data-sizes="auto"            
+                     alt="{{ block.settings.image2.alt}}">            
+                <noscript>
+                  {{ block.settings.image2 | img_url: '480x480', scale: 2 | img_tag: block.settings.image2.alt, 'dt-sc-noscript-image' }}
+                </noscript>              
+                {%- else -%}
+                {{ 'image' | placeholder_svg_tag }}
+                {%- endif -%}
+                <div class="image-gallery-overlay">
+                  
+                  {%- if block.settings.icon_class2 != blank -%}
+                  <i class="{{block.settings.icon_class2}}"></i>
+                  {%- endif -%}
+                  
+                  {%- if block.settings.overlay_title2 != blank -%}
+                  <h6 class="image-overlay-title">{{block.settings.overlay_title2}}</h6>
+                  {%- endif -%}
+                </div>
+                {%- if block.settings.link2 != blank -%}
+              </a>
+              {%- endif -%}
+            </li>
+           <li class="image-bar__item" {{ block.shopify_attributes }} >
+              {%- if block.settings.link3!= blank -%}
+              <a href="{{ block.settings.link3 }}">
+                {%- endif -%}
+                {%- if block.settings.image3 != blank -%}              
+                {%- assign img_url = block.settings.image3 | img_url: 'master' | replace: '_1x1.', '_{width}x.' -%}
+                <img class="lazyload"
+                     src="{{ 'loading.gif' | asset_url }}"
+                     data-src="{{ img_url }}"
+                     data-widths="[180, 360, 470, 600, 770, 970, 1060, 1280, 1512, 1728, 2048]"
+                     data-aspectratio="{{ block.settings.image3.aspect_ratio }}"
+                     data-sizes="auto"            
+                     alt="{{ block.settings.image3.alt}}">            
+                <noscript>
+                  {{ block.settings.image3 | img_url: '480x480', scale: 2 | img_tag: block.settings.image3.alt, 'dt-sc-noscript-image' }}
+                </noscript>              
+                {%- else -%}
+                {{ 'image' | placeholder_svg_tag }}
+                {%- endif -%}
+                <div class="image-gallery-overlay">
+                  
+                  {%- if block.settings.icon_class3 != blank -%}
+                  <i class="{{block.settings.icon_class3}}"></i>
+                  {%- endif -%}
+                  
+                  {%- if block.settings.overlay_title3 != blank -%}
+                  <h6 class="image-overlay-title">{{block.settings.overlay_title2}}</h6>
+                  {%- endif -%}
+                </div>
+                {%- if block.settings.link3 != blank -%}
+              </a>
+              {%- endif -%}
+            </li>
+             <li class="image-bar__item" {{ block.shopify_attributes }} >
+              {%- if block.settings.link4!= blank -%}
+              <a href="{{ block.settings.link4 }}">
+                {%- endif -%}
+                {%- if block.settings.image4 != blank -%}              
+                {%- assign img_url = block.settings.image4 | img_url: 'master' | replace: '_1x1.', '_{width}x.' -%}
+                <img class="lazyload"
+                     src="{{ 'loading.gif' | asset_url }}"
+                     data-src="{{ img_url }}"
+                     data-widths="[180, 360, 470, 600, 770, 970, 1060, 1280, 1512, 1728, 2048]"
+                     data-aspectratio="{{ block.settings.image4.aspect_ratio }}"
+                     data-sizes="auto"            
+                     alt="{{ block.settings.image4.alt}}">            
+                <noscript>
+                  {{ block.settings.image4 | img_url: '480x480', scale: 2 | img_tag: block.settings.image4.alt, 'dt-sc-noscript-image' }}
+                </noscript>              
+                {%- else -%}
+                {{ 'image' | placeholder_svg_tag }}
+                {%- endif -%}
+                <div class="image-gallery-overlay">
+                  
+                  {%- if block.settings.icon_class4 != blank -%}
+                  <i class="{{block.settings.icon_class4}}"></i>
+                  {%- endif -%}
+                  
+                  {%- if block.settings.overlay_title4 != blank -%}
+                  <h6 class="image-overlay-title">{{block.settings.overlay_title4}}</h6>
+                  {%- endif -%}
+                </div>
+                {%- if block.settings.link4 != blank -%}
+              </a>
+              {%- endif -%}
+            </li>
+             <li class="image-bar__item" {{ block.shopify_attributes }} >
+              {%- if block.settings.link5!= blank -%}
+              <a href="{{ block.settings.link5 }}">
+                {%- endif -%}
+                {%- if block.settings.image5 != blank -%}              
+                {%- assign img_url = block.settings.image5 | img_url: 'master' | replace: '_1x1.', '_{width}x.' -%}
+                <img class="lazyload"
+                     src="{{ 'loading.gif' | asset_url }}"
+                     data-src="{{ img_url }}"
+                     data-widths="[180, 360, 470, 600, 770, 970, 1060, 1280, 1512, 1728, 2048]"
+                     data-aspectratio="{{ block.settings.image5.aspect_ratio }}"
+                     data-sizes="auto"            
+                     alt="{{ block.settings.image5.alt}}">            
+                <noscript>
+                  {{ block.settings.image5 | img_url: '480x480', scale: 2 | img_tag: block.settings.image5.alt, 'dt-sc-noscript-image' }}
+                </noscript>              
+                {%- else -%}
+                {{ 'image' | placeholder_svg_tag }}
+                {%- endif -%}
+                <div class="image-gallery-overlay">
+                  
+                  {%- if block.settings.icon_class5 != blank -%}
+                  <i class="{{block.settings.icon_class5}}"></i>
+                  {%- endif -%}
+                  
+                  {%- if block.settings.overlay_title5 != blank -%}
+                  <h6 class="image-overlay-title">{{block.settings.overlay_title5}}</h6>
+                  {%- endif -%}
+                </div>
+                {%- if block.settings.link5 != blank -%}
+              </a>
+              {%- endif -%}
+            </li>
+            <li class="image-bar__item" {{ block.shopify_attributes }} >
+              {%- if block.settings.link6!= blank -%}
+              <a href="{{ block.settings.link6 }}">
+                {%- endif -%}
+                {%- if block.settings.image6 != blank -%}              
+                {%- assign img_url = block.settings.image6 | img_url: 'master' | replace: '_1x1.', '_{width}x.' -%}
+                <img class="lazyload"
+                     src="{{ 'loading.gif' | asset_url }}"
+                     data-src="{{ img_url }}"
+                     data-widths="[180, 360, 470, 600, 770, 970, 1060, 1280, 1512, 1728, 2048]"
+                     data-aspectratio="{{ block.settings.image6.aspect_ratio }}"
+                     data-sizes="auto"            
+                     alt="{{ block.settings.image6.alt}}">            
+                <noscript>
+                  {{ block.settings.image6 | img_url: '480x480', scale: 2 | img_tag: block.settings.image6.alt, 'dt-sc-noscript-image' }}
+                </noscript>              
+                {%- else -%}
+                {{ 'image' | placeholder_svg_tag }}
+                {%- endif -%}
+                <div class="image-gallery-overlay">
+                  
+                  {%- if block.settings.icon_class6 != blank -%}
+                  <i class="{{block.settings.icon_class6}}"></i>
+                  {%- endif -%}
+                  
+                  {%- if block.settings.overlay_title6 != blank -%}
+                  <h6 class="image-overlay-title">{{block.settings.overlay_title6}}</h6>
+                  {%- endif -%}
+                </div>
+                {%- if block.settings.link6 != blank -%}
+              </a>
+              {%- endif -%}
+            </li>
+          </ul>
+          
+   </div>
+</div>

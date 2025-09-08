@@ -1,0 +1,65 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-collection-template",
+      "blocks": {
+        "1d21977b-6a32-4139-95b8-7b13512f782d": {
+          "type": "menu",
+          "settings": {
+            "filter_title": "Category",
+            "linklist": "category"
+          }
+        },
+        "a7f7eb10-b18f-421b-8b8e-547362f7c12d": {
+          "type": "collection_filter",
+          "settings": {}
+        },
+        "42b500f2-612f-47c7-bb2e-32d40dca5768": {
+          "type": "carousel",
+          "settings": {
+            "title": "New Arrivals",
+            "collection": "pretty-products",
+            "limit": 5
+          }
+        },
+        "a9cc54e2-d40e-48a9-ab7a-efa80baabcfc": {
+          "type": "collection",
+          "settings": {
+            "title": "Best Collections",
+            "collection": "trending-products",
+            "limit": 2
+          }
+        }
+      },
+      "block_order": [
+        "1d21977b-6a32-4139-95b8-7b13512f782d",
+        "a7f7eb10-b18f-421b-8b8e-547362f7c12d",
+        "42b500f2-612f-47c7-bb2e-32d40dca5768",
+        "a9cc54e2-d40e-48a9-ab7a-efa80baabcfc"
+      ],
+      "settings": {
+        "full": true,
+        "spacing_both_ends": true,
+        "padding": "0,0",
+        "margin": "0,0",
+        "show_collection_image": false,
+        "collections_sort_enable": true,
+        "collections_view_enable": true,
+        "grid": "3",
+        "rows": "3"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

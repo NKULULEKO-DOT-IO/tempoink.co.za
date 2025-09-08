@@ -1,0 +1,39 @@
+# Shopify
+.shopify/
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+.tmp/
+temp/
+
+# Playwright screenshots
+.playwright-mcp/
+
+# Backup files
+*.backup
+*~

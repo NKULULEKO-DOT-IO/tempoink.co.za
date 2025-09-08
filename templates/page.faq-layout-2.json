@@ -1,0 +1,140 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "faq-template-2",
+      "blocks": {
+        "0de73c27-52cb-40f4-aa52-f26e13ae59e4": {
+          "type": "text",
+          "settings": {
+            "question": "<i class=\"fa fa-hand-o-right\"></i> HOW I KNOW IF ORDER PLACED SUCCESSFULLY?",
+            "description": "Elit eget gravida cum sociis natoque penatibus et magnis dis. Ipsum a arcu cursus vitae congue mauris. Aliquet risus feugiat in ante metus dictum. Vulputate enim nulla aliquet porttitor lacus luctus. Lacus vel facilisis volutpat est velit egestas dui id. Viverra adipiscing at in tellus integer feugiat scelerisque. Mi ipsum faucibus vitae aliquet nec ullamcorper sit."
+          }
+        },
+        "fa2dbe8e-ab31-4520-9ae4-46bb9a8f13a6": {
+          "type": "text",
+          "settings": {
+            "question": "<i class=\"fa fa-hand-o-right\"></i> HOW DO I CHECK THE STUTUS OF MY ORDER?",
+            "description": "Feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Praesent tristique magna sit amet purus gravida quis. Amet mattis vulputate enim nulla aliquet porttitor lacus. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet. Sed cras ornare arcu dui vivamus arcu felis. Tortor vitae purus faucibus ornare suspendisse."
+          }
+        },
+        "a921891c-14b7-4bad-bd7b-f0a2796dbcf1": {
+          "type": "text",
+          "settings": {
+            "question": "<i class=\"fa fa-hand-o-right\"> </i> WHAT ARE THE SHIPPING CHARCHES AVAILABLE?",
+            "description": "Diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus. Proin fermentum leo vel orci. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper. Pellentesque habitant morbi tristique senectus et netus. Libero enim sed faucibus turpis in eu mi bibendum neque. Mauris cursus mattis molestie a iaculis. Ornare aenean euismod elementum nisi quis."
+          }
+        },
+        "fbed8b21-9214-4074-84dc-3617b46067e5": {
+          "type": "text",
+          "settings": {
+            "question": "<i class=\"fa fa-hand-o-right\"></i>  WHAT SHIPPING METHODS ARE AVAILABLE?",
+            "description": "Feugiat in fermentum posuere urna nec tincidunt. Viverra nibh cras pulvinar mattis nunc. Ultrices eros in cursus turpis massa tincidunt dui. Bibendum ut tristique et egestas quis ipsum suspendisse. Bibendum arcu vitae elementum curabitur. Arcu dui vivamus arcu felis. Sem integer vitae justo eget magna fermentum iaculis eu."
+          }
+        },
+        "57cad67d-00fa-4278-85a4-66fad7160f76": {
+          "type": "text",
+          "settings": {
+            "question": "<i class=\"fa fa-hand-o-right\"></i>  CAN I CANCEL MY ORDER?",
+            "description": "Vitae suscipit tellus mauris a diam maecenas. Faucibus et molestie ac feugiat sed. Faucibus scelerisque eleifend donec pretium. Tellus id interdum velit laoreet. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget. Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam. At lectus urna duis convallis convallis tellus. A diam sollicitudin tempor id eu nisl nunc mi."
+          }
+        }
+      },
+      "block_order": [
+        "0de73c27-52cb-40f4-aa52-f26e13ae59e4",
+        "fa2dbe8e-ab31-4520-9ae4-46bb9a8f13a6",
+        "a921891c-14b7-4bad-bd7b-f0a2796dbcf1",
+        "fbed8b21-9214-4074-84dc-3617b46067e5",
+        "57cad67d-00fa-4278-85a4-66fad7160f76"
+      ],
+      "settings": {
+        "full": false,
+        "spacing_both_ends": false,
+        "padding": "0,0",
+        "margin": "0,0",
+        "show_background_image": false,
+        "background_style": "none",
+        "background_size": "auto",
+        "enable_overlay": false,
+        "background_color": "",
+        "overlay_transparency": "0.5",
+        "section_heading": "ANSWERS TO YOUR QUESTIONS",
+        "section_sub_heading": "We are here to help",
+        "section_description": "",
+        "section_button_text": "",
+        "section_button_link": "",
+        "section_heading_color": "#e4e4e4",
+        "section_sub_heading_color": "#f17c8f",
+        "section_description_color": "",
+        "section_button_bg_color": "",
+        "section_button_text_color": "",
+        "section_button_hover_bg_color": "",
+        "section_button_hover_text_color": "",
+        "heading_position": "text-center",
+        "grid": "1"
+      }
+    },
+    "16474946708ed8a71e": {
+      "type": "faq-template-2",
+      "disabled": true,
+      "blocks": {
+        "947488aa-75a5-4f7d-92b5-5211071fe538": {
+          "type": "text",
+          "settings": {
+            "question": "WHAT PAYMENT METHODS ARE ACCEPTED?",
+            "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat."
+          }
+        },
+        "633aadcb-7360-46e8-becf-48f3a5635aab": {
+          "type": "text",
+          "settings": {
+            "question": "HOW DO I TRACK MY ORDER?",
+            "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. Conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          }
+        }
+      },
+      "block_order": [
+        "947488aa-75a5-4f7d-92b5-5211071fe538",
+        "633aadcb-7360-46e8-becf-48f3a5635aab"
+      ],
+      "settings": {
+        "full": false,
+        "spacing_both_ends": false,
+        "padding": "100,0",
+        "margin": "0,0",
+        "show_background_image": false,
+        "background_style": "none",
+        "background_size": "auto",
+        "enable_overlay": false,
+        "background_color": "",
+        "overlay_transparency": "0.5",
+        "section_heading": "Payment Information",
+        "section_sub_heading": "",
+        "section_description": "",
+        "section_button_text": "",
+        "section_button_link": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_description_color": "",
+        "section_button_bg_color": "",
+        "section_button_text_color": "",
+        "section_button_hover_bg_color": "",
+        "section_button_hover_text_color": "",
+        "heading_position": "text-center",
+        "grid": "2"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16474946708ed8a71e"
+  ]
+}

@@ -1,0 +1,96 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "contact-layout-2",
+      "settings": {
+        "full": false,
+        "spacing_both_ends": false,
+        "padding": "0,0",
+        "margin": "-80,-50",
+        "show_background_image": true,
+        "background_image": "shopify://shop_images/contact_layout_bg_1.jpg",
+        "background_style": "parallax",
+        "background_size": "contain",
+        "enable_overlay": false,
+        "background_color": "#ffffff",
+        "overlay_transparency": "0.9",
+        "section_heading": "",
+        "section_sub_heading": "",
+        "section_description": "",
+        "section_button_text": "",
+        "section_button_link": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_description_color": "",
+        "section_button_bg_color": "",
+        "section_button_text_color": "",
+        "section_button_hover_bg_color": "",
+        "section_button_hover_text_color": "",
+        "heading_position": "text-center",
+        "contact_section": true,
+        "section_bg_1": "rgba(0,0,0,0)",
+        "section_1_padding": "60px 0",
+        "contact_section_title1": "Section Title 1",
+        "contact_section_icon_1": "fa fa-phone",
+        "contact_section_heading1": "Heading 1",
+        "contact_section_description1": "Description 1",
+        "contact_section_icon_2": "fa fa-phone",
+        "contact_section_heading2": "Heading 2",
+        "contact_section_description2": "Description 2",
+        "contact_section_icon_3": "fa fa-phone",
+        "contact_section_heading3": "Heading 3",
+        "contact_section_description3": "Description 3",
+        "contact_section_2": true,
+        "section_2_padding": "60px 0",
+        "section_bg_2": "#fafafa",
+        "contact_heaidng": "Section Title 2",
+        "contact_section_title2": "Contact Section",
+        "contact_section_icon_4": "fa fa-phone",
+        "contact_section_heading4": "Heading 4",
+        "contact_section_description4": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed quam nisl. Nunc cursus arcu id dictum fermentum. Cras erat tortor, rutrum quis nulla ut, consectetur viverra felis.",
+        "contact_section_icon_5": "fa fa-phone",
+        "contact_section_heading5": "Heading 5",
+        "contact_section_description5": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed quam nisl. Nunc cursus arcu id dictum fermentum. Cras erat tortor, rutrum quis nulla ut, consectetur viverra felis.",
+        "contact_section_icon_6": "fa fa-phone",
+        "contact_section_heading6": "Heading 6",
+        "contact_section_description6": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed quam nisl. Nunc cursus arcu id dictum fermentum. Cras erat tortor, rutrum quis nulla ut, consectetur viverra felis.",
+        "contact_section_3": false,
+        "section_3_padding": "",
+        "section_3_bg": "",
+        "contact_iframe_code": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d25212.742340156557!2d144.977388!3d-37.823006!3m2!1i1024!2i768!4f13.1!4m3!3e6!4m0!4m0!5e0!3m2!1sen!2sus!4v1637746088469!5m2!1sen!2sus\" width=\"100%\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+        "icon_6": "fa fa-phone",
+        "contact_module_address2": "No: 58 A, East Madison Street, Baltimore, MD, USA 4508",
+        "enable_contact_form": false,
+        "form_padding": "100px 0",
+        "form_bg_color": "#ffffff",
+        "form_bg": "shopify://shop_images/bed-with-book-and-flowers.jpg",
+        "contact_form_title": "Contact Form",
+        "enable_delivery_block": true,
+        "delivery_bg": "shopify://shop_images/single-image-1.jpg",
+        "delivery_title": "Delivery time",
+        "delivery_text": "We deliver your food <br>within 30 mins",
+        "delivery_html": "<b>Monday - Saturday:</b><br>\n9am - 11pm\n<br><br>\n<b>Sunday:</b><br>\n11am - 7pm",
+        "delivery_banner": "shopify://shop_images/670x270.png",
+        "border_color": "#dadada",
+        "heading_color": "#7d583b",
+        "description_color": "#ba8d69",
+        "contacticon_bg_color": "#7d583b",
+        "contacticon_color": "#ffffff",
+        "contacticon_hoverbg_color": "#68482f",
+        "contacticonhover_color": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

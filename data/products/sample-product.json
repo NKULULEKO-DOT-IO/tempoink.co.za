@@ -1,0 +1,34 @@
+{
+  "title": "Traditional Dragon Tattoo",
+  "body_html": "<p>Beautiful traditional dragon design perfect for arm or back placement.</p>",
+  "vendor": "InkitToos",
+  "product_type": "Tattoo Design",
+  "tags": ["traditional", "dragon", "arm", "back", "black-and-grey"],
+  "status": "active",
+  "images": [
+    {
+      "src": "https://your-domain.com/media/dragon-tattoo-1.jpg",
+      "alt": "Traditional Dragon Tattoo Design"
+    }
+  ],
+  "variants": [
+    {
+      "title": "Small (4x6 inches)",
+      "price": "150.00",
+      "sku": "DRAGON-SM-001",
+      "inventory_quantity": 1
+    },
+    {
+      "title": "Medium (6x8 inches)", 
+      "price": "250.00",
+      "sku": "DRAGON-MD-001",
+      "inventory_quantity": 1
+    },
+    {
+      "title": "Large (8x10 inches)",
+      "price": "350.00", 
+      "sku": "DRAGON-LG-001",
+      "inventory_quantity": 1
+    }
+  ]
+}

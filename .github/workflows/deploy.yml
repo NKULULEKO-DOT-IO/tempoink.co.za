@@ -1,0 +1,68 @@
+name: Deploy Shopify Theme
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+env:
+  SHOPIFY_ACCESS_TOKEN: ${{ secrets.SHOPIFY_ACCESS_TOKEN }}
+  SHOPIFY_DOMAIN: chcfjk-dc.myshopify.com
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      - name: Install Shopify CLI
+        run: npm install -g @shopify/cli @shopify/theme
+        
+      - name: Run theme check
+        run: shopify theme check
+
+  deploy-staging:
+    needs: lint
+    runs-on: ubuntu-latest
+    if: github.ref != 'refs/heads/main' && github.ref != 'refs/heads/master'
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      - name: Install Shopify CLI
+        run: npm install -g @shopify/cli @shopify/theme
+        
+      - name: Deploy to staging
+        run: shopify theme push --unpublished --store=$SHOPIFY_DOMAIN
+        env:
+          SHOPIFY_CLI_ACCESS_TOKEN: ${{ secrets.SHOPIFY_ACCESS_TOKEN }}
+
+  deploy-production:
+    needs: lint
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      - name: Install Shopify CLI
+        run: npm install -g @shopify/cli @shopify/theme
+        
+      - name: Deploy to production
+        run: shopify theme push --live --store=$SHOPIFY_DOMAIN
+        env:
+          SHOPIFY_CLI_ACCESS_TOKEN: ${{ secrets.SHOPIFY_ACCESS_TOKEN }}

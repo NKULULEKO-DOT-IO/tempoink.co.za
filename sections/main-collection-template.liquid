@@ -1,0 +1,361 @@
+{% assign margin = section.settings.margin | split: ',' %}
+{% assign margin_top = margin[0] %}
+{% assign margin_bottom = margin[1] %} 
+{% assign padding = section.settings.padding | split: ',' %}
+{% assign padding_top = padding[0] %}
+{% assign padding_bottom = padding[1] %} 
+
+<div class="{% render 'container-settings' %}" data-section-id="{{ section.id }}" data-section-type="collection-template">          
+  <div class="row">      
+    {% assign product_per_page = section.settings.grid | times: section.settings.rows %}
+    {% paginate collection.products by product_per_page %}  
+
+    {% case section.settings.grid %}
+    {% when '2' %}
+    {% assign grid_item_width = 'two-column' %}      
+    {% assign imageSize = '767x767' %}      
+    {% when '3' %}
+    {% assign grid_item_width = 'three-column' %} 
+    {% assign imageSize = '767x767' %}      
+    {% when '4' %}
+    {% assign grid_item_width = 'four-column' %}
+    {% assign imageSize = '767x767' %}      
+    {% when '5' %}
+    {% assign grid_item_width = 'five-column' %}
+    {% assign imageSize = '767x767' %}      
+    {% endcase %}
+
+    <div id="collection-template-query"class="{{settings.collection_sidebar_use}} {% if settings.collection_sidebar_use == 'full-width' %}no-sidebar{% else %}has-sidebar{% endif  %}">
+
+      <div class="collection-grid product-grid-height-{{section.id}}">
+        {% if section.settings.show_collection_image and collection.image %}
+        <div class="collection-hero">
+          <div class="collection-hero__image">           
+            {%- assign img_url = collection.image  | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+            <img class="lazyload"
+                 src="{{ 'loading.gif' | asset_url }}"
+                 data-src="{{ img_url }}"
+                 data-widths="[180, 360, 470, 600, 770, 970, 1060, 1280, 1512, 1728, 2048]"
+                 data-aspectratio="{{ collection.image.aspect_ratio }}"
+                 data-sizes="auto"            
+                 alt="{{ collection.title }}">            
+            <noscript>
+              {{ collection.image | img_url: '480x480', scale: 2 | img_tag: collection.title, 'dt-sc-noscript-image' }}
+            </noscript>
+          </div>  
+          <div class="hero-header">
+            <h2> {{ collection.title }} </h2>
+            {% if collection.description != blank %}
+            <div class="rte collection-description">
+              {{ collection.description }}
+            </div>
+            {% endif %}
+          </div>
+        </div>
+        {% endif %}
+        {% if section.settings.collections_view_enable  or section.settings.collections_sort_enable %}
+        <div class="collection-header">            
+          {% if section.settings.collections_view_enable %}
+          {% render 'collection-mode', grid_item_width: grid_item_width %}
+          {% endif %}            
+        
+          {% if section.settings.collections_sort_enable %}
+          {% render 'collection-sorting' %}
+          {% endif %}            
+        </div>
+        {% endif %}
+        <div class="dT_VProdWrapper" id="dT_collectionGrid"> 
+          <ul class="grid product-collection {{ rows }} dt-sc-column {{grid_item_width}} dt-even-columns">
+            {% if collection.products.size > 0 %}                    
+            {% for product in collection.products %}
+            {% include 'product-grid-item', product: product, imageSize: imageSize %}
+            {% endfor %}        
+            {% else %}
+            <li class="push">
+              <p><em>{{ 'home_page.onboarding.no_products_html' | t }}</em></p>
+            </li>
+            {% endif %}
+          </ul>
+           {% if paginate.pages > 1 %}
+          <div class="text-center pagination">
+            {% include 'pagination', paginate: paginate %}         
+          </div>         
+          {% endif %}
+        </div> 
+      </div>
+
+      {% unless settings.collection_sidebar_use == 'full-width' %}
+      {% include 'collection-sidebar' %}
+      {% endunless %}
+    </div>    
+    {% endpaginate %}    
+  </div>
+</div>
+
+<style>
+  @media only screen and (min-width: 1200px) { #shopify-section-{{section.id}}.main-collection-template .row > div { margin-top:{{margin_top}}px; margin-bottom:{{margin_bottom}}px;padding-top:{{padding_top}}px; padding-bottom:{{padding_bottom}}px; } }
+  @media only screen and (max-width: 1199px) { #shopify-section-{{section.id}}.main-collection-template .row > div { margin-top:{{margin_top | divided_by: 2 }}px; margin-bottom:{{margin_bottom | divided_by: 2}}px;padding-top:{{padding_top | divided_by: 2}}px; padding-bottom:{{padding_bottom | divided_by: 2}}px;} }
+</style>
+
+<script type="text/javascript">
+  jQuery('[data-view] a').on('click', function(){
+    jQuery('[data-view] a.active').removeClass('active');
+    jQuery(this).addClass('active');
+    var flag= jQuery('[data-view="list"]').hasClass("active");
+    if(flag){            
+      jQuery(this).parents('#collection-template-query').find('.product-collection').removeClass('{{ grid_item_width }}').removeClass('product-grid-style').addClass('product-list-style');
+      }
+	 else{
+      jQuery(this).parents('#collection-template-query').find('.product-collection').addClass('{{ grid_item_width }}').addClass('product-grid-style').removeClass('product-list-style');
+      }
+    });
+</script>
+
+{% for block in section.blocks %}
+{% case block.type %}
+{% when 'carousel' %}  
+<script type="text/javascript">  
+  function collectionSidebarCarousel(){
+    var dataSectionType = $('[data-section-type="collection-sidebar-carousel-section"]');
+    var id = dataSectionType.attr('data-section-id');
+    var ItemsPerView = +dataSectionType.attr('data-item-per-view');    
+    var ItemsSpace = +dataSectionType.attr('data-item-space');
+    var autoHeight = +dataSectionType.attr('data-auto-height') || false;    
+    var Autoplay = +dataSectionType.attr('data-autoplay') * 1000;
+    var mobileSlides = +dataSectionType.attr('data-small-screen-items') || 1;
+    var initAutoplay = Autoplay ? {    delay: Autoplay  } : false;    
+    var swiper = new Swiper('#swiper-' + id + '-slider', {  
+      pagination: {
+        el: '#swiper-' + id + '-pagination',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '#swiper-' + id + '-next',
+        prevEl: '#swiper-' + id + '-prev'
+      },
+      loop: false,
+      slidesPerView: ItemsPerView,         
+      spaceBetween: ItemsSpace,
+      autoHeight: autoHeight,    
+      simulateTouch: true,
+      autoplay: initAutoplay    
+    });
+  }
+  $(document).ready(function(){    
+    collectionSidebarCarousel();
+  })
+  $(document)
+  .on('shopify:section:load', collectionSidebarCarousel)
+  .on('shopify:section:unload', collectionSidebarCarousel)
+</script>
+{% endcase %}
+{% endfor %}
+
+{% schema %}
+{
+"name": "Collection Page",
+"class": "main-collection-template",
+"settings": [
+{
+"type": "checkbox",
+"id": "full",
+"label": "Show Full width"
+},
+{
+"type": "checkbox",
+"id": "spacing_both_ends",
+"label": "Enable Right & Left Spacing (Works only on Fullwidth)",
+"default": false
+},
+{
+"type": "text",
+"id": "padding",
+"label": "Style value (Padding)",
+"default":"0,0",
+"info":"Top(px),Bottom(px)"
+},
+{
+"type": "text",
+"id": "margin",
+"label": "Style value (Margin)",
+"default":"0,0",
+"info":"Top(px),Bottom(px)"
+},
+{
+"type": "checkbox",
+"id": "show_collection_image",
+"label": "Show collection image",
+"default": true
+},
+{
+"type": "checkbox",
+"id": "collections_sort_enable",
+"label": "Enable collection sorting",
+"default": true
+},
+{
+"type": "checkbox",
+"id": "collections_view_enable",
+"label": "Enable collection view",
+"default": true
+},
+
+{
+"type": "select",
+"id": "grid",
+"label": "Products per row",
+"default": "4",
+"options": [
+{
+"value": "2",
+"label": "2"
+},
+{
+"value": "3",
+"label": "3"
+},
+{
+"value": "4",
+"label": "4"
+},
+{
+"value": "5",
+"label": "5"
+}
+]
+},
+{
+"type": "select",
+"id": "rows",
+"label": "Rows per page",
+"default": "3",
+"options": [
+{
+"value": "2",
+"label": "2"
+},
+{
+"value": "3",
+"label": "3"
+},
+{
+"value": "4",
+"label": "4"
+},
+{
+"value": "5",
+"label": "5"
+}
+]
+}
+],
+"blocks": [    
+{
+"type": "image",
+"limit": 1,
+"name": "Image",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Title",
+"default": "Heading"
+},
+{
+"type": "image_picker",
+"id": "image",
+"label": "Image"
+},
+{
+"type": "text",
+"id": "link_text",
+"label": "Link Text",
+"default": "Shop Now"
+},
+{
+"type": "url",
+"id": "link",
+"label": "Link"
+}
+]
+},
+{
+"type": "carousel",
+"name": "Product Carousel",
+"limit": 1,
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Heading"
+},
+{
+"type": "collection",
+"id": "collection",
+"label": "Collection"
+},
+{
+"type": "range",
+"id": "limit",
+"min": 1,
+"max": 5,
+"step": 1,
+"label": "Limit",
+"default": 5
+}
+]
+},
+{
+"type": "collection",
+"name": "Product List",
+"limit": 1,
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Heading"
+},
+{
+"type": "collection",
+"id": "collection",
+"label": "Collection"
+},
+{
+"type": "range",
+"id": "limit",
+"min": 1,
+"max": 5,
+"step": 1,
+"label": "Limit",
+"default": 2
+}
+]
+},
+{
+"type": "menu",
+"name": "Menu",
+"limit": 1,
+"settings": [
+{
+"type": "text",
+"id": "filter_title",
+"label": "Title",
+"default": "Custom Menu"
+},
+{
+"type": "link_list",
+"id": "linklist",
+"label": "Menu"
+}
+]
+},
+{
+"type": "collection_filter",
+"name": "Collection Filter",
+"limit": 1,
+"settings": [
+]
+}
+]
+}
+{% endschema %}

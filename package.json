@@ -1,0 +1,29 @@
+{
+  "name": "inkittoos-shopify-theme",
+  "version": "1.0.0",
+  "description": "InkitToos tattoo shop Shopify theme with local development workflow",
+  "scripts": {
+    "dev": "shopify theme dev --store=chcfjk-dc.myshopify.com",
+    "build": "shopify theme check",
+    "deploy:staging": "shopify theme push --unpublished --store=chcfjk-dc.myshopify.com",
+    "deploy:production": "shopify theme push --live --store=chcfjk-dc.myshopify.com",
+    "pull": "shopify theme pull --store=chcfjk-dc.myshopify.com",
+    "sync:products:export": "node scripts/sync-products.js export",
+    "sync:products:import": "node scripts/sync-products.js import",
+    "sync:media": "node scripts/sync-media.js",
+    "backup": "npm run pull && git add -A && git commit -m 'Backup: $(date)'",
+    "lint": "shopify theme check"
+  },
+  "keywords": ["shopify", "theme", "tattoo", "ecommerce"],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@shopify/cli": "^3.84.1",
+    "@shopify/theme": "^3.58.2"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "form-data": "^4.0.0",
+    "dotenv": "^16.3.1"
+  }
+}

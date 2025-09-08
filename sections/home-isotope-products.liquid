@@ -1,0 +1,549 @@
+<script src="https://npmcdn.com/isotope-layout@3.0.6/dist/isotope.pkgd.js"></script>
+
+{% assign margin = section.settings.margin | split: ',' %}
+{% assign margin_top = margin[0] %}
+{% assign margin_bottom = margin[1] %} 
+{% assign padding = section.settings.padding | split: ',' %}
+{% assign padding_top = padding[0] %}
+{% assign padding_bottom = padding[1] %} 
+{% if section.settings.enable_overlay %}
+{% assign section_overlay = 'dt-sc-overlay' %}
+{% endif %}
+{% if section.settings.show_background_image %}
+{% assign lazyScript = "lazyload" %}
+{% endif %}
+
+{% case section.settings.grid %}
+{% when '1' %}
+{% when '2' %}
+{%- assign column = '50%' -%}
+{% when '3' %}
+{%- assign column = '33.33%' -%}              
+{% when '4' %}
+{%- assign column = '24.75%' -%}
+{% when '5' %}
+{%- assign column = '19.6%' -%}
+{% when '6' %}
+{%- assign column = '16.2%' -%}
+{% else %}
+{%- assign column = '33.33%' -%}
+{% endcase %}
+
+{% assign tags = section.settings.shop_by_tags_list | split: ',' %}
+<div data-section-id="{{section.id}}" data-section-type="home-isotope-products" class="dt-sc-section-wrapper  {{lazyScript}} {{ section_overlay }} {% if section.settings.background_style == 'parallax' %} parallax-initiated{% endif %}" {% if section.settings.background_style == 'parallax' %} data-speed="2" data-style="parallax"{% endif %} style="{% render 'bg-color-image-padding' %} background-size: {{- section.settings.background_size -}}; {% if section.settings.background_style == 'fixed' %}background-attachment: fixed;{% endif %} background-repeat:{% if section.settings.background_size == 'repeat' %}repeat{% else %}no-repeat;{% endif %}" {% include 'bg_image' %}>  
+  <div class="{% render 'container-settings' %}"> 
+    <div class="row {{ section.settings.custom_class_name }}">
+      {% render 'section-heading', class: section.id %}     
+      <div class="filters {{section.id}}">
+        <div class="ui-group products-filter">    
+          <div class="button-group js-radio-button-group" data-filter-group="color">
+            <button class="button is-checked" data-filter="">{{ 'collections.toolbar.all' | t }}</button>   
+            {% for result in tags %}
+            <button class="button " data-filter=".{{ result | handle }}">{{ result }}</button> 
+            {% endfor %}
+          </div>
+        </div>
+      </div>  
+        <div class="dT_vDynamicPWrap-{{ section.id }} dT_vProdWrap">
+        <div class="isotope-grid {{ section.id }}">        
+          {% for product in collections[section.settings.tab].products %}    
+          {% include 'isotope-grid-item', product: product %}
+          {% endfor %}        
+        </div>      
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+    
+  $(window).load(function(){
+    var $grid = $('.isotope-grid.{{section.id}}').isotope({
+                  itemSelector: '.isotope-selector',
+                  masonry: {
+                  gutter: {{ section.settings.gallery_spacing }}
+                  }
+                  });
+
+
+    var filters = {};
+    $('.filters.{{ section.id }}').on( 'click', '.button', function( event ) {
+      var $button = $( event.currentTarget );
+      // get group key
+      var $buttonGroup = $button.parents('.button-group');
+      var filterGroup = $buttonGroup.attr('data-filter-group');
+      // set filter for group
+      filters[ filterGroup ] = $button.attr('data-filter');
+      // combine filters
+      var filterValue = concatValues( filters );
+      // set filter for Isotope
+      $grid.isotope({ filter: filterValue });
+    });
+    // change is-checked class on buttons
+    $('.button-group').each( function( i, buttonGroup ) {
+      var $buttonGroup = $( buttonGroup );
+      $buttonGroup.on( 'click', 'button', function( event ) {
+        $buttonGroup.find('.is-checked').removeClass('is-checked');
+        var $button = $( event.currentTarget );
+        $button.addClass('is-checked');
+      });
+    });
+
+    // flatten object by concatting values
+    function concatValues( obj ) {
+      var value = '';
+      for ( var prop in obj ) {
+        value += obj[ prop ];
+      }
+      return value;
+    }
+  });
+  
+  
+  $(document).on('click', '.products-filter .button', function(){
+    $('.products-filter .button').removeClass('active');
+    $('.products-filter .button-group').toggleClass('expanded');
+    $(this).addClass('active');
+    
+  });
+  
+  $(document).click(function(event) {
+    if (!$(event.target).closest(".products-filter").length) {
+      $("body").find(".products-filter .button-group").removeClass("expanded");
+    }
+  });  
+  
+</script>
+
+<style>
+  
+    #shopify-section-{{section.id}}.isotope-products .isotope-selector { overflow: hidden; margin-bottom: {{ section.settings.gallery_spacing }}px; width: calc({{column}} - calc({{ section.settings.gallery_spacing }}px - 10px)); }
+
+  #shopify-section-{{section.id}}.isotope-products .dt-sc-heading .dt-sc-main-heading { color: var(--DTColor_Heading); color:{{ section.settings.section_heading_color }}; } 
+  #shopify-section-{{section.id}}.isotope-products .dt-sc-heading .dt-sc-sub-heading { color: var(--DTColor_Heading); color:{{ section.settings.section_sub_heading_color }}; } 
+  #shopify-section-{{section.id}}.isotope-products .dt-sc-heading .dt-sc-heading-description { color: var(--DTColor_Body); color:{{ section.settings.section_description_color }}; } 
+  #shopify-section-{{section.id}}.isotope-products .dt-sc-heading .dt-sc-btn { 
+    background: var(--DT_Button_BG_Color); background:{{ section.settings.section_button_bg_color }}; 
+      color: var(--DT_Button_Text_Color); color:{{ section.settings.section_button_text_color }}; }
+  #shopify-section-{{section.id}}.isotope-products .dt-sc-heading .dt-sc-btn:hover { 
+    background: var(--DT_Button_BG_Hover_Color); background:{{ section.settings.section_button_hover_bg_color }}; 
+      color: var(--DT_Button_Text_Hover_Color); color:{{ section.settings.section_button_hover_text_color }}; }
+  #shopify-section-{{section.id}}.isotope-products .dt-sc-overlay:before  { 
+    color: var(--DTTertiaryColor); 
+      color: {{ section.settings.background_color }};    
+      background: currentcolor; 
+      opacity: {{ section.settings.overlay_transparency }}; }
+  
+
+  @media only screen and (min-width: 1200px) {
+    #shopify-section-{{section.id}}.isotope-products .dt-sc-section-wrapper { margin-top:{{margin_top}}px; margin-bottom:{{margin_bottom}}px;padding-top:{{padding_top}}px; padding-bottom:{{padding_bottom}}px; }
+  }
+
+  @media only screen and (max-width: 1199px) {
+    #shopify-section-{{section.id}}.isotope-products .dt-sc-section-wrapper { margin-top:{{margin_top | divided_by: 2 }}px; margin-bottom:{{margin_bottom | divided_by: 2}}px;padding-top:{{padding_top | divided_by: 2}}px; padding-bottom:{{padding_bottom | divided_by: 2}}px;}
+  }
+
+
+  #shopify-section-{{section.id}}.isotope-products .button { display: inline-block; padding: var(--DTPadding_Btn); margin: .2rem; }
+
+  /* ---- isotope ---- */
+  
+    /* clear fix */
+  #shopify-section-{{section.id}}.isotope-products .isotope-grid {
+   overflow: hidden;  
+    transition: var(--DTBaseTransition);
+      -webkit-transition: var(--DTBaseTransition);
+  }
+
+  /* clear fix */
+  #shopify-section-{{section.id}}.isotope-products .isotope-grid:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  
+  #shopify-section-{{section.id}}.isotope-products .filters { text-align: center; }
+
+  /* ui group */
+  
+  #shopify-section-{{section.id}}.isotope-products .ui-group {
+    display: inline-block; width: 100%; margin: 0 auto calc(3rem - 15px);
+  }
+
+  #shopify-section-{{section.id}}.isotope-products .ui-group .button-group {
+    display: flex; width: 100%; justify-content: center;
+  }
+  
+  #shopify-section-{{section.id}}.isotope-products .button:hover,
+  #shopify-section-{{section.id}}.isotope-products .isotope-selector .isotope_links > a:hover { background: var(--DT_Button_BG_Hover_Color); color: var(--DT_Button_Text_Hover_Color); }
+  
+  #shopify-section-{{section.id}}.isotope-products .button.active {
+    background: var(--DT_Button_BG_Color); color: var(--DT_Button_Text_Color);
+      }
+
+  @media only screen and (max-width: 1380px) {
+    
+    #shopify-section-{{section.id}}.isotope-products .isotope-selector { width: calc(24.7% - calc({{ section.settings.gallery_spacing }}px - 10px)); }
+
+  }
+  
+  @media only screen and (max-width: 1199px) {
+
+    #shopify-section-{{section.id}}.isotope-products .isotope-selector { width: calc(33.33% - calc({{ section.settings.gallery_spacing }}px - 10px)); }
+
+  }
+
+  @media only screen and (max-width:991px) {
+
+    #shopify-section-{{section.id}}.isotope-products .isotope-selector {width: calc(50% - calc({{ section.settings.gallery_spacing }}px - 10px));}
+
+  }
+  
+  @media only screen and (min-width:768px) {
+    #shopify-section-{{section.id}}.isotope-products .button.is-checked,
+    #shopify-section-{{section.id}}.isotope-products .button.is-checked.active { background: var(--DT_Button_BG_Hover_Color); color: var(--DT_Button_Text_Hover_Color); }
+  }
+  
+  @media only screen and (max-width:767px) {
+
+    #shopify-section-{{section.id}}.isotope-products .filters {
+      position: relative;
+      z-index: 3;
+    }
+    #shopify-section-{{section.id}}.isotope-products .filters .ui-group {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      display: grid;
+      height: 3rem;
+      margin-bottom: 3rem;
+    }
+    #shopify-section-{{section.id}}.isotope-products .filters .ui-group .button-group {
+      display: grid;
+      width: 100%;
+      grid-template-columns: 1fr;
+      line-height: normal;
+    }
+    #shopify-section-{{section.id}}.isotope-products .filters .ui-group .button-group button {
+      order: 1;
+      width: 100%;
+      margin: 0;
+      transition: var(--DTBaseTransition);
+    }
+    
+    #shopify-section-{{section.id}}.isotope-products .filters .ui-group .button-group button:not(:last-child),
+    #shopify-section-{{section.id}}.isotope-products .filters .ui-group .button-group button.is-checked.active {
+      border-bottom: 1px solid {{ settings.button_text_hover_color | color_modify: 'alpha', 0.35 }};
+    }
+    
+    #shopify-section-{{section.id}}.isotope-products .filters .ui-group .button-group button.active,
+    #shopify-section-{{section.id}}.isotope-products .filters .ui-group .button-group button.is-checked {
+      order: 0;
+      z-index: 1;
+    }
+    #shopify-section-{{section.id}}.isotope-products .filters .ui-group .button-group:after {
+      width: 15px;
+      height: 15px;
+      border: 2px solid var(--DT_Button_Text_Hover_Color);
+      border-right: 0;
+      border-bottom: 0;
+      content: "";
+      position: absolute;
+      right: 25px;
+      transform: rotate(-135deg) translateY(-50%);
+      -webkit-transform: rotate(-135deg) translateY(-50%);
+      top: 50%;
+      z-index: 1;
+        pointer-events: none;
+        transform-origin: top;
+        -webkit-transform-origin: top;
+    }
+    
+    #shopify-section-{{section.id}}.isotope-products .filters .ui-group .button-group button:not(.active) {
+      position: absolute;
+      top: 0;
+    }
+    #shopify-section-{{section.id}}.isotope-products .filters .ui-group .button-group.expanded:after {
+      transform: rotate(45deg) translateY(-50%);
+      -webkit-transform: rotate(45deg) translateY(-50%);
+      transform-origin: left;
+      -webkit-transform-origin: left;
+    }
+    #shopify-section-{{section.id}}.isotope-products .filters .ui-group .button-group.expanded button:not(.active) {
+      position: relative;
+      top: auto;
+    }
+  }
+  
+  
+  @media only screen and (max-width:576px) {
+
+    #shopify-section-{{section.id}}.isotope-products .isotope-selector {width: 100%; }
+    
+    #shopify-section-{{section.id}}.isotope-products .filters .ui-group { width: 75%; }
+
+  }
+  
+
+</style>
+
+{% schema %}
+{
+"name": "Isotope Products",
+"class": "index-section isotope-products",
+"settings": [
+{
+"type": "checkbox",
+"id": "full",
+"label": "Show Full width"
+},
+{
+"type": "checkbox",
+"id": "spacing_both_ends",
+"label": "Enable Right & Left Spacing (Works only on Fullwidth)",
+"default": false
+},
+{
+"type": "text",
+"id": "padding",
+"label": "Style value (Padding)",
+"default":"0,0",
+"info":"Top(px),Bottom(px)"
+},
+{
+"type": "text",
+"id": "margin",
+"label": "Style value (Margin)",
+"default":"0,0",
+"info":"Top(px),Bottom(px)"
+},
+{
+"type": "checkbox",
+"id": "show_background_image",
+"label": "Enable Background image"
+},
+{
+"type": "image_picker",
+"id": "background_image",
+"label": "Background image",
+"info": "Size: 1920x1280"
+},
+{
+"type": "select",
+"id": "background_style",
+"label": "Background Style",
+"default": "none",
+"options": [
+{
+"value": "fixed",
+"label": "Fixed"
+},
+{
+"value": "parallax",
+"label": "Parallax"
+},
+{
+"value": "none",
+"label": "None"
+}
+]
+},
+{
+"type": "select",
+"id": "background_size",
+"label": "Background Size",
+"info": "This will not apply for parallax",
+"default": "auto",
+"options": [
+{
+"value": "auto",
+"label": "Auto"
+},
+{
+"value": "cover",
+"label": "Cover"
+},
+{
+"value": "contain",
+"label": "Contain"
+},
+{
+"value": "repeat",
+"label": "Repeat"
+}
+]
+},
+{
+"type": "checkbox",
+"id": "enable_overlay",
+"label": "Enable Background Color (Used as Background Image Overlay Color too)"
+},
+{
+"type": "color",
+"id": "background_color",
+"label":"Background color"
+},
+{
+"type": "text",
+"id": "overlay_transparency",
+"label": "Overlay Transparency (0.01 to 1)",
+"default": "0.5"
+},
+{
+"type": "text",
+"id": "section_heading",
+"label": "Main Heading",
+"default": "Isotope products"
+},  
+{
+"type": "text",
+"id": "section_sub_heading",
+"label": "Sub Heading",
+"default": "Sub Heading"
+},  
+{
+"type": "text",
+"id": "section_description",
+"label": "Description",
+"default": "Use this text to share the information which you like!."
+},  
+{
+"type": "text",
+"id": "section_button_text",
+"label": "Link text"
+},
+{
+"type": "url",
+"id": "section_button_link",
+"label": "Link URL"
+},
+{
+"type": "header",
+"content": "Section Color settings"
+},
+{
+"type": "color",
+"id": "section_heading_color",
+"label": "Heading color"
+},    
+{
+"type": "color",
+"id": "section_sub_heading_color",
+"label": "Sub heading color"
+},   
+{
+"type": "color",
+"id": "section_description_color",
+"label": "Description color"
+},  
+{
+"type": "color",
+"id": "section_button_bg_color",
+"label": "Button bg color"
+},   
+{
+"type": "color",
+"id": "section_button_text_color",
+"label": "Button text color"
+},   
+{
+"type": "color",
+"id": "section_button_hover_bg_color",
+"label": "Button hover bg color"
+},   
+{
+"type": "color",
+"id": "section_button_hover_text_color",
+"label": "Button hover text color"
+},
+{
+"type": "select",
+"id": "heading_position",
+"label": "Heading Position",
+"options": [
+{
+"value": "text-center",
+"label": "Center"
+},
+{
+"value": "text-start",
+"label": "Left"
+},
+{
+"value": "text-end",
+"label": "Right"
+}
+]
+},
+{
+"type": "collection",
+"id": "tab",
+"label": "Select collection"    
+},
+{
+"type": "textarea",
+"id": "shop_by_tags_list",
+"label": "Tags list",
+"info": "Separate by a comma, i.e \"XS, S, M, L, XL\"."
+},
+{
+"type": "select",
+"id": "grid",
+"label": "Galleries per row",
+"default": "4",
+"options": [
+{
+"value": "1",
+"label": "1"
+},
+{
+"value": "2",
+"label": "2"
+},
+{
+"value": "3",
+"label": "3"
+},
+{
+"value": "4",
+"label": "4"
+},
+{
+"value": "5",
+"label": "5"
+},
+{
+"value": "6",
+"label": "6"
+}
+]
+},
+{
+"type": "range",
+"id": "gallery_spacing",
+"label": "Gallery Spacing",
+"min": 0,
+"max": 100,
+"step": 1,
+"unit": "px",
+"default": 30
+},
+{
+"type": "header",
+"content": "Custom class"
+},
+{
+"type": "text",
+"id": "custom_class_name",
+"label": "Add your custom class name here"
+}
+],
+"presets": [
+{
+"name": "Isotope Products"
+}
+]
+}
+{% endschema %}  

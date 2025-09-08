@@ -1,0 +1,383 @@
+{% assign margin = section.settings.margin | split: ',' %}
+{% assign margin_top = margin[0] %}
+{% assign margin_bottom = margin[1] %} 
+{% assign padding = section.settings.padding | split: ',' %}
+{% assign padding_top = padding[0] %}
+{% assign padding_bottom = padding[1] %} 
+
+{% if section.settings.enable_overlay %}
+{% assign section_overlay = 'dt-sc-overlay' %}
+{% endif %}
+
+{% if section.settings.show_background_image %}
+{% assign lazyScript = "lazyload" %}
+{% endif %}
+<div class="dt-sc-section-wrapper  {{lazyScript}} {{ section_overlay }} {% if section.settings.background_style == 'parallax' %} parallax-initiated{% endif %}" {% if section.settings.background_style == 'parallax' %} data-speed="2" data-style="parallax"{% endif %} style="{% render 'bg-color-image-padding' %} background-size: {{- section.settings.background_size -}}; {% if section.settings.background_style == 'fixed' %}background-attachment: fixed;{% endif %} background-repeat:{% if section.settings.background_size == 'repeat' %}repeat{% else %}no-repeat;{% endif %}" {% include 'bg_image' %}>  
+  <div class="{% render 'container-settings' %}"> 
+    <div class="row {{ section.settings.custom_class_name }}">
+      {% render 'section-heading', class: section.id %}     
+      {% if section.settings.html != blank %}
+      <div class="dt-sc-brand-wrapper">
+        <div id="brandLogo-{{ section.id }}-ctrls"></div>
+        <div id="brandLogo-{{ section.id }}-content">
+        {% for block in section.blocks %}
+        <div class="dt-sc-brand-content dt-sc-top-content--{{ block.id }}">
+          {% if block.settings.text != blank  %}  
+          <p>{{ block.settings.text }}</p>
+          {% endif %}
+        </div>
+        {% endfor %}
+        </div>
+        <div id="brandLogo-{{ section.id }}-image">
+          {% for block in section.blocks %}
+          <div class="dt-sc-brand-tab">
+              <div class="dt-sc-brand-content dt-sc-top-content--{{ block.id }}">
+                {% if block.settings.brand-logo != blank  %}
+            <img src="{{ block.settings.brand-logo | img_url: 'master' }}" alt="{{ section.settings.heading }}" />
+            {% endif %}                     
+              </div>  
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+<style type="text/css">
+
+  #shopify-section-{{section.id}}.tabbed-brands .dt-sc-heading .dt-sc-main-heading { color: var(--DTColor_Heading); color:{{ section.settings.section_heading_color }}; } 
+  #shopify-section-{{section.id}}.tabbed-brands .dt-sc-heading .dt-sc-sub-heading { color: var(--DTColor_Heading); color:{{ section.settings.section_sub_heading_color }}; } 
+  #shopify-section-{{section.id}}.tabbed-brands .dt-sc-heading .dt-sc-heading-description { color: var(--DTColor_Body); color:{{ section.settings.section_description_color }}; } 
+  #shopify-section-{{section.id}}.tabbed-brands .dt-sc-heading .dt-sc-btn { 
+    background: var(--DT_Button_BG_Color); background:{{ section.settings.section_button_bg_color }}; 
+      color: var(--DT_Button_Text_Color); color:{{ section.settings.section_button_text_color }}; }
+  #shopify-section-{{section.id}}.tabbed-brands .dt-sc-heading .dt-sc-btn:hover { 
+    background: var(--DT_Button_BG_Hover_Color); background:{{ section.settings.section_button_hover_bg_color }}; 
+      color: var(--DT_Button_Text_Hover_Color); color:{{ section.settings.section_button_hover_text_color }}; }
+  #shopify-section-{{section.id}}.tabbed-brands .dt-sc-overlay:before  { 
+    color: var(--DTTertiaryColor); 
+      color: {{ section.settings.background_color }};    
+      background: currentcolor; 
+      opacity: {{ section.settings.overlay_transparency }}; }
+  
+  {% for block in section.blocks %}
+    #shopify-section-{{section.id}}.tabbed-brands .dt-sc-top-content--{{ block.id }} p { color: var(--DTColor_Body); color: {{block.settings.slider_description_color}}; }
+  {% endfor %}
+  
+  #shopify-section-{{section.id}}.tabbed-brands .dt-sc-brand-content { display: flex; flex-wrap: wrap; justify-content: center; padding: 1rem; }
+  #shopify-section-{{section.id}}.tabbed-brands .dt-sc-brand-content p { width: 700px; max-width: 75%; margin: 0 auto; text-align:center; padding: 4rem; font-size: 24px; font-weight: 900; }
+  
+  #shopify-section-{{section.id}}.tabbed-brands .dt-sc-brand-wrapper div[id*="-image"] .slick-list.draggable { display: flex; align-items: center; justify-content: center; }
+  #shopify-section-{{section.id}}.tabbed-brands .slick-list.draggable .slick-track { display: flex; justify-content: space-between; margin: 0; align-items: center; }
+  
+  #shopify-section-{{section.id}}.tabbed-brands .dt-sc-brand-tab img { opacity: 0.6; transition: var(--DTBaseTransition); cursor: pointer; }
+  #shopify-section-{{section.id}}.tabbed-brands .dt-sc-brand-tab.slick-current img,
+  #shopify-section-{{section.id}}.tabbed-brands .dt-sc-brand-tab:hover img { opacity: 1; }
+  
+  @media only screen and (min-width: 1200px) {
+    #shopify-section-{{section.id}}.tabbed-brands .dt-sc-section-wrapper { margin-top:{{margin_top}}px; margin-bottom:{{margin_bottom}}px;padding-top:{{padding_top}}px; padding-bottom:{{padding_bottom}}px; }
+  }
+
+  @media only screen and (max-width: 1199px) {
+    #shopify-section-{{section.id}}.tabbed-brands .dt-sc-section-wrapper { margin-top:{{margin_top | divided_by: 2 }}px; margin-bottom:{{margin_bottom | divided_by: 2}}px;padding-top:{{padding_top | divided_by: 2}}px; padding-bottom:{{padding_bottom | divided_by: 2}}px;}
+  }
+  
+  @media only screen and (max-width: 767px) {    
+    #shopify-section-{{section.id}}.tabbed-brands .dt-sc-brand-content p { width: 100%; max-width: 100%; padding: 3rem; font-size: 20px; font-weight: 700; }
+  }
+  
+  @media only screen and (max-width: 576px) {    
+    #shopify-section-{{section.id}}.tabbed-brands .dt-sc-brand-content { padding: .5rem; }
+    #shopify-section-{{section.id}}.tabbed-brands .dt-sc-brand-content p { padding: 1.5rem;  font-size: var(--DTFontSizeBase); }
+    #shopify-section-{{section.id}}.tabbed-brands .slick-slide > div > img { padding: 0; opacity: 1; }
+  }
+  
+
+</style>
+
+<script type="text/javascript">
+
+  $(document).ready(function(){
+    $('#brandLogo-{{ section.id }}-content').not('.slick-initialized').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1, 
+      arrows: false,
+      appendArrows: '#brandLogo-{{ section.id }}-ctrls',
+      asNavFor: '#brandLogo-{{ section.id }}-image',
+      autoplay:false,
+      autoplaySpeed:2500,
+      adaptiveHeight: true,      
+      focusOnSelect: true,
+      responsive: [
+      {
+      breakpoint: 576,
+      settings: {
+      autoplay: true
+      }
+      }
+      ]      
+      });
+    $('#brandLogo-{{ section.id }}-image').not('.slick-initialized').slick({
+      slidesToShow: {{section.blocks.size}},
+      slidesToScroll: 1,
+      asNavFor: '#brandLogo-{{ section.id }}-content',
+      infinite: true,
+      dots: false,
+      arrows: false,
+      focusOnSelect: true,
+      autoplay:false,
+      autoplaySpeed:2500,
+      adaptiveHeight: true,
+      responsive: [
+      {
+      breakpoint: 576,
+      settings: {
+      slidesToShow: 1,
+      slidesPerRow: 1,
+      autoplay: true
+      }
+      }
+      ]
+      }); 
+  });
+
+</script>
+
+{% schema %}
+{
+"name": "Home Tabbed Brands",
+"class": "index-section tabbed-brands",
+"max_blocks": 4,
+"settings": [
+{
+"type": "checkbox",
+"id": "full",
+"label": "Show Full width"
+},
+{
+"type": "checkbox",
+"id": "spacing_both_ends",
+"label": "Enable Right & Left Spacing (Works only on Fullwidth)",
+"default": false
+},
+{
+"type": "text",
+"id": "padding",
+"label": "Style value (Padding)",
+"default":"0,0",
+"info":"Top(px),Bottom(px)"
+},
+{
+"type": "text",
+"id": "margin",
+"label": "Style value (Margin)",
+"default":"0,0",
+"info":"Top(px),Bottom(px)"
+},
+{
+"type": "checkbox",
+"id": "show_background_image",
+"label": "Enable Background image"
+},
+{
+"type": "image_picker",
+"id": "background_image",
+"label": "Background image",
+"info": "Size: 1920x1280"
+},
+{
+"type": "select",
+"id": "background_style",
+"label": "Background Style",
+"default": "none",
+"options": [
+{
+"value": "fixed",
+"label": "Fixed"
+},
+{
+"value": "parallax",
+"label": "Parallax"
+},
+{
+"value": "none",
+"label": "None"
+}
+]
+},
+{
+"type": "select",
+"id": "background_size",
+"label": "Background Size",
+"info": "This will not apply for parallax",
+"default": "auto",
+"options": [
+{
+"value": "auto",
+"label": "Auto"
+},
+{
+"value": "cover",
+"label": "Cover"
+},
+{
+"value": "contain",
+"label": "Contain"
+},
+{
+"value": "repeat",
+"label": "Repeat"
+}
+]
+},
+{
+"type": "checkbox",
+"id": "enable_overlay",
+"label": "Enable Background Color (Used as Background Image Overlay Color too)"
+},
+{
+"type": "color",
+"id": "background_color",
+"label":"Background color"
+},
+{
+"type": "text",
+"id": "overlay_transparency",
+"label": "Overlay Transparency (0.01 to 1)",
+"default": "0.5"
+},
+{
+"type": "text",
+"id": "section_heading",
+"label": "Main Heading",
+"default": "Html Text"
+},  
+{
+"type": "text",
+"id": "section_sub_heading",
+"label": "Sub Heading",
+"default": "Sub Heading"
+},  
+{
+"type": "text",
+"id": "section_description",
+"label": "Description",
+"default": "Use this text to share the information which you like!."
+},  
+{
+"type": "text",
+"id": "section_button_text",
+"label": "Link text"
+},
+{
+"type": "url",
+"id": "section_button_link",
+"label": "Link URL"
+},
+{
+"type": "header",
+"content": "Section Color settings"
+},
+{
+"type": "color",
+"id": "section_heading_color",
+"label": "Heading color"
+},    
+{
+"type": "color",
+"id": "section_sub_heading_color",
+"label": "Sub heading color"
+},   
+{
+"type": "color",
+"id": "section_description_color",
+"label": "Description color"
+},  
+{
+"type": "color",
+"id": "section_button_bg_color",
+"label": "Button bg color"
+},   
+{
+"type": "color",
+"id": "section_button_text_color",
+"label": "Button text color"
+},   
+{
+"type": "color",
+"id": "section_button_hover_bg_color",
+"label": "Button hover bg color"
+},   
+{
+"type": "color",
+"id": "section_button_hover_text_color",
+"label": "Button hover text color"
+},
+{
+"type": "select",
+"id": "heading_position",
+"label": "Heading Position",
+"options": [
+{
+"value": "text-center",
+"label": "Center"
+},
+{
+"value": "text-start",
+"label": "Left"
+},
+{
+"value": "text-end",
+"label": "Right"
+}
+]
+},
+{
+"type": "html",
+"id": "html",
+"label": "Add your HTML text here",
+"default": "<!--<div id='insta-feed'></div>-->"
+},
+{
+"type": "header",
+"content": "Custom class"
+},
+{
+"type": "text",
+"id": "custom_class_name",
+"label": "Add your custom class name here"
+}
+],
+"blocks": [
+{
+"type": "Image",
+"name":"Brand detail",
+"settings": [
+{
+"type": "image_picker",
+"id": "brand-logo",
+"label": "Image"
+},
+{
+"type": "textarea",
+"id": "text",
+"label": "Description",
+"default": "Description"          
+},  
+{
+"type": "color",
+"id": "brand_description_color",
+"label": "Description color"
+}
+]
+}
+],
+"presets": [
+{
+"name": "Tabbed Brands",
+"category": "Text"
+}
+]
+}
+{% endschema %}  
