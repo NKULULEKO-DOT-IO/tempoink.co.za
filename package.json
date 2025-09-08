@@ -14,7 +14,12 @@
     "backup": "npm run pull && git add -A && git commit -m 'Backup: $(date)'",
     "lint": "shopify theme check"
   },
-  "keywords": ["shopify", "theme", "tattoo", "ecommerce"],
+  "keywords": [
+    "shopify",
+    "theme",
+    "tattoo",
+    "ecommerce"
+  ],
   "author": "Your Name",
   "license": "MIT",
   "devDependencies": {
@@ -22,8 +27,9 @@
     "@shopify/theme": "^3.58.2"
   },
   "dependencies": {
-    "node-fetch": "^3.3.2",
+    "csv-parser": "^3.2.0",
+    "dotenv": "^16.3.1",
     "form-data": "^4.0.0",
-    "dotenv": "^16.3.1"
+    "node-fetch": "^3.3.2"
   }
 }
