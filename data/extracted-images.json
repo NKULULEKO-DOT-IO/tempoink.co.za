@@ -1,0 +1,74 @@
+{
+  "TMIK-0002": {
+    "title": "Geisha",
+    "images": [
+      {
+        "url": "https://ezink.co.za/cdn/shop/files/GeishaTemporaryTattoo.jpg?v=1751823928&width=1946",
+        "filename": "TMIK-0002-1.jpg",
+        "localPath": "data/images/TMIK-0002-1.jpg"
+      },
+      {
+        "url": "https://ezink.co.za/cdn/shop/files/Geishatemporarytattoo_1.png?v=1751823928&width=1946",
+        "filename": "TMIK-0002-2.png",
+        "localPath": "data/images/TMIK-0002-2.png"
+      },
+      {
+        "url": "https://ezink.co.za/cdn/shop/files/beforeandafter_4372aee4-4130-4297-9c4d-742d9ab29972.png?v=1751823928&width=1946",
+        "filename": "TMIK-0002-3.png",
+        "localPath": "data/images/TMIK-0002-3.png"
+      }
+    ],
+    "extractedAt": "2025-09-08T22:53:41.755Z"
+  },
+  "TMIK-0001": {
+    "title": "Japanese Dragon Sleeve",
+    "images": [],
+    "extractedAt": "2025-09-08T22:53:43.545Z"
+  },
+  "TMIK-0003": {
+    "title": "Blazebone",
+    "images": [],
+    "extractedAt": "2025-09-08T22:53:45.506Z"
+  },
+  "TMIK-0004": {
+    "title": "Swooping Eagle",
+    "images": [],
+    "extractedAt": "2025-09-08T22:53:47.783Z"
+  },
+  "TMIK-0005": {
+    "title": "Balanced Soul",
+    "images": [],
+    "extractedAt": "2025-09-08T22:53:50.170Z"
+  },
+  "TMIK-0006": {
+    "title": "Viking Celtic",
+    "images": [],
+    "extractedAt": "2025-09-08T22:53:52.050Z"
+  },
+  "TMIK-0007": {
+    "title": "Fallen Angel",
+    "images": [
+      {
+        "url": "https://ezink.co.za/cdn/shop/files/FallenAngelTemporaryTattoo.jpg?v=1645776696&width=1946",
+        "filename": "TMIK-0007-1.jpg",
+        "localPath": "data/images/TMIK-0007-1.jpg"
+      }
+    ],
+    "extractedAt": "2025-09-08T22:53:55.132Z"
+  },
+  "TMIK-0008": {
+    "title": "Knight",
+    "images": [],
+    "extractedAt": "2025-09-08T22:53:57.450Z"
+  },
+  "TMIK-0009": {
+    "title": "3 Sleeve Mystery Pack",
+    "images": [],
+    "extractedAt": "2025-09-08T22:53:59.267Z"
+  },
+  "TMIK-0010": {
+    "title": "Japanese Waves Sleeve",
+    "images": [],
+    "extractedAt": "2025-09-08T22:54:01.093Z"
+  }
+}

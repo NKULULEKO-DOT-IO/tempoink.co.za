@@ -1,0 +1,92 @@
+{
+  "generatedAt": "2025-09-08T22:56:56.154Z",
+  "products": [
+    {
+      "sku": "TMIK-0002",
+      "title": "Geisha",
+      "imagesDownloaded": 3,
+      "imageFiles": [
+        {
+          "filename": "TMIK-0002-1.jpg",
+          "exists": true,
+          "size": 227064
+        },
+        {
+          "filename": "TMIK-0002-2.png",
+          "exists": true,
+          "size": 533777
+        },
+        {
+          "filename": "TMIK-0002-3.png",
+          "exists": true,
+          "size": 943222
+        }
+      ]
+    },
+    {
+      "sku": "TMIK-0001",
+      "title": "Japanese Dragon Sleeve",
+      "imagesDownloaded": 0,
+      "imageFiles": []
+    },
+    {
+      "sku": "TMIK-0003",
+      "title": "Blazebone",
+      "imagesDownloaded": 0,
+      "imageFiles": []
+    },
+    {
+      "sku": "TMIK-0004",
+      "title": "Swooping Eagle",
+      "imagesDownloaded": 0,
+      "imageFiles": []
+    },
+    {
+      "sku": "TMIK-0005",
+      "title": "Balanced Soul",
+      "imagesDownloaded": 0,
+      "imageFiles": []
+    },
+    {
+      "sku": "TMIK-0006",
+      "title": "Viking Celtic",
+      "imagesDownloaded": 0,
+      "imageFiles": []
+    },
+    {
+      "sku": "TMIK-0007",
+      "title": "Fallen Angel",
+      "imagesDownloaded": 1,
+      "imageFiles": [
+        {
+          "filename": "TMIK-0007-1.jpg",
+          "exists": true,
+          "size": 157406
+        }
+      ]
+    },
+    {
+      "sku": "TMIK-0008",
+      "title": "Knight",
+      "imagesDownloaded": 0,
+      "imageFiles": []
+    },
+    {
+      "sku": "TMIK-0009",
+      "title": "3 Sleeve Mystery Pack",
+      "imagesDownloaded": 0,
+      "imageFiles": []
+    },
+    {
+      "sku": "TMIK-0010",
+      "title": "Japanese Waves Sleeve",
+      "imagesDownloaded": 0,
+      "imageFiles": []
+    }
+  ],
+  "summary": {
+    "totalProducts": 10,
+    "productsWithImages": 2,
+    "totalImagesDownloaded": 4
+  }
+}

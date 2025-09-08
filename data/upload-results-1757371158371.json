@@ -1,0 +1,622 @@
+[
+  {
+    "success": true,
+    "product": {
+      "id": 10015206146362,
+      "title": "Japanese Dragon Sleeve",
+      "body_html": "<p>Traditional Japanese dragon design perfect for full arm coverage. Lasts 1-2 weeks with proper application.</p>",
+      "vendor": "TEMPOINK™",
+      "product_type": "Temporary Tattoo",
+      "created_at": "2025-09-09T00:38:30+02:00",
+      "handle": "japanese-dragon-sleeve",
+      "updated_at": "2025-09-09T00:38:30+02:00",
+      "published_at": "2025-09-09T00:38:30+02:00",
+      "template_suffix": null,
+      "published_scope": "global",
+      "tags": "Best Seller, Dragon, Japanese, Sleeve",
+      "status": "active",
+      "admin_graphql_api_id": "gid://shopify/Product/10015206146362",
+      "variants": [
+        {
+          "id": 51849678782778,
+          "product_id": 10015206146362,
+          "title": "7 x 19 inch",
+          "price": "299.00",
+          "position": 1,
+          "inventory_policy": "deny",
+          "compare_at_price": null,
+          "option1": "7 x 19 inch",
+          "option2": null,
+          "option3": null,
+          "created_at": "2025-09-09T00:38:30+02:00",
+          "updated_at": "2025-09-09T00:38:30+02:00",
+          "taxable": true,
+          "barcode": "TEMP001",
+          "fulfillment_service": "manual",
+          "grams": 150,
+          "inventory_management": "shopify",
+          "requires_shipping": true,
+          "sku": "TMIK-0001",
+          "weight": 150,
+          "weight_unit": "g",
+          "inventory_item_id": 53869480018234,
+          "inventory_quantity": 100,
+          "old_inventory_quantity": 100,
+          "admin_graphql_api_id": "gid://shopify/ProductVariant/51849678782778",
+          "image_id": null
+        }
+      ],
+      "options": [
+        {
+          "id": 12522235461946,
+          "product_id": 10015206146362,
+          "name": "Size",
+          "position": 1,
+          "values": [
+            "7 x 19 inch"
+          ]
+        }
+      ],
+      "images": [],
+      "image": null
+    }
+  },
+  {
+    "success": true,
+    "product": {
+      "id": 10015206179130,
+      "title": "Geisha",
+      "body_html": "<p>Beautiful traditional Japanese geisha design with delicate features. Lasts 1-2 weeks with proper application.</p>",
+      "vendor": "TEMPOINK™",
+      "product_type": "Temporary Tattoo",
+      "created_at": "2025-09-09T00:38:36+02:00",
+      "handle": "geisha",
+      "updated_at": "2025-09-09T00:38:36+02:00",
+      "published_at": "2025-09-09T00:38:35+02:00",
+      "template_suffix": null,
+      "published_scope": "global",
+      "tags": "Geisha, Japanese, On Sale",
+      "status": "active",
+      "admin_graphql_api_id": "gid://shopify/Product/10015206179130",
+      "variants": [
+        {
+          "id": 51849678979386,
+          "product_id": 10015206179130,
+          "title": "4 x 7 inch",
+          "price": "149.00",
+          "position": 1,
+          "inventory_policy": "deny",
+          "compare_at_price": "229.00",
+          "option1": "4 x 7 inch",
+          "option2": null,
+          "option3": null,
+          "created_at": "2025-09-09T00:38:36+02:00",
+          "updated_at": "2025-09-09T00:38:36+02:00",
+          "taxable": true,
+          "barcode": "TEMP002",
+          "fulfillment_service": "manual",
+          "grams": 20,
+          "inventory_management": "shopify",
+          "requires_shipping": true,
+          "sku": "TMIK-0002",
+          "weight": 20,
+          "weight_unit": "g",
+          "inventory_item_id": 53869480214842,
+          "inventory_quantity": 75,
+          "old_inventory_quantity": 75,
+          "admin_graphql_api_id": "gid://shopify/ProductVariant/51849678979386",
+          "image_id": null
+        }
+      ],
+      "options": [
+        {
+          "id": 12522235494714,
+          "product_id": 10015206179130,
+          "name": "Size",
+          "position": 1,
+          "values": [
+            "4 x 7 inch"
+          ]
+        }
+      ],
+      "images": [],
+      "image": null
+    }
+  },
+  {
+    "success": true,
+    "product": {
+      "id": 10015206211898,
+      "title": "Blazebone",
+      "body_html": "<p>Fierce skull design with flame elements creating a powerful statement piece. Lasts 1-2 weeks with proper application.</p>",
+      "vendor": "TEMPOINK™",
+      "product_type": "Temporary Tattoo",
+      "created_at": "2025-09-09T00:38:38+02:00",
+      "handle": "blazebone",
+      "updated_at": "2025-09-09T00:38:38+02:00",
+      "published_at": "2025-09-09T00:38:37+02:00",
+      "template_suffix": null,
+      "published_scope": "global",
+      "tags": "Flames, New, Skull",
+      "status": "active",
+      "admin_graphql_api_id": "gid://shopify/Product/10015206211898",
+      "variants": [
+        {
+          "id": 51849679044922,
+          "product_id": 10015206211898,
+          "title": "4 x 7 inch",
+          "price": "229.00",
+          "position": 1,
+          "inventory_policy": "deny",
+          "compare_at_price": null,
+          "option1": "4 x 7 inch",
+          "option2": null,
+          "option3": null,
+          "created_at": "2025-09-09T00:38:38+02:00",
+          "updated_at": "2025-09-09T00:38:38+02:00",
+          "taxable": true,
+          "barcode": "TEMP003",
+          "fulfillment_service": "manual",
+          "grams": 20,
+          "inventory_management": "shopify",
+          "requires_shipping": true,
+          "sku": "TMIK-0003",
+          "weight": 20,
+          "weight_unit": "g",
+          "inventory_item_id": 53869480280378,
+          "inventory_quantity": 50,
+          "old_inventory_quantity": 50,
+          "admin_graphql_api_id": "gid://shopify/ProductVariant/51849679044922",
+          "image_id": null
+        }
+      ],
+      "options": [
+        {
+          "id": 12522235527482,
+          "product_id": 10015206211898,
+          "name": "Size",
+          "position": 1,
+          "values": [
+            "4 x 7 inch"
+          ]
+        }
+      ],
+      "images": [],
+      "image": null
+    }
+  },
+  {
+    "success": true,
+    "product": {
+      "id": 10015206244666,
+      "title": "Swooping Eagle",
+      "body_html": "<p>Majestic eagle in flight with detailed featherwork and dynamic pose. Lasts 1-2 weeks with proper application.</p>",
+      "vendor": "TEMPOINK™",
+      "product_type": "Temporary Tattoo",
+      "created_at": "2025-09-09T00:38:41+02:00",
+      "handle": "swooping-eagle",
+      "updated_at": "2025-09-09T00:38:41+02:00",
+      "published_at": "2025-09-09T00:38:41+02:00",
+      "template_suffix": null,
+      "published_scope": "global",
+      "tags": "Animals, Eagle, New",
+      "status": "active",
+      "admin_graphql_api_id": "gid://shopify/Product/10015206244666",
+      "variants": [
+        {
+          "id": 51849679208762,
+          "product_id": 10015206244666,
+          "title": "4 x 7 inch",
+          "price": "229.00",
+          "position": 1,
+          "inventory_policy": "deny",
+          "compare_at_price": null,
+          "option1": "4 x 7 inch",
+          "option2": null,
+          "option3": null,
+          "created_at": "2025-09-09T00:38:41+02:00",
+          "updated_at": "2025-09-09T00:38:41+02:00",
+          "taxable": true,
+          "barcode": "TEMP004",
+          "fulfillment_service": "manual",
+          "grams": 20,
+          "inventory_management": "shopify",
+          "requires_shipping": true,
+          "sku": "TMIK-0004",
+          "weight": 20,
+          "weight_unit": "g",
+          "inventory_item_id": 53869480444218,
+          "inventory_quantity": 50,
+          "old_inventory_quantity": 50,
+          "admin_graphql_api_id": "gid://shopify/ProductVariant/51849679208762",
+          "image_id": null
+        }
+      ],
+      "options": [
+        {
+          "id": 12522235593018,
+          "product_id": 10015206244666,
+          "name": "Size",
+          "position": 1,
+          "values": [
+            "4 x 7 inch"
+          ]
+        }
+      ],
+      "images": [],
+      "image": null
+    }
+  },
+  {
+    "success": true,
+    "product": {
+      "id": 10015206277434,
+      "title": "Balanced Soul",
+      "body_html": "<p>Spiritual design featuring yin-yang elements with intricate mandala details. Lasts 1-2 weeks with proper application.</p>",
+      "vendor": "TEMPOINK™",
+      "product_type": "Temporary Tattoo",
+      "created_at": "2025-09-09T00:38:43+02:00",
+      "handle": "balanced-soul",
+      "updated_at": "2025-09-09T00:38:43+02:00",
+      "published_at": "2025-09-09T00:38:43+02:00",
+      "template_suffix": null,
+      "published_scope": "global",
+      "tags": "Mandala, New, On Sale, Spiritual",
+      "status": "active",
+      "admin_graphql_api_id": "gid://shopify/Product/10015206277434",
+      "variants": [
+        {
+          "id": 51849679307066,
+          "product_id": 10015206277434,
+          "title": "5.5 x 9 inch",
+          "price": "199.00",
+          "position": 1,
+          "inventory_policy": "deny",
+          "compare_at_price": "249.00",
+          "option1": "5.5 x 9 inch",
+          "option2": null,
+          "option3": null,
+          "created_at": "2025-09-09T00:38:43+02:00",
+          "updated_at": "2025-09-09T00:38:43+02:00",
+          "taxable": true,
+          "barcode": "TEMP005",
+          "fulfillment_service": "manual",
+          "grams": 35,
+          "inventory_management": "shopify",
+          "requires_shipping": true,
+          "sku": "TMIK-0005",
+          "weight": 35,
+          "weight_unit": "g",
+          "inventory_item_id": 53869480542522,
+          "inventory_quantity": 50,
+          "old_inventory_quantity": 50,
+          "admin_graphql_api_id": "gid://shopify/ProductVariant/51849679307066",
+          "image_id": null
+        }
+      ],
+      "options": [
+        {
+          "id": 12522235625786,
+          "product_id": 10015206277434,
+          "name": "Size",
+          "position": 1,
+          "values": [
+            "5.5 x 9 inch"
+          ]
+        }
+      ],
+      "images": [],
+      "image": null
+    }
+  },
+  {
+    "success": true,
+    "product": {
+      "id": 10015206310202,
+      "title": "Viking Celtic",
+      "body_html": "<p>Traditional Celtic knotwork combined with Viking symbolism. Lasts 1-2 weeks with proper application.</p>",
+      "vendor": "TEMPOINK™",
+      "product_type": "Temporary Tattoo",
+      "created_at": "2025-09-09T00:38:45+02:00",
+      "handle": "viking-celtic",
+      "updated_at": "2025-09-09T00:38:45+02:00",
+      "published_at": "2025-09-09T00:38:45+02:00",
+      "template_suffix": null,
+      "published_scope": "global",
+      "tags": "Best Seller, Celtic, Traditional, Viking",
+      "status": "active",
+      "admin_graphql_api_id": "gid://shopify/Product/10015206310202",
+      "variants": [
+        {
+          "id": 51849679372602,
+          "product_id": 10015206310202,
+          "title": "3 x 6 inch",
+          "price": "189.00",
+          "position": 1,
+          "inventory_policy": "deny",
+          "compare_at_price": null,
+          "option1": "3 x 6 inch",
+          "option2": null,
+          "option3": null,
+          "created_at": "2025-09-09T00:38:45+02:00",
+          "updated_at": "2025-09-09T00:38:45+02:00",
+          "taxable": true,
+          "barcode": "TEMP006",
+          "fulfillment_service": "manual",
+          "grams": 15,
+          "inventory_management": "shopify",
+          "requires_shipping": true,
+          "sku": "TMIK-0006",
+          "weight": 15,
+          "weight_unit": "g",
+          "inventory_item_id": 53869480608058,
+          "inventory_quantity": 100,
+          "old_inventory_quantity": 100,
+          "admin_graphql_api_id": "gid://shopify/ProductVariant/51849679372602",
+          "image_id": null
+        }
+      ],
+      "options": [
+        {
+          "id": 12522235658554,
+          "product_id": 10015206310202,
+          "name": "Size",
+          "position": 1,
+          "values": [
+            "3 x 6 inch"
+          ]
+        }
+      ],
+      "images": [],
+      "image": null
+    }
+  },
+  {
+    "success": true,
+    "product": {
+      "id": 10015206342970,
+      "title": "Fallen Angel",
+      "body_html": "<p>Gothic angel design with dramatic wings and ethereal beauty. Lasts 1-2 weeks with proper application.</p>",
+      "vendor": "TEMPOINK™",
+      "product_type": "Temporary Tattoo",
+      "created_at": "2025-09-09T00:38:48+02:00",
+      "handle": "fallen-angel",
+      "updated_at": "2025-09-09T00:38:48+02:00",
+      "published_at": "2025-09-09T00:38:48+02:00",
+      "template_suffix": null,
+      "published_scope": "global",
+      "tags": "Angel, Best Seller, Gothic",
+      "status": "active",
+      "admin_graphql_api_id": "gid://shopify/Product/10015206342970",
+      "variants": [
+        {
+          "id": 51849679503674,
+          "product_id": 10015206342970,
+          "title": "4 x 7 inch",
+          "price": "229.00",
+          "position": 1,
+          "inventory_policy": "deny",
+          "compare_at_price": null,
+          "option1": "4 x 7 inch",
+          "option2": null,
+          "option3": null,
+          "created_at": "2025-09-09T00:38:48+02:00",
+          "updated_at": "2025-09-09T00:38:48+02:00",
+          "taxable": true,
+          "barcode": "TEMP007",
+          "fulfillment_service": "manual",
+          "grams": 20,
+          "inventory_management": "shopify",
+          "requires_shipping": true,
+          "sku": "TMIK-0007",
+          "weight": 20,
+          "weight_unit": "g",
+          "inventory_item_id": 53869480739130,
+          "inventory_quantity": 100,
+          "old_inventory_quantity": 100,
+          "admin_graphql_api_id": "gid://shopify/ProductVariant/51849679503674",
+          "image_id": null
+        }
+      ],
+      "options": [
+        {
+          "id": 12522235691322,
+          "product_id": 10015206342970,
+          "name": "Size",
+          "position": 1,
+          "values": [
+            "4 x 7 inch"
+          ]
+        }
+      ],
+      "images": [],
+      "image": null
+    }
+  },
+  {
+    "success": true,
+    "product": {
+      "id": 10015206375738,
+      "title": "Knight",
+      "body_html": "<p>Medieval knight design with intricate armor details. Lasts 1-2 weeks with proper application.</p>",
+      "vendor": "TEMPOINK™",
+      "product_type": "Temporary Tattoo",
+      "created_at": "2025-09-09T00:38:50+02:00",
+      "handle": "knight",
+      "updated_at": "2025-09-09T00:38:50+02:00",
+      "published_at": "2025-09-09T00:38:50+02:00",
+      "template_suffix": null,
+      "published_scope": "global",
+      "tags": "Best Seller, Knight, Medieval",
+      "status": "active",
+      "admin_graphql_api_id": "gid://shopify/Product/10015206375738",
+      "variants": [
+        {
+          "id": 51849679601978,
+          "product_id": 10015206375738,
+          "title": "4 x 7 inch",
+          "price": "229.00",
+          "position": 1,
+          "inventory_policy": "deny",
+          "compare_at_price": null,
+          "option1": "4 x 7 inch",
+          "option2": null,
+          "option3": null,
+          "created_at": "2025-09-09T00:38:50+02:00",
+          "updated_at": "2025-09-09T00:38:50+02:00",
+          "taxable": true,
+          "barcode": "TEMP008",
+          "fulfillment_service": "manual",
+          "grams": 20,
+          "inventory_management": "shopify",
+          "requires_shipping": true,
+          "sku": "TMIK-0008",
+          "weight": 20,
+          "weight_unit": "g",
+          "inventory_item_id": 53869480837434,
+          "inventory_quantity": 100,
+          "old_inventory_quantity": 100,
+          "admin_graphql_api_id": "gid://shopify/ProductVariant/51849679601978",
+          "image_id": null
+        }
+      ],
+      "options": [
+        {
+          "id": 12522235724090,
+          "product_id": 10015206375738,
+          "name": "Size",
+          "position": 1,
+          "values": [
+            "4 x 7 inch"
+          ]
+        }
+      ],
+      "images": [],
+      "image": null
+    }
+  },
+  {
+    "success": true,
+    "product": {
+      "id": 10015206408506,
+      "title": "3 Sleeve Mystery Pack",
+      "body_html": "<p>Get three surprise full sleeve designs at an amazing price! Lasts 1-2 weeks with proper application.</p>",
+      "vendor": "TEMPOINK™",
+      "product_type": "Tattoo Pack",
+      "created_at": "2025-09-09T00:38:52+02:00",
+      "handle": "3-sleeve-mystery-pack",
+      "updated_at": "2025-09-09T00:38:52+02:00",
+      "published_at": "2025-09-09T00:38:52+02:00",
+      "template_suffix": null,
+      "published_scope": "global",
+      "tags": "Big Savings, Bundle, Mystery Pack, Sleeve",
+      "status": "active",
+      "admin_graphql_api_id": "gid://shopify/Product/10015206408506",
+      "variants": [
+        {
+          "id": 51849679634746,
+          "product_id": 10015206408506,
+          "title": "Bundle",
+          "price": "599.00",
+          "position": 1,
+          "inventory_policy": "deny",
+          "compare_at_price": "899.00",
+          "option1": "Bundle",
+          "option2": null,
+          "option3": null,
+          "created_at": "2025-09-09T00:38:52+02:00",
+          "updated_at": "2025-09-09T00:38:52+02:00",
+          "taxable": true,
+          "barcode": "TEMP009",
+          "fulfillment_service": "manual",
+          "grams": 150,
+          "inventory_management": "shopify",
+          "requires_shipping": true,
+          "sku": "TMIK-0009",
+          "weight": 150,
+          "weight_unit": "g",
+          "inventory_item_id": 53869480870202,
+          "inventory_quantity": 25,
+          "old_inventory_quantity": 25,
+          "admin_graphql_api_id": "gid://shopify/ProductVariant/51849679634746",
+          "image_id": null
+        }
+      ],
+      "options": [
+        {
+          "id": 12522235756858,
+          "product_id": 10015206408506,
+          "name": "Size",
+          "position": 1,
+          "values": [
+            "Bundle"
+          ]
+        }
+      ],
+      "images": [],
+      "image": null
+    }
+  },
+  {
+    "success": true,
+    "product": {
+      "id": 10015206441274,
+      "title": "Japanese Waves Sleeve",
+      "body_html": "<p>Traditional Japanese wave pattern perfect for full sleeve coverage. Lasts 1-2 weeks with proper application.</p>",
+      "vendor": "TEMPOINK™",
+      "product_type": "Temporary Tattoo",
+      "created_at": "2025-09-09T00:38:55+02:00",
+      "handle": "japanese-waves-sleeve",
+      "updated_at": "2025-09-09T00:38:55+02:00",
+      "published_at": "2025-09-09T00:38:55+02:00",
+      "template_suffix": null,
+      "published_scope": "global",
+      "tags": "Best Seller, Japanese, Sleeve, Waves",
+      "status": "active",
+      "admin_graphql_api_id": "gid://shopify/Product/10015206441274",
+      "variants": [
+        {
+          "id": 51849679765818,
+          "product_id": 10015206441274,
+          "title": "7 x 19 inch",
+          "price": "299.00",
+          "position": 1,
+          "inventory_policy": "deny",
+          "compare_at_price": null,
+          "option1": "7 x 19 inch",
+          "option2": null,
+          "option3": null,
+          "created_at": "2025-09-09T00:38:55+02:00",
+          "updated_at": "2025-09-09T00:38:55+02:00",
+          "taxable": true,
+          "barcode": "TEMP010",
+          "fulfillment_service": "manual",
+          "grams": 150,
+          "inventory_management": "shopify",
+          "requires_shipping": true,
+          "sku": "TMIK-0010",
+          "weight": 150,
+          "weight_unit": "g",
+          "inventory_item_id": 53869481001274,
+          "inventory_quantity": 100,
+          "old_inventory_quantity": 100,
+          "admin_graphql_api_id": "gid://shopify/ProductVariant/51849679765818",
+          "image_id": null
+        }
+      ],
+      "options": [
+        {
+          "id": 12522235789626,
+          "product_id": 10015206441274,
+          "name": "Size",
+          "position": 1,
+          "values": [
+            "7 x 19 inch"
+          ]
+        }
+      ],
+      "images": [],
+      "image": null
+    }
+  }
+]

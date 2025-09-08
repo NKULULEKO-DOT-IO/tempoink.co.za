@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const csv = require('csv-parser');
-const ShopifyAPI = require('./shopify-api');
+const ShopifyAPI = require('./shopify-api-simple');
 
 class CSVToShopify {
   constructor() {
