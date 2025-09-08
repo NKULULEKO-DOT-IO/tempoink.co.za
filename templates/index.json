@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero_section": {
@@ -31,7 +40,9 @@
           }
         }
       },
-      "block_order": ["hero_slide"],
+      "block_order": [
+        "hero_slide"
+      ],
       "settings": {
         "full": true,
         "slider_height": 600,
@@ -54,17 +65,12 @@
         "section_heading_color": "#000000",
         "section_description_color": "#666666",
         "heading_position": "text-start",
-        "collection": "on-sale",
-        "post_limit": 10,
         "grid": "5",
+        "border_radius": "8",
         "enable_slider": true,
         "items_per_view": 5,
-        "items_laptop_view": 4,
-        "items_tablet_view": 3,
-        "items_mobile_view": 1,
-        "arrows": true,
         "dots": false,
-        "border_radius": "8",
+        "arrows": true,
         "custom_class_name": "tempoink-collection"
       }
     },
@@ -76,21 +82,21 @@
           "settings": {
             "block_title": "SHOP TATTOOS",
             "block_button_link": "/collections/all-tattoos",
-            "block_heading_color": "#000000",
-            "block_banner_bg": "#f8f8f8",
             "block_text_align": "text-center",
-            "content_position": "center"
+            "content_position": "center",
+            "block_banner_bg": "#f8f8f8",
+            "block_heading_color": "#000000"
           }
         },
         "category_2": {
-          "type": "content", 
+          "type": "content",
           "settings": {
             "block_title": "BEST SELLERS",
-            "block_button_link": "/collections/best-sellers", 
-            "block_heading_color": "#000000",
-            "block_banner_bg": "#f8f8f8",
+            "block_button_link": "/collections/best-sellers",
             "block_text_align": "text-center",
-            "content_position": "center"
+            "content_position": "center",
+            "block_banner_bg": "#f8f8f8",
+            "block_heading_color": "#000000"
           }
         },
         "category_3": {
@@ -98,10 +104,10 @@
           "settings": {
             "block_title": "TATTOO PACKS",
             "block_button_link": "/collections/tattoo-packs",
-            "block_heading_color": "#000000", 
-            "block_banner_bg": "#f8f8f8",
             "block_text_align": "text-center",
-            "content_position": "center"
+            "content_position": "center",
+            "block_banner_bg": "#f8f8f8",
+            "block_heading_color": "#000000"
           }
         },
         "category_4": {
@@ -109,20 +115,25 @@
           "settings": {
             "block_title": "ABOUT US",
             "block_button_link": "/pages/about-us",
-            "block_heading_color": "#000000",
-            "block_banner_bg": "#f8f8f8", 
             "block_text_align": "text-center",
-            "content_position": "center"
+            "content_position": "center",
+            "block_banner_bg": "#f8f8f8",
+            "block_heading_color": "#000000"
           }
         }
       },
-      "block_order": ["category_1", "category_2", "category_3", "category_4"],
+      "block_order": [
+        "category_1",
+        "category_2",
+        "category_3",
+        "category_4"
+      ],
       "settings": {
         "full": false,
         "padding": "60,60",
         "background_color": "#ffffff",
-        "grid": "4",
         "column_gap": "20",
+        "grid": "4",
         "border_radius": "8",
         "overlay_style_height": 200,
         "custom_class_name": "tempoink-categories"
@@ -132,24 +143,19 @@
       "type": "home-featured-collection",
       "settings": {
         "full": false,
-        "padding": "80,80", 
+        "padding": "80,80",
         "background_color": "#ffffff",
         "section_heading": "New Tattoos",
         "section_description": "Introducing 100+ new tattoo designs to the TEMPOINK library. Designed by real tattoo artists these are some of the best tattoos TEMPOINK has released!",
         "section_heading_color": "#000000",
         "section_description_color": "#666666",
         "heading_position": "text-start",
-        "collection": "new-tattoos",
-        "post_limit": 9,
-        "grid": "5", 
+        "grid": "5",
+        "border_radius": "8",
         "enable_slider": true,
         "items_per_view": 5,
-        "items_laptop_view": 4,
-        "items_tablet_view": 3,
-        "items_mobile_view": 1,
-        "arrows": true,
         "dots": false,
-        "border_radius": "8",
+        "arrows": true,
         "custom_class_name": "tempoink-collection"
       }
     },
@@ -161,21 +167,21 @@
           "settings": {
             "block_title": "SMALL",
             "block_button_link": "/collections/small-tattoos",
-            "block_heading_color": "#000000",
+            "block_text_align": "text-center",
+            "content_position": "center",
             "block_banner_bg": "#f8f8f8",
-            "block_text_align": "text-center", 
-            "content_position": "center"
+            "block_heading_color": "#000000"
           }
         },
         "medium_tattoos": {
           "type": "content",
           "settings": {
-            "block_title": "MEDIUM", 
+            "block_title": "MEDIUM",
             "block_button_link": "/collections/medium-tattoos",
-            "block_heading_color": "#000000",
-            "block_banner_bg": "#f8f8f8",
             "block_text_align": "text-center",
-            "content_position": "center"
+            "content_position": "center",
+            "block_banner_bg": "#f8f8f8",
+            "block_heading_color": "#000000"
           }
         },
         "large_tattoos": {
@@ -183,10 +189,10 @@
           "settings": {
             "block_title": "LARGE",
             "block_button_link": "/collections/large-tattoos",
-            "block_heading_color": "#000000",
-            "block_banner_bg": "#f8f8f8",
             "block_text_align": "text-center",
-            "content_position": "center"
+            "content_position": "center",
+            "block_banner_bg": "#f8f8f8",
+            "block_heading_color": "#000000"
           }
         },
         "on_sale": {
@@ -194,20 +200,25 @@
           "settings": {
             "block_title": "ON SALE",
             "block_button_link": "/collections/on-sale",
-            "block_heading_color": "#000000",
-            "block_banner_bg": "#f8f8f8",
             "block_text_align": "text-center",
-            "content_position": "center"
+            "content_position": "center",
+            "block_banner_bg": "#f8f8f8",
+            "block_heading_color": "#000000"
           }
         }
       },
-      "block_order": ["small_tattoos", "medium_tattoos", "large_tattoos", "on_sale"],
+      "block_order": [
+        "small_tattoos",
+        "medium_tattoos",
+        "large_tattoos",
+        "on_sale"
+      ],
       "settings": {
         "full": false,
         "padding": "60,60",
-        "background_color": "#ffffff", 
-        "grid": "4",
+        "background_color": "#ffffff",
         "column_gap": "20",
+        "grid": "4",
         "border_radius": "8",
         "overlay_style_height": 200,
         "custom_class_name": "tempoink-size-categories"
@@ -219,27 +230,22 @@
         "full": false,
         "padding": "80,80",
         "background_color": "#ffffff",
-        "section_heading": "Tattoo Packs", 
+        "section_heading": "Tattoo Packs",
         "section_description": "There's no guesswork, we've compiled our best designs into packs for your convenience… all while saving up to 50%",
         "section_heading_color": "#000000",
         "section_description_color": "#666666",
         "heading_position": "text-start",
-        "collection": "tattoo-packs",
-        "post_limit": 10,
         "grid": "5",
+        "border_radius": "8",
         "enable_slider": true,
         "items_per_view": 5,
-        "items_laptop_view": 4,
-        "items_tablet_view": 3, 
-        "items_mobile_view": 1,
-        "arrows": true,
         "dots": false,
-        "border_radius": "8",
+        "arrows": true,
         "custom_class_name": "tempoink-collection"
       }
     },
     "best_sellers": {
-      "type": "home-featured-collection", 
+      "type": "home-featured-collection",
       "settings": {
         "full": false,
         "padding": "80,80",
@@ -249,17 +255,12 @@
         "section_heading_color": "#000000",
         "section_description_color": "#666666",
         "heading_position": "text-start",
-        "collection": "best-sellers",
-        "post_limit": 10,
         "grid": "5",
+        "border_radius": "8",
         "enable_slider": true,
         "items_per_view": 5,
-        "items_laptop_view": 4,
-        "items_tablet_view": 3,
-        "items_mobile_view": 1,
-        "arrows": true,
         "dots": false,
-        "border_radius": "8", 
+        "arrows": true,
         "custom_class_name": "tempoink-collection"
       }
     },
@@ -271,10 +272,9 @@
         "background_color": "#f8f8f8",
         "section_heading": "TEMPOINK™ vs Other Brands",
         "section_description": "At TEMPOINK we pride ourselves in high quality temporary tattoos that last 1-2 weeks. Giving you a tattoo that looks and feels real.",
-        "section_heading_color": "#000000", 
+        "section_heading_color": "#000000",
         "section_description_color": "#666666",
-        "heading_position": "text-center",
-        "custom_class_name": "tempoink-comparison"
+        "heading_position": "text-center"
       }
     },
     "style_categories": {
@@ -285,21 +285,21 @@
           "settings": {
             "block_title": "Japanese",
             "block_button_link": "/collections/japanese-tattoos",
-            "block_heading_color": "#ffffff",
-            "block_banner_bg": "#333333",
             "block_text_align": "text-center",
-            "content_position": "center"
+            "content_position": "center",
+            "block_banner_bg": "#333333",
+            "block_heading_color": "#ffffff"
           }
         },
         "symbols": {
-          "type": "content", 
+          "type": "content",
           "settings": {
             "block_title": "Symbols",
             "block_button_link": "/collections/symbol-tattoos",
-            "block_heading_color": "#ffffff",
-            "block_banner_bg": "#333333",
             "block_text_align": "text-center",
-            "content_position": "center"
+            "content_position": "center",
+            "block_banner_bg": "#333333",
+            "block_heading_color": "#ffffff"
           }
         },
         "animals": {
@@ -307,21 +307,21 @@
           "settings": {
             "block_title": "Animals",
             "block_button_link": "/collections/animal-tattoos",
-            "block_heading_color": "#ffffff",
-            "block_banner_bg": "#333333",
             "block_text_align": "text-center",
-            "content_position": "center"
+            "content_position": "center",
+            "block_banner_bg": "#333333",
+            "block_heading_color": "#ffffff"
           }
         },
         "flowers": {
           "type": "content",
           "settings": {
             "block_title": "Flowers",
-            "block_button_link": "/collections/flower-tattoos", 
-            "block_heading_color": "#ffffff",
-            "block_banner_bg": "#333333",
+            "block_button_link": "/collections/flower-tattoos",
             "block_text_align": "text-center",
-            "content_position": "center"
+            "content_position": "center",
+            "block_banner_bg": "#333333",
+            "block_heading_color": "#ffffff"
           }
         },
         "traditional": {
@@ -329,25 +329,32 @@
           "settings": {
             "block_title": "Traditional",
             "block_button_link": "/collections/traditional-tattoos",
-            "block_heading_color": "#ffffff",
-            "block_banner_bg": "#333333",
             "block_text_align": "text-center",
-            "content_position": "center"
+            "content_position": "center",
+            "block_banner_bg": "#333333",
+            "block_heading_color": "#ffffff"
           }
         },
         "patchwork": {
           "type": "content",
           "settings": {
-            "block_title": "Patchwork", 
+            "block_title": "Patchwork",
             "block_button_link": "/collections/patchwork-tattoos",
-            "block_heading_color": "#ffffff",
+            "block_text_align": "text-center",
+            "content_position": "center",
             "block_banner_bg": "#333333",
-            "block_text_align": "text-center", 
-            "content_position": "center"
+            "block_heading_color": "#ffffff"
           }
         }
       },
-      "block_order": ["japanese", "symbols", "animals", "flowers", "traditional", "patchwork"],
+      "block_order": [
+        "japanese",
+        "symbols",
+        "animals",
+        "flowers",
+        "traditional",
+        "patchwork"
+      ],
       "settings": {
         "full": false,
         "padding": "80,80",
@@ -355,8 +362,8 @@
         "section_heading": "Shop By Style",
         "section_heading_color": "#000000",
         "heading_position": "text-center",
-        "grid": "6",
         "column_gap": "20",
+        "grid": "6",
         "border_radius": "8",
         "overlay_style_height": 250,
         "custom_class_name": "tempoink-styles"
@@ -377,7 +384,7 @@
           "type": "content",
           "settings": {
             "quote": "<p>This product is insane! The detail is incredible not to mention easy application. Innovative idea and did not wait long at all to receive it, happy days!</p>",
-            "author": "Olive", 
+            "author": "Olive",
             "star": "5"
           }
         },
@@ -390,7 +397,11 @@
           }
         }
       },
-      "block_order": ["review_1", "review_2", "review_3"],
+      "block_order": [
+        "review_1",
+        "review_2",
+        "review_3"
+      ],
       "settings": {
         "full": false,
         "padding": "80,80",
@@ -398,25 +409,25 @@
         "section_heading": "Let customers speak for us",
         "section_heading_color": "#000000",
         "heading_position": "text-center",
+        "testimonial_background_color": "#ffffff",
+        "testimonial_content_color": "#333333",
+        "testimonial_author_text_color": "#000000",
         "enable_slider": true,
         "items_per_view": 3,
         "items_laptop_view": 2,
         "items_mobile_view": 1,
         "dots": true,
         "arrows": false,
-        "testimonial_background_color": "#ffffff",
-        "testimonial_content_color": "#333333",
-        "testimonial_author_text_color": "#000000",
         "custom_class_name": "tempoink-reviews"
       }
     }
   },
   "order": [
-    "hero_section", 
+    "hero_section",
     "on_sale_section",
     "category_grid",
     "new_tattoos",
-    "size_categories", 
+    "size_categories",
     "tattoo_packs",
     "best_sellers",
     "brand_comparison",
