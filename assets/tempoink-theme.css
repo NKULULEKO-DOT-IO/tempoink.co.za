@@ -1,4 +1,112 @@
 /* TEMPOINK Custom Theme Styles - Clean White Design */
+/* Updated: 2025-01-09 01:05 - Charcoal Navigation Colors */
+
+/* Force Charcoal Navigation Colors - High Priority Override */
+* {
+  --navbar-text-color: #444444 !important;
+  --navbar-icon-color: #444444 !important;
+}
+
+body header a,
+body .site-header a,
+body nav a,
+body .header a,
+body .navigation a,
+header a,
+.site-header a,
+nav a,
+.header a,
+.navigation a {
+  color: #444444 !important;
+}
+
+body header svg,
+body .site-header svg,
+body nav svg,
+body .header svg,
+body .navigation svg,
+header svg,
+.site-header svg,
+nav svg,
+.header svg,
+.navigation svg {
+  fill: #444444 !important;
+  color: #444444 !important;
+  stroke: #444444 !important;
+}
+
+/* Target specific Shopify selectors that might override */
+html body .shopify-section-header-sticky .header a,
+html body .shopify-section .header a,
+html body .header__inline-menu a,
+html body .header__menu-item a {
+  color: #444444 !important;
+}
+
+/* Gradient Overlay Utility */
+.gradient-overlay {
+  position: relative !important;
+}
+
+.gradient-overlay::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0.6)) !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+
+.gradient-overlay > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Gradient Overlay Variations */
+.gradient-overlay-dark {
+  position: relative !important;
+}
+
+.gradient-overlay-dark::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)) !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+
+.gradient-overlay-dark > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.gradient-overlay-light {
+  position: relative !important;
+}
+
+.gradient-overlay-light::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.8)) !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+
+.gradient-overlay-light > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
 
 /* Global Theme Reset to White Background */
 body {
@@ -16,7 +124,7 @@ body {
 
 .site-header .logo h1,
 .site-header .logo a {
-  color: #000000 !important;
+  color: #444444 !important;
   font-weight: 700 !important;
   font-size: 24px !important;
   text-decoration: none !important;
@@ -24,8 +132,16 @@ body {
 
 /* Navigation Styling */
 .dt-nav a,
-.dt-desktop-menu a {
-  color: #000000 !important;
+.dt-desktop-menu a,
+nav a,
+header a,
+.header-nav a,
+.shopify-section-header a,
+.site-header a,
+.header__menu a,
+.navigation a,
+.nav-link {
+  color: #444444 !important;
   font-weight: 500 !important;
   text-transform: uppercase !important;
   font-size: 14px !important;
@@ -33,14 +149,69 @@ body {
 }
 
 .dt-nav a:hover,
-.dt-desktop-menu a:hover {
-  color: #333333 !important;
+.dt-desktop-menu a:hover,
+nav a:hover,
+header a:hover,
+.header-nav a:hover {
+  color: #666666 !important;
+}
+
+/* Navigation Icons */
+.site-header svg,
+.site-header icon,
+.header-nav svg,
+.header-nav icon,
+nav svg,
+nav icon,
+.dt-nav svg,
+.dt-nav icon,
+header svg,
+header icon {
+  fill: #444444 !important;
+  color: #444444 !important;
+  stroke: #444444 !important;
+}
+
+.site-header svg:hover,
+.site-header icon:hover,
+.header-nav svg:hover,
+.header-nav icon:hover,
+nav svg:hover,
+nav icon:hover,
+.dt-nav svg:hover,
+.dt-nav icon:hover,
+header svg:hover,
+header icon:hover {
+  fill: #666666 !important;
+  color: #666666 !important;
+  stroke: #666666 !important;
+}
+
+/* Cart Badge and Icons */
+.cart-count-bubble,
+.cart-badge,
+.header-cart-count {
+  background-color: #444444 !important;
+  color: #ffffff !important;
+}
+
+/* Search Icon */
+.search-icon,
+.search-button,
+button[aria-label*="search"] {
+  color: #444444 !important;
+}
+
+.search-icon:hover,
+.search-button:hover,
+button[aria-label*="search"]:hover {
+  color: #666666 !important;
 }
 
 /* Announcement Bar */
 .announcement-bar {
   background-color: #ffffff !important;
-  color: #000000 !important;
+  color: #444444 !important;
   border-bottom: 1px solid #e5e5e5 !important;
   padding: 8px 0 !important;
   font-size: 12px !important;
@@ -53,6 +224,17 @@ body {
 .tempoink-hero {
   background-color: #ffffff !important;
   padding: 80px 0 !important;
+}
+
+/* Hero with gradient overlay */
+.tempoink-hero.gradient-overlay {
+  background-image: url('your-hero-background.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.tempoink-hero.gradient-overlay::before {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0.6)) !important;
 }
 
 .tempoink-hero .slide-content {
@@ -171,6 +353,35 @@ body {
   color: #999999 !important;
   text-decoration: line-through !important;
   font-weight: 400 !important;
+}
+
+/* Product Image Overlays */
+.product-image-container.gradient-overlay {
+  position: relative !important;
+}
+
+.product-image-container.gradient-overlay img {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.product-image-container.gradient-overlay::before {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0.6)) !important;
+  border-radius: 8px 8px 0 0 !important;
+}
+
+/* Banner Image Overlays */
+.banner-image.gradient-overlay {
+  position: relative !important;
+  min-height: 400px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.banner-image.gradient-overlay::before {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0.6)) !important;
+  border-radius: 8px !important;
 }
 
 /* Category Grid */
