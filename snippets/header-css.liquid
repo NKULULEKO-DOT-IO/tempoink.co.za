@@ -1,0 +1,9 @@
+{{ 'dt-framework.css' | asset_url | stylesheet_tag }}  
+{{ 'dt-custom.css' | asset_url | stylesheet_tag }}
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }} 
+{% unless template contains 'customers' or template contains 'cart' %}
+{{ 'select2.min.css' | asset_url | stylesheet_tag }} 
+{% endunless %}
+{{ 'slick.css' | asset_url | stylesheet_tag }} 
+{{ 'font-all.min.css' | asset_url | stylesheet_tag }} 
+{{ 'animation.css' | asset_url | stylesheet_tag }} 

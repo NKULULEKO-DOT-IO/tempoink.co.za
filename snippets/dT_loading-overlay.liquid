@@ -1,0 +1,41 @@
+<div class="dT_LoadingOverlay dT_collectionOverlay"></div>
+<style>
+  .dT_LoadingOverlay,  .dT_collectionOverlay{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    {% unless settings.preloader != blank %} background-image:url({{ "loading.gif" | asset_url}}); {% endunless %}
+    {% if settings.preloader != blank %} background-image:url('{{ settings.preloader | img_url: 'master' }}'); {% endif %}
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: var(--DTBodyBGColor);
+        }
+  body.loadingdT,  body.collectionPreloading{
+    overflow: hidden;   
+  }
+  body.collectionPreloading .dT_collectionOverlay, body.loadingdT .dT_LoadingOverlay{
+    display: block;
+  }
+  .collectionListPreload{
+    position: relative;
+  }
+  .collectionListPreload:after{
+    content: '';
+    position: fixed;
+    opacity: .9;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2000;    
+    {% unless settings.preloader != blank %} background-image:url({{ "loading.gif" | asset_url}}); {% endunless %}
+    {% if settings.preloader != blank %} background-image:url('{{ settings.preloader | img_url: 'master' }}'); {% endif %}
+      background-repeat: no-repeat;
+      background-position:center;
+      background-color: var(--DTBodyBGColor);
+        }
+</style>

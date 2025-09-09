@@ -1,0 +1,46 @@
+<div class="{{ footer_column_alignment}}">
+  {% if block.settings.title != blank  and section.settings.show_footer_title %}        
+  <h5 class="footer__title ">{{ block.settings.title }}</h5>
+  {% endif %}
+  {% form 'customer', id: 'newsletter-footer' %}
+  {% if form.posted_successfully? %}
+  <div class="note note--success">{{ 'general.newsletter_form.mailing_list_success_message' | t }}</div>
+  {% endif %}
+  {% if form.context == 'footer' %}
+  {% if form.errors %}
+  {{ form.errors | default_errors }}
+  {% endif %}
+  {% endif %}
+   {% if block.settings.richtext != blank %}
+  {{ block.settings.richtext }}
+  {% endif %}
+  <input type="hidden" name="contact[tags]" value="prospect,newsletter">
+  <input type="hidden" name="contact[context]" value="footer">
+  <div class="footer__newsletter">
+    <input type="email" value="{% if customer %}{{ customer.email }}{% endif %}" placeholder="{{ 'general.newsletter_form.newsletter_email' | t }}" name="contact[email]" id="Email-{{ block.id }}"  class="footer__newsletter-input" autocorrect="off"  autocapitalize="off" required="required">
+    <button type="submit" class="btn footer__newsletter-btn" name="commit">{{ 'general.newsletter_form.sign_up' | t }}</button>
+  </div>
+
+ 
+  {% endform %}
+
+  {% if section.settings.social_placement == 'with_newsletter'  and section.settings.show_social %}   
+  {% include 'social-links' %}
+  {% endif %}
+  
+  {% if section.settings.show_payment_icons  and  section.settings.payment_placement == 'with_newsletter' %}
+  {% unless shop.enabled_payment_types == empty %}
+  <div class="footer__payment-icons grid__item wide--one-third post-large--one-third large--one-third medium--one-whole">
+    <ul class="dt-sc-list-inline payment-icons">
+      {% for type in shop.enabled_payment_types %}
+      <li class="icon--payment">
+        {{ type | payment_type_svg_tag }}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endunless %}
+  {% endif %}
+         
+  
+</div>

@@ -1,0 +1,44 @@
+{% if block.type == 'icon' %}
+<div class="dt-sc-support-block dt-sc-support-block-{{ block.id }} {{section.settings.specification_block_style}} {{ section.settings.text_position}} {% if block.settings.reverse_column %}dt-sc-reverse-columns{% endif %}">    
+  {% if block.settings.icon != blank %}
+  <div class="dt-sc-support-icon-image">    
+    <img src="{{ block.settings.icon | img_url: 'master' }}" alt="{{ block.settings.icon.alt | escape }}">               
+  </div>
+  {% endif%}     
+  <div class="dt-sc-support-content">
+    {% if block.settings.title != blank and block.settings.title_link != blank %}  
+    <a href="{{block.settings.title_link}}" class="dt-sc-title"><h5 class="dt-sc-support-heading">{{ block.settings.title }}</h5></a>
+    {% else %}
+    <h5 class="dt-sc-support-heading">{{ block.settings.title }}</h5>
+    {% endif %} 
+    {% if block.settings.desc != blank  %}  
+    <p class="dt-sc-support-description"> {{ block.settings.desc}}</p>
+    {% endif %}
+    {% if block.settings.link and block.settings.link_text != blank %}
+    <a href="{{ block.settings.link}}" class="dt-sc-btn">{{block.settings.link_text}}</a>
+    {% endif %}
+  </div>
+</div>
+{% endif %}
+{% if block.type == 'class' %}
+<div class="dt-sc-support-block dt-sc-support-block-{{ block.id }} {{section.settings.specification_block_style}} {{ section.settings.text_position}} {% if block.settings.reverse_column %}dt-sc-reverse-columns{% endif %}">
+  {% if block.settings.class != blank %}
+  <div class="dt-sc-support-icon-image">
+    <i class="{{block.settings.class}}"></i>
+  </div>
+  {% endif%}     
+  <div class="dt-sc-support-content">
+    {% if block.settings.title != blank and block.settings.title_link != blank %}  
+    <a href="{{block.settings.title_link}}" class="dt-sc-title"><h5 class="dt-sc-support-heading">{{ block.settings.title }}</h5></a>
+    {% else %}
+    <h5 class="dt-sc-support-heading">{{ block.settings.title }}</h5>
+    {% endif %} 
+    {% if block.settings.desc != blank  %}  
+    <p class="dt-sc-support-description"> {{ block.settings.desc}}</p>
+    {% endif %}
+    {% if block.settings.link != blank and block.settings.link_text != blank %}
+    <a href="{{ block.settings.link}}" class="dt-sc-btn">{{block.settings.link_text}}</a>
+    {% endif %}
+  </div>
+</div>
+{% endif %}

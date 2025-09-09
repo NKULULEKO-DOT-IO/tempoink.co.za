@@ -1,0 +1,97 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "masonry-blog-template",
+      "blocks": {
+        "e647a523-a5ba-4008-bc31-a8f436883b14": {
+          "type": "articles",
+          "settings": {
+            "title": "Recent articles",
+            "show_description": true,
+            "limit": 2
+          }
+        },
+        "0732544a-d1ac-41bc-a4f9-a987643eedff": {
+          "type": "tags",
+          "settings": {
+            "title": "Tags",
+            "limit": 5
+          }
+        },
+        "f1e131c6-6525-4150-91f7-24c14561c6af": {
+          "type": "carousel",
+          "settings": {
+            "title": "Best Collections",
+            "collection": "best-collections",
+            "limit": 5
+          }
+        },
+        "08599de1-333a-41a0-ad7b-7dad4bc47c9f": {
+          "type": "collection",
+          "settings": {
+            "title": "Featured",
+            "collection": "featured-products",
+            "limit": 2
+          }
+        },
+        "36666774-1fbe-4764-9edb-5b1feb77f99d": {
+          "type": "image",
+          "settings": {
+            "title": "Promo image",
+            "image": "shopify://shop_images/woman-in-park-afternoon.jpeg",
+            "link_text": "Shop Now",
+            "link": "/"
+          }
+        }
+      },
+      "block_order": [
+        "e647a523-a5ba-4008-bc31-a8f436883b14",
+        "0732544a-d1ac-41bc-a4f9-a987643eedff",
+        "f1e131c6-6525-4150-91f7-24c14561c6af",
+        "08599de1-333a-41a0-ad7b-7dad4bc47c9f",
+        "36666774-1fbe-4764-9edb-5b1feb77f99d"
+      ],
+      "settings": {
+        "full": true,
+        "spacing_both_ends": true,
+        "padding": "0,0",
+        "margin": "0,0",
+        "blog_results_per_page": 16,
+        "blog_show_author": true,
+        "blog_show_date": true,
+        "blog_comments": true,
+        "blog_show_tag": true,
+        "blog_show_button": true,
+        "blog_show_description": true,
+        "enable_blog_icons": false,
+        "block_banner_style": "grid-style",
+        "grid": "2",
+        "gallery_spacing": 30,
+        "text_position": "text-start",
+        "column_gap": "30",
+        "enable_box_shadow": false,
+        "content_width": "50/50",
+        "lap_content_width": "40/60",
+        "vertical_position": "vertical-top",
+        "overlay_style": "use_overlay",
+        "overlay_color": "",
+        "overlay_opacity": "0.5",
+        "rotation_degree": "180",
+        "split_blog_layout": false,
+        "split_gap": "30"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

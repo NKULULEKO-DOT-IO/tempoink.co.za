@@ -1,0 +1,144 @@
+{% assign margin = section.settings.margin | split: ',' %}
+{% assign margin_top = margin[0] %}
+{% assign margin_bottom = margin[1] %} 
+{% assign padding = section.settings.padding | split: ',' %}
+{% assign padding_top = padding[0] %}
+{% assign padding_bottom = padding[1] %}
+
+{% case section.settings.grid %}
+{% when '1' %}
+{% when '2' %}
+{%- assign column = 'two-column' -%}
+{% when '3' %}
+{%- assign column = 'three-column' -%}              
+{% when '4' %}
+{%- assign column = 'four-column' -%}              
+{% when '5' %}
+{%- assign column = 'five-column' -%}   
+{% when '6' %}
+{%- assign column = 'six-column' -%}   
+{% else %}
+{%- assign column = 'three-column' -%}              
+{% endcase %} 
+<div class="{% render 'container-settings' %}" data-section-id="{{ section.id }}" data-section-type="collection-template">          
+  <div class="row"> 
+    <div class="dt-sc-column {{column}} list-collection-products">  
+      {% if section.settings.use_custom_list_collection %}
+      {% for link in linklists[section.settings.list-collections].links %}
+      {% assign collection = link.object %}
+      {% unless collection.handle == 'frontpage' %}    
+      {% assign featured = collection.handle %}
+      {% include 'collection-grid-item' %}
+      {% endunless %}
+      {% endfor %}  
+      {% else %}
+      {% for collection in collections %}
+      {% unless collection.handle == 'frontpage' %}    
+      {% assign featured = collection.handle %}
+      {% include 'collection-grid-item' %}
+      {% endunless %}
+      {% endfor %}  
+      {% endif %}  
+    </div>
+  </div>
+</div>
+
+<style>
+  .collection-detail .dt-sc-btn{
+    display: inline-block;  
+  }
+  
+  @media only screen and (min-width: 1200px) { #shopify-section-{{section.id}}.main-list-collection .row > div { margin-top:{{margin_top}}px; margin-bottom:{{margin_bottom}}px;padding-top:{{padding_top}}px; padding-bottom:{{padding_bottom}}px; } }
+  @media only screen and (max-width: 1199px) { #shopify-section-{{section.id}}.main-list-collection .row > div { margin-top:{{margin_top | divided_by: 2 }}px; margin-bottom:{{margin_bottom | divided_by: 2}}px;padding-top:{{padding_top | divided_by: 2}}px; padding-bottom:{{padding_bottom | divided_by: 2}}px;} }
+
+
+</style>
+{% schema %}
+{
+"name": "Options",
+"class": "main-list-collection",
+"settings": [
+{
+"type": "checkbox",
+"id": "full",
+"label": "Show Full width"
+},
+{
+"type": "checkbox",
+"id": "spacing_both_ends",
+"label": "Enable Right & Left Spacing (Works only on Fullwidth)",
+"default": false
+},
+{
+"type": "text",
+"id": "padding",
+"label": "Style value (Padding)",
+"default":"0,0",
+"info":"Top(px),Bottom(px)"
+},
+{
+"type": "text",
+"id": "margin",
+"label": "Style value (Margin)",
+"default":"0,0",
+"info":"Top(px),Bottom(px)"
+},
+{
+"type": "checkbox",
+"id": "use_custom_list_collection",
+"label": "Use custom list collection"
+},
+{
+"type": "link_list",
+"id": "list-collections",
+"label": "Pick custom  linkedlist"
+},
+{
+"type": "text",
+"id": "collection_btn_text",
+"label": "Btn text",
+"default": "Shop Now"
+},
+{
+"type": "checkbox",
+"id": "show_item_count",
+"label": "Show prouct count"
+},
+{
+"type": "checkbox",
+"id": "show_excerpt",
+"label": "Show excerpt"
+},
+{
+"type": "select",
+"id": "grid",
+"label":"Products per row",        
+"default": "4",
+"options": [
+{
+"value": "2",
+"label":"2"
+},
+{
+"value": "3",
+"label":"3"
+},
+{
+"value": "4",
+"label": "4"
+},
+{
+"value": "5",
+"label": "5"
+}
+]
+}
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
