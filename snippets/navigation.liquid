@@ -71,10 +71,17 @@
 {%- endfor -%}
 {%- endfor -%}
 
-{%- comment -%} DEMO MEGA MENU FOR CATALOG {%- endcomment -%}
-{%- if link_title == 'catalog' -%}
+{%- comment -%} DEMO MEGA MENUS FOR MULTIPLE ITEMS {%- endcomment -%}
+{%- if link_title == 'catalog' or link_title == 'categories' -%}
 {% assign columnSize = 'four-column' %} 
 {% assign blockType = 'demo_menu' %}
+{%- assign dt_mega = true -%}
+{%- endif -%}
+
+{%- comment -%} TATTOOS DROPDOWN MENU {%- endcomment -%}
+{%- if link_title == 'tattoos' -%}
+{% assign columnSize = 'three-column' %} 
+{% assign blockType = 'tattoo_menu' %}
 {%- assign dt_mega = true -%}
 {%- endif -%}
 
@@ -207,6 +214,47 @@
           <h4>MORE INK MORE SAVINGS</h4>
           <p>Spend R750 or more to unlock a FREE exclusive tattoo pack (including 4 free tattoos and free shipping).</p>
           <a href="/collections/all" class="btn">SAVE NOW →</a>
+        </li>
+        {% endif %}
+
+        {% if blockType == "tattoo_menu" %}
+        <!-- TATTOOS MEGA MENU CONTENT -->
+        <li>
+          <h5><a href="/collections/by-size">By Size</a></h5>
+          <ul>
+            <li><a href="/collections/extra-small"><span>Extra Small</span></a></li>
+            <li><a href="/collections/small"><span>Small</span></a></li>
+            <li><a href="/collections/medium"><span>Medium</span></a></li>
+            <li><a href="/collections/large"><span>Large</span></a></li>
+            <li><a href="/collections/sleeve"><span>Sleeve</span></a></li>
+            <li><a href="/collections/all-sizes"><span>Shop All</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/by-product">By Product</a></h5>
+          <ul>
+            <li><a href="/collections/new"><span>New</span></a></li>
+            <li><a href="/collections/best-sellers"><span>Best Sellers</span></a></li>
+            <li><a href="/collections/on-sale"><span>On Sale</span></a></li>
+            <li><a href="/collections/tattoo-packs"><span>Tattoo Packs</span></a></li>
+            <li><a href="/collections/all"><span>Shop All</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/by-style">By Style</a></h5>
+          <ul>
+            <li><a href="/collections/traditional"><span>Traditional</span></a></li>
+            <li><a href="/collections/japanese"><span>Japanese</span></a></li>
+            <li><a href="/collections/minimal"><span>Minimal</span></a></li>
+            <li><a href="/collections/patchwork"><span>Patchwork</span></a></li>
+            <li><a href="/collections/blackwork"><span>Blackwork</span></a></li>
+            <li><a href="/collections/fineline"><span>Fineline</span></a></li>
+            <li><a href="/collections/cute"><span>Cute</span></a></li>
+            <li><a href="/collections/astrology"><span>Astrology</span></a></li>
+            <li><a href="/collections/realism"><span>Realism</span></a></li>
+            <li><a href="/collections/american"><span>American</span></a></li>
+            <li><a href="/collections/all-styles"><span>Shop All</span></a></li>
+          </ul>
         </li>
         {% endif %}
 
