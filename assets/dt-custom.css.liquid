@@ -296,6 +296,142 @@ img.mfp-img{width:auto;max-width:100%;height:auto;display:block;line-height:0;-w
 /*Custom Navigation Colors - Charcoal with Light Grey Hover*/
 /***********************************************************************************/
 
+/* Sticky Header - Keep White Background */
+.dt-header-scroll,
+#sticky-header-active.dt-header-scroll,
+.dt-header-top,
+#sticky-header-active.dt-header-top {
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Ensure sticky header navigation items stay charcoal */
+.dt-header-scroll .dt-nav a,
+.dt-header-scroll .site-nav a,
+.dt-header-scroll .dt-sc-nav-link,
+#sticky-header-active.dt-header-scroll .dt-nav a,
+#sticky-header-active.dt-header-scroll .site-nav a,
+#sticky-header-active.dt-header-scroll .dt-sc-nav-link,
+.dt-header-top .dt-nav a,
+.dt-header-top .site-nav a,
+.dt-header-top .dt-sc-nav-link,
+#sticky-header-active.dt-header-top .dt-nav a,
+#sticky-header-active.dt-header-top .site-nav a,
+#sticky-header-active.dt-header-top .dt-sc-nav-link {
+  color: #444444 !important;
+}
+
+/* Sticky header icons stay charcoal */
+.dt-header-scroll .header svg,
+.dt-header-scroll .header svg path,
+.dt-header-scroll #cart-number svg,
+.dt-header-scroll #cart-number svg path,
+.dt-header-scroll .site-header__account svg,
+.dt-header-scroll .site-header__account svg path,
+.dt-header-scroll .site-header__compare svg,
+.dt-header-scroll .site-header__compare svg path,
+.dt-header-scroll .dt-sc-header-toggle svg,
+.dt-header-scroll .dt-sc-header-toggle svg path,
+#sticky-header-active.dt-header-scroll .header svg,
+#sticky-header-active.dt-header-scroll .header svg path,
+#sticky-header-active.dt-header-scroll #cart-number svg,
+#sticky-header-active.dt-header-scroll #cart-number svg path,
+#sticky-header-active.dt-header-scroll .site-header__account svg,
+#sticky-header-active.dt-header-scroll .site-header__account svg path,
+#sticky-header-active.dt-header-scroll .site-header__compare svg,
+#sticky-header-active.dt-header-scroll .site-header__compare svg path,
+#sticky-header-active.dt-header-scroll .dt-sc-header-toggle svg,
+#sticky-header-active.dt-header-scroll .dt-sc-header-toggle svg path,
+.dt-header-top .header svg,
+.dt-header-top .header svg path,
+.dt-header-top #cart-number svg,
+.dt-header-top #cart-number svg path,
+.dt-header-top .site-header__account svg,
+.dt-header-top .site-header__account svg path,
+.dt-header-top .site-header__compare svg,
+.dt-header-top .site-header__compare svg path,
+.dt-header-top .dt-sc-header-toggle svg,
+.dt-header-top .dt-sc-header-toggle svg path,
+#sticky-header-active.dt-header-top .header svg,
+#sticky-header-active.dt-header-top .header svg path,
+#sticky-header-active.dt-header-top #cart-number svg,
+#sticky-header-active.dt-header-top #cart-number svg path,
+#sticky-header-active.dt-header-top .site-header__account svg,
+#sticky-header-active.dt-header-top .site-header__account svg path,
+#sticky-header-active.dt-header-top .site-header__compare svg,
+#sticky-header-active.dt-header-top .site-header__compare svg path,
+#sticky-header-active.dt-header-top .dt-sc-header-toggle svg,
+#sticky-header-active.dt-header-top .dt-sc-header-toggle svg path {
+  fill: #444444 !important;
+  stroke: #444444 !important;
+  color: #444444 !important;
+}
+
+/* Sticky header hover effects */
+.dt-header-scroll .dt-nav a:hover,
+.dt-header-scroll .site-nav a:hover,
+.dt-header-scroll .dt-sc-nav-link:hover,
+#sticky-header-active.dt-header-scroll .dt-nav a:hover,
+#sticky-header-active.dt-header-scroll .site-nav a:hover,
+#sticky-header-active.dt-header-scroll .dt-sc-nav-link:hover,
+.dt-header-top .dt-nav a:hover,
+.dt-header-top .site-nav a:hover,
+.dt-header-top .dt-sc-nav-link:hover,
+#sticky-header-active.dt-header-top .dt-nav a:hover,
+#sticky-header-active.dt-header-top .site-nav a:hover,
+#sticky-header-active.dt-header-top .dt-sc-nav-link:hover {
+  color: #cccccc !important;
+}
+
+/* Sticky header icon hover effects */
+.dt-header-scroll .header:hover svg,
+.dt-header-scroll .header:hover svg path,
+.dt-header-scroll #cart-number:hover svg,
+.dt-header-scroll #cart-number:hover svg path,
+.dt-header-scroll .site-header__account:hover svg,
+.dt-header-scroll .site-header__account:hover svg path,
+.dt-header-scroll .site-header__compare:hover svg,
+.dt-header-scroll .site-header__compare:hover svg path,
+.dt-header-scroll .dt-sc-header-toggle:hover svg,
+.dt-header-scroll .dt-sc-header-toggle:hover svg path,
+#sticky-header-active.dt-header-scroll .header:hover svg,
+#sticky-header-active.dt-header-scroll .header:hover svg path,
+#sticky-header-active.dt-header-scroll #cart-number:hover svg,
+#sticky-header-active.dt-header-scroll #cart-number:hover svg path,
+#sticky-header-active.dt-header-scroll .site-header__account:hover svg,
+#sticky-header-active.dt-header-scroll .site-header__account:hover svg path,
+#sticky-header-active.dt-header-scroll .site-header__compare:hover svg,
+#sticky-header-active.dt-header-scroll .site-header__compare:hover svg path,
+#sticky-header-active.dt-header-scroll .dt-sc-header-toggle:hover svg,
+#sticky-header-active.dt-header-scroll .dt-sc-header-toggle:hover svg path,
+.dt-header-top .header:hover svg,
+.dt-header-top .header:hover svg path,
+.dt-header-top #cart-number:hover svg,
+.dt-header-top #cart-number:hover svg path,
+.dt-header-top .site-header__account:hover svg,
+.dt-header-top .site-header__account:hover svg path,
+.dt-header-top .site-header__compare:hover svg,
+.dt-header-top .site-header__compare:hover svg path,
+.dt-header-top .dt-sc-header-toggle:hover svg,
+.dt-header-top .dt-sc-header-toggle:hover svg path,
+#sticky-header-active.dt-header-top .header:hover svg,
+#sticky-header-active.dt-header-top .header:hover svg path,
+#sticky-header-active.dt-header-top #cart-number:hover svg,
+#sticky-header-active.dt-header-top #cart-number:hover svg path,
+#sticky-header-active.dt-header-top .site-header__account:hover svg,
+#sticky-header-active.dt-header-top .site-header__account:hover svg path,
+#sticky-header-active.dt-header-top .site-header__compare:hover svg,
+#sticky-header-active.dt-header-top .site-header__compare:hover svg path,
+#sticky-header-active.dt-header-top .dt-sc-header-toggle:hover svg,
+#sticky-header-active.dt-header-top .dt-sc-header-toggle:hover svg path {
+  fill: #cccccc !important;
+  stroke: #cccccc !important;
+  color: #cccccc !important;
+}
+
 /* Main navigation text colors */
 .dt-nav .dt-sc-nav-link,
 .dt-nav a,
@@ -496,6 +632,114 @@ a.site-header__icon.site-header__search_icon.dT_TopStickySearchBtn:hover svg pat
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+}
+
+/* Enhanced column layouts for different mega menu types */
+.dt-sc-column.three-column {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  align-items: start;
+}
+
+.dt-sc-column.six-column {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 25px;
+  align-items: start;
+}
+
+.dt-sc-column.four-column {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  align-items: start;
+}
+
+/* Enhanced mega menu content styling */
+.dt-sc--main-menu--mega .sub-menu-lists li {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.dt-sc--main-menu--mega .sub-menu-lists li h5 {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #222;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 8px;
+}
+
+.dt-sc--main-menu--mega .sub-menu-lists li h5 a {
+  color: #222 !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.dt-sc--main-menu--mega .sub-menu-lists li h5 a:hover {
+  color: #444444 !important;
+}
+
+.dt-sc--main-menu--mega .sub-menu-lists li ul li {
+  margin-bottom: 8px;
+  padding: 0;
+}
+
+.dt-sc--main-menu--mega .sub-menu-lists li ul li a {
+  color: #666 !important;
+  font-size: 14px;
+  padding: 6px 0;
+  display: block;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.dt-sc--main-menu--mega .sub-menu-lists li ul li a:hover {
+  color: #444444 !important;
+  background: #f8f8f8;
+  padding-left: 8px;
+  transform: translateX(4px);
+}
+
+/* Staggered animation for mega menu items */
+.dt-sc--main-menu--mega .sub-menu-lists li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.dt-sc--main-menu--mega .sub-menu-lists li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dt-sc--main-menu--mega .sub-menu-lists li:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.dt-sc--main-menu--mega .sub-menu-lists li:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.dt-sc--main-menu--mega .sub-menu-lists li:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.dt-sc--main-menu--mega .sub-menu-lists li:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.has-mega-menu:hover .dt-sc--main-menu--mega .sub-menu-lists li {
+  animation: slideInUp 0.4s ease forwards;
 }
 
 /* Mega Menu Columns */

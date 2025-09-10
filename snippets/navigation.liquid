@@ -71,17 +71,47 @@
 {%- endfor -%}
 {%- endfor -%}
 
-{%- comment -%} DEMO MEGA MENUS FOR MULTIPLE ITEMS {%- endcomment -%}
-{%- if link_title == 'catalog' or link_title == 'categories' -%}
-{% assign columnSize = 'four-column' %} 
-{% assign blockType = 'demo_menu' %}
+{%- comment -%} COMPLETE NAVIGATION SYSTEM LIKE EZINK {%- endcomment -%}
+
+{%- comment -%} TATTOOS MEGA MENU {%- endcomment -%}
+{%- if link_title == 'tattoos' -%}
+{% assign columnSize = 'three-column' %} 
+{% assign blockType = 'tattoos_mega' %}
 {%- assign dt_mega = true -%}
 {%- endif -%}
 
-{%- comment -%} TATTOOS DROPDOWN MENU {%- endcomment -%}
-{%- if link_title == 'tattoos' -%}
+{%- comment -%} ON SALE MEGA MENU {%- endcomment -%}
+{%- if link_title == 'on-sale' or link_title == 'sale' -%}
+{% assign columnSize = 'four-column' %} 
+{% assign blockType = 'sale_mega' %}
+{%- assign dt_mega = true -%}
+{%- endif -%}
+
+{%- comment -%} ARTISTS MEGA MENU {%- endcomment -%}
+{%- if link_title == 'artists' -%}
 {% assign columnSize = 'three-column' %} 
-{% assign blockType = 'tattoo_menu' %}
+{% assign blockType = 'artists_mega' %}
+{%- assign dt_mega = true -%}
+{%- endif -%}
+
+{%- comment -%} TATTOO PACKS MEGA MENU {%- endcomment -%}
+{%- if link_title == 'tattoo-packs' or link_title == 'packs' -%}
+{% assign columnSize = 'four-column' %} 
+{% assign blockType = 'packs_mega' %}
+{%- assign dt_mega = true -%}
+{%- endif -%}
+
+{%- comment -%} CATEGORIES MEGA MENU {%- endcomment -%}
+{%- if link_title == 'categories' -%}
+{% assign columnSize = 'six-column' %} 
+{% assign blockType = 'categories_mega' %}
+{%- assign dt_mega = true -%}
+{%- endif -%}
+
+{%- comment -%} CATALOG DEMO MEGA MENU (temporary) {%- endcomment -%}
+{%- if link_title == 'catalog' -%}
+{% assign columnSize = 'four-column' %} 
+{% assign blockType = 'demo_menu' %}
 {%- assign dt_mega = true -%}
 {%- endif -%}
 
@@ -217,7 +247,7 @@
         </li>
         {% endif %}
 
-        {% if blockType == "tattoo_menu" %}
+        {% if blockType == "tattoos_mega" %}
         <!-- TATTOOS MEGA MENU CONTENT -->
         <li>
           <h5><a href="/collections/by-size">By Size</a></h5>
@@ -227,17 +257,7 @@
             <li><a href="/collections/medium"><span>Medium</span></a></li>
             <li><a href="/collections/large"><span>Large</span></a></li>
             <li><a href="/collections/sleeve"><span>Sleeve</span></a></li>
-            <li><a href="/collections/all-sizes"><span>Shop All</span></a></li>
-          </ul>
-        </li>
-        <li>
-          <h5><a href="/collections/by-product">By Product</a></h5>
-          <ul>
-            <li><a href="/collections/new"><span>New</span></a></li>
-            <li><a href="/collections/best-sellers"><span>Best Sellers</span></a></li>
-            <li><a href="/collections/on-sale"><span>On Sale</span></a></li>
-            <li><a href="/collections/tattoo-packs"><span>Tattoo Packs</span></a></li>
-            <li><a href="/collections/all"><span>Shop All</span></a></li>
+            <li><a href="/collections/all-sizes"><span>Shop All Sizes</span></a></li>
           </ul>
         </li>
         <li>
@@ -246,14 +266,205 @@
             <li><a href="/collections/traditional"><span>Traditional</span></a></li>
             <li><a href="/collections/japanese"><span>Japanese</span></a></li>
             <li><a href="/collections/minimal"><span>Minimal</span></a></li>
-            <li><a href="/collections/patchwork"><span>Patchwork</span></a></li>
+            <li><a href="/collections/neo-traditional"><span>Neo Traditional</span></a></li>
             <li><a href="/collections/blackwork"><span>Blackwork</span></a></li>
             <li><a href="/collections/fineline"><span>Fineline</span></a></li>
+            <li><a href="/collections/geometric"><span>Geometric</span></a></li>
+            <li><a href="/collections/watercolor"><span>Watercolor</span></a></li>
+            <li><a href="/collections/realism"><span>Realism</span></a></li>
             <li><a href="/collections/cute"><span>Cute</span></a></li>
             <li><a href="/collections/astrology"><span>Astrology</span></a></li>
-            <li><a href="/collections/realism"><span>Realism</span></a></li>
-            <li><a href="/collections/american"><span>American</span></a></li>
-            <li><a href="/collections/all-styles"><span>Shop All</span></a></li>
+            <li><a href="/collections/patchwork"><span>Patchwork</span></a></li>
+            <li><a href="/collections/american"><span>American Traditional</span></a></li>
+            <li><a href="/collections/all-styles"><span>Shop All Styles</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/by-body-part">By Body Part</a></h5>
+          <ul>
+            <li><a href="/collections/arm-tattoos"><span>Arm Tattoos</span></a></li>
+            <li><a href="/collections/leg-tattoos"><span>Leg Tattoos</span></a></li>
+            <li><a href="/collections/back-tattoos"><span>Back Tattoos</span></a></li>
+            <li><a href="/collections/chest-tattoos"><span>Chest Tattoos</span></a></li>
+            <li><a href="/collections/hand-tattoos"><span>Hand Tattoos</span></a></li>
+            <li><a href="/collections/neck-tattoos"><span>Neck Tattoos</span></a></li>
+            <li><a href="/collections/foot-tattoos"><span>Foot Tattoos</span></a></li>
+            <li><a href="/collections/face-tattoos"><span>Face Tattoos</span></a></li>
+          </ul>
+        </li>
+        {% endif %}
+
+        {% if blockType == "categories_mega" %}
+        <!-- CATEGORIES MEGA MENU CONTENT -->
+        <li>
+          <h5><a href="/collections/featured">Featured Collections</a></h5>
+          <ul>
+            <li><a href="/collections/new-arrivals"><span>New Arrivals</span></a></li>
+            <li><a href="/collections/best-sellers"><span>Best Sellers</span></a></li>
+            <li><a href="/collections/trending"><span>Trending Now</span></a></li>
+            <li><a href="/collections/featured"><span>Staff Picks</span></a></li>
+            <li><a href="/collections/exclusive"><span>Exclusive Designs</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/by-artist">By Artist</a></h5>
+          <ul>
+            <li><a href="/collections/guest-artists"><span>Guest Artists</span></a></li>
+            <li><a href="/collections/resident-artists"><span>Resident Artists</span></a></li>
+            <li><a href="/collections/international-artists"><span>International Artists</span></a></li>
+            <li><a href="/collections/emerging-artists"><span>Emerging Artists</span></a></li>
+            <li><a href="/collections/all-artists"><span>All Artists</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/special-offers">Special Offers</a></h5>
+          <ul>
+            <li><a href="/collections/flash-sale"><span>Flash Sale</span></a></li>
+            <li><a href="/collections/bundle-deals"><span>Bundle Deals</span></a></li>
+            <li><a href="/collections/seasonal-sale"><span>Seasonal Sale</span></a></li>
+            <li><a href="/collections/clearance"><span>Clearance</span></a></li>
+            <li><a href="/collections/limited-edition"><span>Limited Edition</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/accessories">Accessories & Care</a></h5>
+          <ul>
+            <li><a href="/collections/aftercare"><span>Aftercare Products</span></a></li>
+            <li><a href="/collections/application-tools"><span>Application Tools</span></a></li>
+            <li><a href="/collections/removal-products"><span>Removal Products</span></a></li>
+            <li><a href="/collections/gift-cards"><span>Gift Cards</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/by-occasion">By Occasion</a></h5>
+          <ul>
+            <li><a href="/collections/festivals"><span>Festivals</span></a></li>
+            <li><a href="/collections/parties"><span>Parties</span></a></li>
+            <li><a href="/collections/photoshoots"><span>Photoshoots</span></a></li>
+            <li><a href="/collections/costumes"><span>Costumes</span></a></li>
+            <li><a href="/collections/everyday"><span>Everyday Wear</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/color-themes">By Color</a></h5>
+          <ul>
+            <li><a href="/collections/black-ink"><span>Black Ink</span></a></li>
+            <li><a href="/collections/color-tattoos"><span>Color Tattoos</span></a></li>
+            <li><a href="/collections/gold-foil"><span>Gold Foil</span></a></li>
+            <li><a href="/collections/silver-foil"><span>Silver Foil</span></a></li>
+            <li><a href="/collections/glow-in-dark"><span>Glow in the Dark</span></a></li>
+          </ul>
+        </li>
+        {% endif %}
+
+        {% if blockType == "sale_mega" %}
+        <!-- ON SALE MEGA MENU CONTENT -->
+        <li>
+          <h5><a href="/collections/flash-sale">Flash Sales</a></h5>
+          <ul>
+            <li><a href="/collections/24-hour-sale"><span>24 Hour Flash Sale</span></a></li>
+            <li><a href="/collections/weekend-special"><span>Weekend Special</span></a></li>
+            <li><a href="/collections/midnight-deals"><span>Midnight Deals</span></a></li>
+            <li><a href="/collections/lightning-deals"><span>Lightning Deals</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/seasonal-sale">Seasonal Sales</a></h5>
+          <ul>
+            <li><a href="/collections/summer-sale"><span>Summer Sale</span></a></li>
+            <li><a href="/collections/winter-special"><span>Winter Special</span></a></li>
+            <li><a href="/collections/holiday-deals"><span>Holiday Deals</span></a></li>
+            <li><a href="/collections/back-to-school"><span>Back to School</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/bundle-deals">Bundle Deals</a></h5>
+          <ul>
+            <li><a href="/collections/buy-2-get-1"><span>Buy 2 Get 1 Free</span></a></li>
+            <li><a href="/collections/starter-packs"><span>Starter Packs</span></a></li>
+            <li><a href="/collections/mega-bundles"><span>Mega Bundles</span></a></li>
+            <li><a href="/collections/value-packs"><span>Value Packs</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/clearance">Clearance</a></h5>
+          <ul>
+            <li><a href="/collections/end-of-line"><span>End of Line</span></a></li>
+            <li><a href="/collections/discontinued"><span>Discontinued Items</span></a></li>
+            <li><a href="/collections/last-chance"><span>Last Chance</span></a></li>
+            <li><a href="/collections/final-sale"><span>Final Sale</span></a></li>
+          </ul>
+        </li>
+        {% endif %}
+
+        {% if blockType == "artists_mega" %}
+        <!-- ARTISTS MEGA MENU CONTENT -->
+        <li>
+          <h5><a href="/collections/featured-artists">Featured Artists</a></h5>
+          <ul>
+            <li><a href="/collections/artist-of-the-month"><span>Artist of the Month</span></a></li>
+            <li><a href="/collections/trending-artists"><span>Trending Artists</span></a></li>
+            <li><a href="/collections/spotlight-artists"><span>Spotlight Artists</span></a></li>
+            <li><a href="/collections/new-artists"><span>New Artists</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/by-artist-type">By Artist Type</a></h5>
+          <ul>
+            <li><a href="/collections/guest-artists"><span>Guest Artists</span></a></li>
+            <li><a href="/collections/resident-artists"><span>Resident Artists</span></a></li>
+            <li><a href="/collections/international-artists"><span>International Artists</span></a></li>
+            <li><a href="/collections/emerging-artists"><span>Emerging Artists</span></a></li>
+            <li><a href="/collections/legend-artists"><span>Legend Artists</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/artist-collaborations">Collaborations</a></h5>
+          <ul>
+            <li><a href="/collections/artist-x-brand"><span>Artist x Brand</span></a></li>
+            <li><a href="/collections/limited-collabs"><span>Limited Collaborations</span></a></li>
+            <li><a href="/collections/exclusive-drops"><span>Exclusive Drops</span></a></li>
+            <li><a href="/collections/charity-collabs"><span>Charity Collaborations</span></a></li>
+          </ul>
+        </li>
+        {% endif %}
+
+        {% if blockType == "packs_mega" %}
+        <!-- TATTOO PACKS MEGA MENU CONTENT -->
+        <li>
+          <h5><a href="/collections/starter-packs">Starter Packs</a></h5>
+          <ul>
+            <li><a href="/collections/beginner-pack"><span>Beginner Pack</span></a></li>
+            <li><a href="/collections/first-tattoo-pack"><span>First Tattoo Pack</span></a></li>
+            <li><a href="/collections/trial-pack"><span>Trial Pack</span></a></li>
+            <li><a href="/collections/sampler-pack"><span>Sampler Pack</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/themed-packs">Themed Packs</a></h5>
+          <ul>
+            <li><a href="/collections/festival-pack"><span>Festival Pack</span></a></li>
+            <li><a href="/collections/party-pack"><span>Party Pack</span></a></li>
+            <li><a href="/collections/vacation-pack"><span>Vacation Pack</span></a></li>
+            <li><a href="/collections/photoshoot-pack"><span>Photoshoot Pack</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/size-packs">By Size Packs</a></h5>
+          <ul>
+            <li><a href="/collections/mini-pack"><span>Mini Pack</span></a></li>
+            <li><a href="/collections/medium-pack"><span>Medium Pack</span></a></li>
+            <li><a href="/collections/large-pack"><span>Large Pack</span></a></li>
+            <li><a href="/collections/mega-pack"><span>Mega Pack</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/premium-packs">Premium Packs</a></h5>
+          <ul>
+            <li><a href="/collections/vip-pack"><span>VIP Pack</span></a></li>
+            <li><a href="/collections/exclusive-pack"><span>Exclusive Pack</span></a></li>
+            <li><a href="/collections/limited-edition-pack"><span>Limited Edition Pack</span></a></li>
+            <li><a href="/collections/collector-pack"><span>Collector Pack</span></a></li>
           </ul>
         </li>
         {% endif %}
