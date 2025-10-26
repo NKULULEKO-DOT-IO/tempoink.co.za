@@ -1,0 +1,159 @@
+{%- if section.settings.home_page_only == false or template.name == 'index' -%}
+<section class="text-center announcement-bar {% if section.settings.hide_announcement_mobile %}  hide-mobile{% endif %}">
+  {%- if section.settings.text != blank or section.settings.promo_item_1 != blank -%}  
+   {% if section.settings.enable_marquee %}
+     <div class="announcement-marquee">
+       <div class="announcement-marquee-content">
+         {%- if section.settings.promo_item_1 != blank -%}
+           {%- if section.settings.promo_link_1 != blank -%}
+             <a href="{{ section.settings.promo_link_1 }}" class="announcement-item">{{ section.settings.promo_item_1 }}</a>
+           {%- else -%}
+             <span class="announcement-item">{{ section.settings.promo_item_1 }}</span>
+           {%- endif -%}
+           <span class="announcement-separator">{{ section.settings.promo_separator | default: '•' }}</span>
+         {%- endif -%}
+         
+         {%- if section.settings.promo_item_2 != blank -%}
+           {%- if section.settings.promo_link_2 != blank -%}
+             <a href="{{ section.settings.promo_link_2 }}" class="announcement-item">{{ section.settings.promo_item_2 }}</a>
+           {%- else -%}
+             <span class="announcement-item">{{ section.settings.promo_item_2 }}</span>
+           {%- endif -%}
+           <span class="announcement-separator">{{ section.settings.promo_separator | default: '•' }}</span>
+         {%- endif -%}
+         
+         {%- if section.settings.promo_item_3 != blank -%}
+           {%- if section.settings.promo_link_3 != blank -%}
+             <a href="{{ section.settings.promo_link_3 }}" class="announcement-item">{{ section.settings.promo_item_3 }}</a>
+           {%- else -%}
+             <span class="announcement-item">{{ section.settings.promo_item_3 }}</span>
+           {%- endif -%}
+           <span class="announcement-separator">{{ section.settings.promo_separator | default: '•' }}</span>
+         {%- endif -%}
+         
+         <!-- Multiple duplicates for seamless loop with no gaps -->
+         {%- for i in (1..6) -%}
+           {%- if section.settings.promo_item_1 != blank -%}
+             {%- if section.settings.promo_link_1 != blank -%}
+               <a href="{{ section.settings.promo_link_1 }}" class="announcement-item">{{ section.settings.promo_item_1 }}</a>
+             {%- else -%}
+               <span class="announcement-item">{{ section.settings.promo_item_1 }}</span>
+             {%- endif -%}
+             <span class="announcement-separator">{{ section.settings.promo_separator | default: '•' }}</span>
+           {%- endif -%}
+           
+           {%- if section.settings.promo_item_2 != blank -%}
+             {%- if section.settings.promo_link_2 != blank -%}
+               <a href="{{ section.settings.promo_link_2 }}" class="announcement-item">{{ section.settings.promo_item_2 }}</a>
+             {%- else -%}
+               <span class="announcement-item">{{ section.settings.promo_item_2 }}</span>
+             {%- endif -%}
+             <span class="announcement-separator">{{ section.settings.promo_separator | default: '•' }}</span>
+           {%- endif -%}
+           
+           {%- if section.settings.promo_item_3 != blank -%}
+             {%- if section.settings.promo_link_3 != blank -%}
+               <a href="{{ section.settings.promo_link_3 }}" class="announcement-item">{{ section.settings.promo_item_3 }}</a>
+             {%- else -%}
+               <span class="announcement-item">{{ section.settings.promo_item_3 }}</span>
+             {%- endif -%}
+             <span class="announcement-separator">{{ section.settings.promo_separator | default: '•' }}</span>
+           {%- endif -%}
+         {%- endfor -%}
+       </div>
+    </div>    
+  {% else %}
+  {{ section.settings.text }} 
+    <a href="javascript:void(0)" class="close close-icon dt-sc-btn"></a>
+  {%- endif -%}
+  {% endif %}
+</section>
+{%- endif -%}
+
+<style>
+  .announcement-bar{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    clear: both; 
+    width: 100%; 
+    background: {{ section.settings.announcement_bg_color | default: '#2c2c2c' }} !important;
+    color: {{ section.settings.announcement_text_color | default: '#ffffff' }} !important;
+    height: {{ section.settings.announcement_height | default: 40 }}px !important;
+    overflow: hidden;
+    border: none;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .announcement-bar>* { margin: 0; }
+  .announcement-bar .close-icon { background: transparent; position: absolute; transform: translateY(-50%); top: 50%; right: 15px; color: #ffffff; }
+  .announcement-bar:empty { display: none; }
+  
+  .announcement-marquee {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .announcement-marquee-content {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    animation: marqueeScroll {{ section.settings.marquee_speed | default: 100 }}s infinite linear;
+    gap: 20px;
+    width: max-content;
+    will-change: transform;
+  }
+  
+  .announcement-item {
+    color: {{ section.settings.announcement_text_color | default: '#ffffff' }};
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+    text-decoration: none;
+  }
+  
+  .announcement-item:hover {
+    color: {{ section.settings.announcement_text_color | default: '#ffffff' | color_modify: 'alpha', 0.8 }};
+    text-decoration: none;
+  }
+  
+  .announcement-separator {
+    color: {{ section.settings.announcement_text_color | default: '#ffffff' }};
+    margin: 0 20px;
+    font-size: 12px;
+  }
+  
+  @keyframes marqueeScroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .announcement-bar {
+      font-size: 11px;
+      height: 35px;
+    }
+    
+    .announcement-item {
+      font-size: 11px;
+    }
+    
+    .announcement-separator {
+      margin: 0 15px;
+      font-size: 11px;
+    }
+  }
+</style>

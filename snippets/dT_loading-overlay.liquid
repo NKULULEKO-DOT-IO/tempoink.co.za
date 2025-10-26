@@ -1,0 +1,194 @@
+<div class="dT_LoadingOverlay dT_collectionOverlay">
+  <div class="loading-content">
+    <div class="loading-logo">
+      <span class="logo-text">TEMPOINK</span>
+    </div>
+    <div class="loader"></div>
+    <div class="loading-text">Loading your perfect design...</div>
+  </div>
+</div>
+
+<style>
+.dT_LoadingOverlay, .dT_collectionOverlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  background: #ffffff;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.loading-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 300px;
+}
+
+.loading-logo {
+  margin-bottom: 40px;
+}
+
+.logo-text {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2c2c2c;
+  letter-spacing: 4px;
+  font-family: var(--DTFontTypo_Heading);
+  display: inline-block;
+  animation: logoFade 2s ease-in-out infinite alternate;
+}
+
+.loader {
+  height: 9px;
+  width: 60px;
+  margin: 0 auto 30px;
+  --c: no-repeat linear-gradient(#2c2c2c 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 26% 3px;
+  animation: l1 1s infinite;
+}
+
+.loading-text {
+  font-size: 16px;
+  color: #666666;
+  font-weight: 400;
+  animation: textPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes l1 {
+  0%,
+  70%,
+  100%   {background-position: calc(0*100%/3) 50% ,calc(1*100%/3) 50% ,calc(2*100%/3) 50% ,calc(3*100%/3) 50% }
+  11.67% {background-position: calc(0*100%/3) 0   ,calc(1*100%/3) 50% ,calc(2*100%/3) 50% ,calc(3*100%/3) 50% }
+  23.33% {background-position: calc(0*100%/3) 100%,calc(1*100%/3) 0   ,calc(2*100%/3) 50% ,calc(3*100%/3) 50% }
+  35%    {background-position: calc(0*100%/3) 50% ,calc(1*100%/3) 100%,calc(2*100%/3) 0   ,calc(3*100%/3) 50% }
+  46.67% {background-position: calc(0*100%/3) 50% ,calc(1*100%/3) 50% ,calc(2*100%/3) 100%,calc(3*100%/3) 0   }
+  58.34% {background-position: calc(0*100%/3) 50% ,calc(1*100%/3) 50% ,calc(2*100%/3) 50% ,calc(3*100%/3) 100%}
+}
+
+@keyframes logoFade {
+  0% {
+    opacity: 0.6;
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes textPulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+body.loadingdT, body.collectionPreloading {
+  overflow: hidden;   
+}
+
+body.collectionPreloading .dT_collectionOverlay, 
+body.loadingdT .dT_LoadingOverlay {
+  display: block;
+}
+
+.collectionListPreload {
+  position: relative;
+}
+
+.collectionListPreload:after {
+  content: '';
+  position: fixed;
+  opacity: 0.95;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+  background: #ffffff;
+  background-image: radial-gradient(circle at center, rgba(44,44,44,0.1) 0%, transparent 50%);
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .loading-content {
+    width: 250px;
+  }
+  
+  .logo-text {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+  
+  .loading-spinner {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .spinner-ring:nth-child(1) {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .spinner-ring:nth-child(2) {
+    width: 45px;
+    height: 45px;
+    top: 7.5px;
+    left: 7.5px;
+  }
+  
+  .spinner-ring:nth-child(3) {
+    width: 30px;
+    height: 30px;
+    top: 15px;
+    left: 15px;
+  }
+  
+  .loading-text {
+    font-size: 14px;
+  }
+}
+
+/* Smooth fade out animation */
+.dT_LoadingOverlay.fade-out,
+.dT_collectionOverlay.fade-out {
+  animation: fadeOut 0.5s ease-out forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+</style>
+
+<script>
+// Enhanced loading experience
+document.addEventListener('DOMContentLoaded', function() {
+  // Add smooth fade out when page loads
+  const loadingOverlay = document.querySelector('.dT_LoadingOverlay');
+  if (loadingOverlay && loadingOverlay.style.display !== 'none') {
+    setTimeout(() => {
+      loadingOverlay.classList.add('fade-out');
+      setTimeout(() => {
+        loadingOverlay.style.display = 'none';
+      }, 500);
+    }, 800); // Show for at least 800ms for smooth experience
+  }
+});
+</script>

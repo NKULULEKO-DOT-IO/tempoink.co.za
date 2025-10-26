@@ -1,0 +1,40 @@
+<script src="{{ 'jquery-3.5.1.min.js' | asset_url }}"></script>        
+<script src="{{ 'api.js' | shopify_asset_url }}" defer="defer"></script>
+<script src="{{ 'ajax-cart.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'dt-plugins.js' | asset_url }}"></script>  
+{% unless template contains 'customers' or template contains 'cart' %}
+<script src="{{ 'select2.min.js' | asset_url }}" defer="defer"></script>
+{% endunless %}
+<script src="{{ 'slick.min.js' | asset_url }}"></script>  
+{{ 'instafeed.js' | asset_url | script_tag }}
+{% if template contains 'customers' %}
+{{ "shopify_common.js" | shopify_asset_url | script_tag }}
+{{ "customer_area.js"  | shopify_asset_url | script_tag }}
+{% endif %}
+<script src="{{ 'wow.js' | asset_url }}"></script>
+{% liquid
+	assign cartGoalRange = settings.cart_goal_range | escape    
+    assign cartGoalPrice = cartGoalRange | split: cart.currency.iso_code    
+    assign cartGoalPriceTemp = cartGoalPrice[1] | split: ","
+    assign cartGoalPrice = cartGoalPriceTemp[0] | replace: "[" | replace: "]" | strip
+%}
+<script>  
+  var DT_THEME = {
+    strings: {
+      addToWishList: {{ 'products.wishlist.addToWishList' | t | json }},
+      viewMyWishList: {{ 'products.wishlist.viewMyWishList' | t | json }},     
+      addToCart: {{ 'products.product.add_to_cart' | t | json }},
+      soldOut: {{ 'products.product.sold_out' | t | json }},
+      unavailable: {{ 'products.product.unavailable' | t | json }},
+      addToCompareList: {{ 'products.compare.addToCompareList' | t | json }},
+      viewMyCompareList: {{ 'products.compare.viewMyCompareList' | t | json }},
+      minCompareProductNav: {{ 'products.compare.minCompareProductNav' | t | json }},
+      minCompareProduct: {{ 'products.compare.minCompareProduct' | t | json }}      
+    },
+    moneyFormat: {{ shop.money_format | json }},
+    cartGoalPrice: {{ cartGoalPrice | escape | json }},
+    freeEligible: {{ 'freeshipping.label.eligible' | t | json }},      
+    freeOnly: {{ 'freeshipping.label.only' | t | json }},
+    freeNotEligible: {{ 'freeshipping.label.not_eligible' | t | json }}
+  };      
+</script>

@@ -1,0 +1,93 @@
+{%- if canonical_url != blank  -%}
+<link rel="canonical" href="{{ canonical_url }}">
+{%- endif -%}
+
+{%- if settings.favicon != blank  -%}
+<link rel="shortcut icon" href="{{ settings.favicon | img_url: '16x16' }}" type="image/png" />
+{%- endif -%}
+
+<title>
+  {%- if template == 'index' -%}
+    TEMPOINK - Premium Temporary Tattoos | 1-2 Week Lasting Designs
+  {%- elsif template contains 'product' -%}
+    {{ page_title }} - Premium Temporary Tattoo | TEMPOINK
+  {%- elsif template contains 'collection' -%}
+    {{ page_title }} - Temporary Tattoos | TEMPOINK
+  {%- elsif template contains 'page' -%}
+    {{ page_title }} | TEMPOINK - Premium Temporary Tattoos
+  {%- elsif template contains 'blog' -%}
+    {{ page_title }} - Tattoo Inspiration & Tips | TEMPOINK
+  {%- else -%}
+    {{ page_title }}
+    {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+    {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+    {%- unless page_title contains 'TEMPOINK' %} | TEMPOINK{% endunless -%}
+  {%- endif -%}
+</title>
+
+{%- comment -%} SEO Meta Descriptions {%- endcomment -%}
+{% if page_description %}
+<meta name="description" content="{{ page_description | escape }}">
+{% elsif template == 'index' %}
+<meta name="description" content="Shop premium temporary tattoos at TEMPOINK. High-quality designs lasting 1-2 weeks. Free express shipping on orders over R1000. Browse hundreds of unique tattoo designs.">
+{% elsif template contains 'collection' and collection.description != blank %}
+<meta name="description" content="{{ collection.description | strip_html | truncate: 160 | escape }}">
+{% elsif template contains 'collection' %}
+<meta name="description" content="Browse our {{ collection.title | downcase }} temporary tattoo collection at TEMPOINK. Premium quality designs that last 1-2 weeks. Free shipping on orders over R1000.">
+{% elsif template contains 'product' and product.description != blank %}
+<meta name="description" content="{{ product.description | strip_html | truncate: 160 | escape }}">
+{% elsif template contains 'product' %}
+<meta name="description" content="{{ product.title }} - Premium temporary tattoo from TEMPOINK. High-quality design lasting 1-2 weeks. Easy application with professional results.">
+{% else %}
+<meta name="description" content="TEMPOINK - Premium temporary tattoos that last 1-2 weeks. High-quality designs with easy application. Free express shipping on orders over R1000.">
+{% endif %}
+
+{%- comment -%} SEO Keywords {%- endcomment -%}
+<meta name="keywords" content="temporary tattoos, fake tattoos, semi-permanent tattoos, body art, tattoo designs, sleeve tattoos, small tattoos, large tattoos, tattoo packs, TEMPOINK, South Africa, Durban">
+
+{%- comment -%} Additional SEO Meta Tags {%- endcomment -%}
+<meta name="author" content="TEMPOINK">
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1a1a1a">
+
+{%- comment -%} Geographic Targeting {%- endcomment -%}
+<meta name="geo.region" content="ZA">
+<meta name="geo.placename" content="South Africa">
+<meta name="geo.position" content="-29.8587;31.0218">
+<meta name="ICBM" content="-29.8587, 31.0218">
+
+{%- comment -%} Business Schema Markup {%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "TEMPOINK",
+  "description": "Premium temporary tattoos that last 1-2 weeks",
+  "url": "{{ shop.secure_url }}",
+  "logo": "{{ settings.logo | img_url: 'master' }}",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "ZA",
+    "addressRegion": "KwaZulu-Natal",
+    "addressLocality": "Durban"
+  },
+  "priceRange": "R149-R899",
+  "currenciesAccepted": "ZAR",
+  "paymentAccepted": ["Credit Card", "PayPal", "Bank Transfer"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Temporary Tattoos",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Temporary Tattoos",
+          "category": "Body Art"
+        }
+      }
+    ]
+  }
+}
+</script>

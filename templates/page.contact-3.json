@@ -1,0 +1,224 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "contact-layout-3",
+      "settings": {
+        "full": false,
+        "spacing_both_ends": false,
+        "padding": "0,0",
+        "margin": "-90,0",
+        "show_background_image": true,
+        "background_image": "shopify://shop_images/blogbg.png",
+        "background_style": "none",
+        "background_size": "cover",
+        "enable_overlay": false,
+        "background_color": "",
+        "overlay_transparency": "0.5",
+        "section_heading": "",
+        "section_sub_heading": "",
+        "section_description": "",
+        "section_button_text": "",
+        "section_button_link": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_description_color": "",
+        "section_button_bg_color": "",
+        "section_button_text_color": "",
+        "section_button_hover_bg_color": "",
+        "section_button_hover_text_color": "",
+        "heading_position": "text-center",
+        "enable_contact_info": true,
+        "contactborder_color": "#e4e4e4",
+        "contact_hvrborder_color": "#f17c8f",
+        "icontactheading_color": "#e4e4e4",
+        "contacticon_bg_color": "#f17c8f",
+        "contacticon_color": "#e4e4e4",
+        "contacticon_hoverbg_color": "#e4e4e4",
+        "contacticonhover_color": "#f17c8f",
+        "for_title": "#e4e4e4",
+        "for_title_decrip": "#e4e4e4",
+        "contact_detail_color": "#e4e4e4",
+        "contact_detail_title": true,
+        "contact_det_title": "Title",
+        "contact_module_address": true,
+        "contact_module_address_title": "Address",
+        "contact_module_address1": "No: 58 A, East Madison Street,",
+        "contact_module_address2": "Baltimore, MD, USA 4508",
+        "contact_phone": true,
+        "contact_module_contact_phonetitle": "Phone",
+        "contact_phone1": "<b>Toll-Free: </b> 0803 - 080 - 3081",
+        "contact_module_email": true,
+        "contact_module_contact_title": "Email",
+        "contact_module_email1": "mail@example.com",
+        "contact_module_email2": "support@example.com",
+        "contact_opening_hours": false,
+        "contact_opening__title": "Opening Hours",
+        "contact_opening_hours1": "Mon - Fri: 6am - 8pm",
+        "contact_opening_hours2": "Saturday: 8am - 4pm",
+        "contact_opening_hours3": "Sunday: 8am - 12pm",
+        "enable_contact_form": true,
+        "contact_form_title": "Contact Form",
+        "title_description": "Title Description"
+      }
+    },
+    "1648123372889e06c9": {
+      "type": "home-html-text",
+      "settings": {
+        "full": true,
+        "spacing_both_ends": false,
+        "padding": "0,0",
+        "margin": "0,0",
+        "show_background_image": true,
+        "background_image": "shopify://shop_images/carusol_bg.png",
+        "background_style": "none",
+        "background_size": "cover",
+        "enable_overlay": false,
+        "background_color": "",
+        "overlay_transparency": "0.5",
+        "section_heading": "",
+        "section_sub_heading": "",
+        "section_description": "",
+        "section_button_text": "",
+        "section_button_link": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_description_color": "",
+        "section_button_bg_color": "",
+        "section_button_text_color": "",
+        "section_button_hover_bg_color": "",
+        "section_button_hover_text_color": "",
+        "heading_position": "text-center",
+        "html": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d535824.851074982!2d-79.75849494069716!3d42.10656967042161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8832aa91bb8a60f7%3A0xd25ae10c2b29727!2s1083%20Blockville-Watts%20Flats%20Rd%2C%20Ashville%2C%20NY%2014710%2C%20USA!5e0!3m2!1sen!2sin!4v1644999816805!5m2!1sen!2sin\" width=\"100%\" height=\"500\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+        "custom_class_name": ""
+      }
+    },
+    "164812361210d2bc7f": {
+      "type": "home-image-gallery",
+      "disabled": true,
+      "blocks": {
+        "1648123611df515692-0": {
+          "type": "image_image",
+          "settings": {
+            "icon_class": "fa fa-instagram",
+            "overlay_title": "Shop the Look",
+            "link": ""
+          }
+        },
+        "1648123611df515692-1": {
+          "type": "image_image",
+          "settings": {
+            "icon_class": "fa fa-instagram",
+            "overlay_title": "Shop the Look",
+            "link": ""
+          }
+        },
+        "1648123611df515692-2": {
+          "type": "image_image",
+          "settings": {
+            "icon_class": "fa fa-instagram",
+            "overlay_title": "Shop the Look",
+            "link": ""
+          }
+        },
+        "1648123611df515692-3": {
+          "type": "image_image",
+          "settings": {
+            "icon_class": "fa fa-instagram",
+            "overlay_title": "Shop the Look",
+            "link": ""
+          }
+        },
+        "1648123611df515692-4": {
+          "type": "image_image",
+          "settings": {
+            "icon_class": "fa fa-instagram",
+            "overlay_title": "Shop the Look",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1648123611df515692-0",
+        "1648123611df515692-1",
+        "1648123611df515692-2",
+        "1648123611df515692-3",
+        "1648123611df515692-4"
+      ],
+      "settings": {
+        "full": true,
+        "spacing_both_ends": false,
+        "padding": "0,0",
+        "margin": "0,0",
+        "show_background_image": false,
+        "background_style": "none",
+        "background_size": "auto",
+        "enable_overlay": false,
+        "background_color": "",
+        "overlay_transparency": "0.5",
+        "section_heading": "",
+        "section_sub_heading": "",
+        "section_description": "",
+        "section_button_text": "",
+        "section_button_link": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_description_color": "",
+        "section_button_bg_color": "",
+        "section_button_text_color": "",
+        "section_button_hover_bg_color": "",
+        "section_button_hover_text_color": "",
+        "heading_position": "text-center",
+        "grid": "5",
+        "column_gap": "0",
+        "image_list_text": "",
+        "image_list_link": "",
+        "item_height": 450,
+        "item_height_laptop": 400,
+        "item_height_tab": 350,
+        "item_height_mobile": 300,
+        "image_link_bg_color": "",
+        "image_link_text_color": "",
+        "image_link_hover_bg_color": "",
+        "image_link_hover_text_color": "",
+        "image_overlay_icon_color": "",
+        "image_overlay_color": "",
+        "icon_size": "24",
+        "enable_slider": false,
+        "remove_button_space": false,
+        "enable_auto_height": true,
+        "items_per_view": 4,
+        "items_laptop_view": 3,
+        "items_tablet_view": 2,
+        "items_mobile_view": 1,
+        "enable_center_mode": false,
+        "slider_autoplay": 0,
+        "dots": true,
+        "carousel_pagination_alignment": "center_pagination",
+        "arrows": true,
+        "nav_arrow_position": "navigation-bottom-center",
+        "center_nav_arrow_alignment": "outside_container",
+        "navigation_button_color": "",
+        "navigation_button_icon_color": "",
+        "navigation_button_hover_color": "",
+        "navigation_button_hover_icon_color": "",
+        "navigation_dot_color": "",
+        "navigation_dot_active_color": "",
+        "custom_class_name": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1648123372889e06c9",
+    "164812361210d2bc7f"
+  ]
+}

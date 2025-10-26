@@ -1,0 +1,284 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "about-us",
+      "settings": {}
+    },
+    "165235496492108b81": {
+      "type": "home-specification-block",
+      "blocks": {
+        "14a8b828-7d17-46bb-8e81-11a4ea512359": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/icon-2_6553af6c-4ea9-4367-a6e1-638789d4a8ae.png",
+            "title": "Morden Tools",
+            "title_link": "shopify://collections/best-sellers",
+            "desc": "Velit sed ullamcorper morbi tincidunt ornare massa eget. Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam.  A diam sollicitudin tempor id eu nisl nunc mi. Leo integer malesuada nunc vel risus commodo viverra maecenas.",
+            "link_text": "View More",
+            "link": "",
+            "reverse_column": false
+          }
+        },
+        "c4a2dbbc-1ce8-45b6-acfc-1305e2aa3893": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/icon4.png",
+            "title": "Beutiful Cutter",
+            "title_link": "shopify://collections/new-arrivals",
+            "desc": "Ut aliquam purus sit amet luctus venenatis. Augue mauris augue neque gravida in fermentum et. Morbi tristique senectus et netus. Dui id ornare arcu odio. Consectetur adipiscing elit ut aliquam purus. Mattis nunc sed blandit libero volutpat sed.",
+            "link_text": "View More",
+            "link": "",
+            "reverse_column": false
+          }
+        },
+        "9b4fcca5-0d87-413d-83db-cdf8c883d0d2": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/ICON-5.png",
+            "title": "New Design",
+            "title_link": "shopify://collections/pretty-products",
+            "desc": "Turpis egestas maecenas pharetra convallis posuere morbi leo urna. Mauris pharetra et ultrices neque. Neque gravida in fermentum et. Aenean et tortor at risus viverra. Volutpat maecenas volutpat blandit aliquam etiam erat. Dui vivamus arcu felis bibendum.",
+            "link_text": "View More",
+            "link": "",
+            "reverse_column": false
+          }
+        }
+      },
+      "block_order": [
+        "14a8b828-7d17-46bb-8e81-11a4ea512359",
+        "c4a2dbbc-1ce8-45b6-acfc-1305e2aa3893",
+        "9b4fcca5-0d87-413d-83db-cdf8c883d0d2"
+      ],
+      "settings": {
+        "full": true,
+        "spacing_both_ends": true,
+        "padding": "0,0",
+        "margin": "0,110",
+        "show_background_image": false,
+        "background_style": "none",
+        "background_size": "auto",
+        "enable_overlay": false,
+        "background_color": "",
+        "overlay_transparency": "0.5",
+        "section_heading": "Our New Art",
+        "section_sub_heading": "Unique Design",
+        "section_description": "",
+        "section_button_text": "",
+        "section_button_link": "",
+        "section_heading_color": "#dedede",
+        "section_sub_heading_color": "#f17c8f",
+        "section_description_color": "",
+        "section_button_bg_color": "",
+        "section_button_text_color": "",
+        "section_button_hover_bg_color": "",
+        "section_button_hover_text_color": "",
+        "heading_position": "text-center",
+        "column_gap": "30px",
+        "vertical_position": "position-vertical-center",
+        "content_width": "50/48",
+        "content_width_lap": "40/60",
+        "content_width_tab": "35/65",
+        "enable_image": true,
+        "primary_image": "shopify://shop_images/1.jpg",
+        "primary_title": "",
+        "primary_title_link": "",
+        "primary_sub_title": "",
+        "primary_description": "",
+        "primary_button_text": "",
+        "primary_button_link": "",
+        "main_banner_style": "overlay",
+        "primary_text_align": "text-center",
+        "primary_position": "center",
+        "overlay_style_height": "600",
+        "border_radius": "0",
+        "enable_box_shadow": false,
+        "overlay_style": "use_overlay",
+        "overlay_color": "",
+        "overlay_opacity": "0",
+        "rotation_degree": "180",
+        "primary_banner_bg": "",
+        "primary_heading_color": "",
+        "primary_sub_heading_color": "",
+        "primary_description_color": "",
+        "primary_button_bg_color": "",
+        "primary_button_text_color": "",
+        "primary_button_hover_bg_color": "",
+        "primary_button_hover_text_color": "",
+        "specification_block_style": "default",
+        "block_icon_size": "70px",
+        "icon_border_radius": "0px",
+        "specification_style": "style3",
+        "block_icon_outer_size": "70px",
+        "additional_heading": "",
+        "additional_sub_heading": "",
+        "additional_description": "",
+        "additional_heading_position": "text-start",
+        "block_icon_bg": "rgba(0,0,0,0)",
+        "block_icon_color": "",
+        "block_heading_color": "#dedede",
+        "block_description_color": "#bababa",
+        "block_button_bg_color": "",
+        "block_button_text_color": "",
+        "block_button_hover_bg_color": "",
+        "block_button_hover_text_color": "",
+        "additional_heading_color": "",
+        "additional_sub_heading_color": "",
+        "additional_description_color": "",
+        "custom_class_name": "custom-about-banner"
+      }
+    },
+    "1652356478a1bfea0c": {
+      "type": "home-grid-banner",
+      "blocks": {
+        "1652356478a7ecce3c-0": {
+          "type": "content",
+          "settings": {
+            "grid_banner_type": "image",
+            "block_image": "shopify://shop_images/2-1.jpg",
+            "block_video": "https://www.w3schools.com/tags/mov_bbb.mp4",
+            "show_image": true,
+            "show_content": true,
+            "block_title": "Customize Your Body",
+            "block_sub_title": "Classic Tattoo",
+            "block_description": "Purus viverra accumsan in nisl nisi scelerisque. Arcu ac tortor dignissim convallis aenean. Porttitor eget dolor morbi non. Ut venenatis tellus in metus. Risus feugiat in ante metus dictum. Cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla. Id consectetur purus ut faucibus pulvinar.",
+            "block_button_text": "About Us",
+            "block_button_link": "shopify://collections/trending-products",
+            "block_text_align": "text-start",
+            "content_position": "center-left",
+            "reverse_column": false,
+            "block_banner_bg": "rgba(0,0,0,0)",
+            "block_content_box_bg": "rgba(0,0,0,0)",
+            "block_heading_color": "#dedede",
+            "block_sub_heading_color": "#f17c8f",
+            "block_description_color": "#bababa",
+            "block_button_bg_color": "rgba(0,0,0,0)",
+            "block_button_text_color": "#dedede",
+            "block_button_hover_bg_color": "rgba(0,0,0,0)",
+            "block_button_hover_text_color": "#f17c8f",
+            "overlay_style": "use_gradient_overlay",
+            "overlay_color": "#141414",
+            "overlay_opacity": "0.5",
+            "rotation_degree": "180"
+          }
+        },
+        "bd3cf4ab-41a8-4019-8b3c-53c05f64df79": {
+          "type": "content",
+          "settings": {
+            "grid_banner_type": "image",
+            "block_image": "shopify://shop_images/2-2.jpg",
+            "block_video": "https://www.w3schools.com/tags/mov_bbb.mp4",
+            "show_image": true,
+            "show_content": true,
+            "block_title": "Premium Quality Designs",
+            "block_sub_title": "Skilled Service",
+            "block_description": "Molestie at elementum eu facilisi rehing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+            "block_button_text": "About Us",
+            "block_button_link": "shopify://collections/new-arrivals",
+            "block_text_align": "text-end",
+            "content_position": "center-right",
+            "reverse_column": true,
+            "block_banner_bg": "rgba(0,0,0,0)",
+            "block_content_box_bg": "rgba(0,0,0,0)",
+            "block_heading_color": "#dedede",
+            "block_sub_heading_color": "#f17c8f",
+            "block_description_color": "#bababa",
+            "block_button_bg_color": "rgba(0,0,0,0)",
+            "block_button_text_color": "#bababa",
+            "block_button_hover_bg_color": "rgba(0,0,0,0)",
+            "block_button_hover_text_color": "#f17c8f",
+            "overlay_style": "use_gradient_overlay",
+            "overlay_color": "#141414",
+            "overlay_opacity": "0.5",
+            "rotation_degree": "180"
+          }
+        }
+      },
+      "block_order": [
+        "1652356478a7ecce3c-0",
+        "bd3cf4ab-41a8-4019-8b3c-53c05f64df79"
+      ],
+      "settings": {
+        "full": false,
+        "spacing_both_ends": false,
+        "padding": "100,100",
+        "margin": "0,0",
+        "show_background_image": false,
+        "background_style": "none",
+        "background_size": "cover",
+        "enable_overlay": true,
+        "background_color": "#1a1a1a",
+        "overlay_transparency": "1",
+        "section_heading": "",
+        "section_sub_heading": "",
+        "section_description": "",
+        "section_button_text": "",
+        "section_button_link": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_description_color": "",
+        "section_button_bg_color": "",
+        "section_button_text_color": "",
+        "section_button_hover_bg_color": "",
+        "section_button_hover_text_color": "",
+        "heading_position": "text-center",
+        "block_banner_style": "list",
+        "column_gap": "60",
+        "grid": "2",
+        "border_radius": "0",
+        "enable_box_shadow": false,
+        "equal_height": false,
+        "content_width": "50/50",
+        "lap_content_width": "50/50",
+        "overlay_style_height": 460,
+        "overlay_style_height_laptop": 460,
+        "overlay_style_height_mobile": 400,
+        "custom_class_name": "custom-about-grid-banner"
+      }
+    },
+    "165235876056aacd17": {
+      "type": "home-html-text",
+      "settings": {
+        "full": false,
+        "spacing_both_ends": false,
+        "padding": "100,100",
+        "margin": "0,0",
+        "show_background_image": false,
+        "background_style": "none",
+        "background_size": "auto",
+        "enable_overlay": false,
+        "background_color": "",
+        "overlay_transparency": "0.5",
+        "section_heading": "Touch Us : Crafted With New Perfection",
+        "section_sub_heading": "",
+        "section_description": "Mattis nunc sed blandit libero. Id leo in vitae turpis. Aliquet enim tortor at auctor urna nunc id cursus metus.",
+        "section_button_text": "Shop Now",
+        "section_button_link": "shopify://collections/our-products",
+        "section_heading_color": "#dedede",
+        "section_sub_heading_color": "",
+        "section_description_color": "#bababa",
+        "section_button_bg_color": "rgba(0,0,0,0)",
+        "section_button_text_color": "#dedede",
+        "section_button_hover_bg_color": "rgba(0,0,0,0)",
+        "section_button_hover_text_color": "#f17c8f",
+        "heading_position": "text-center",
+        "html": "<!--<div id='insta-feed'></div>-->",
+        "custom_class_name": "custom-about-html-text"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "165235496492108b81",
+    "1652356478a1bfea0c",
+    "165235876056aacd17"
+  ]
+}

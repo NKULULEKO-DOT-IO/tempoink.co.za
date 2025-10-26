@@ -1,0 +1,49 @@
+{% if section.settings.search_type == 'search-icon' %}
+<div id="dT_top-sticky">
+  <div class="container">
+    <div class="row">
+      <div class="{% if section.settings.enable_predictive_search %} dT_ProductProactiveSearch {% endif %}">
+       <a href="#" class="dT_TopStickySearchCloseBtn close">{% include 'icon-close' %}</a>
+        <form method="GET" action="/search" autocomplete="off">
+          <div class="search-box">
+            <input type="text" name="q" class="form-control" autocomplete="off" placeholder="Search Our Store" aria-label="Search Our Store"
+                   v-model="search" @keyup="inputChanged" @keydown.down="onArrow" @keydown.up="onArrow">
+            <input type="hidden" name="product" value="product" />
+            <div class="input-group-append">
+              <button class="dt-sc-btn" type="submit">
+                {% include 'icon-search' %}
+              </button>
+            </div>
+          </div>
+        </form>
+        
+        <div class="dT_PredictiveSearchResult_Section">
+          <template v-if="dT_ProductProactiveSugesstions">
+            <ul class="dt-sc-ProductSugesstions">
+              <li v-for="(item, i) in filteredSearchResults" :key="i" class="autocomplete-results" v-show="isOpen" :class="{ 'is-active': i === arrowCounter }">
+                <template v-if="item.image">
+                  <a :href="item.url">
+                    <img class="img-fluid mr-4 mb-2" width="150" :src="item.image" alt="">
+                  </a>
+                </template>
+                <div class="media-body">
+                  <a :href="item.url">${ item.product_title }</a>
+                  {% comment %}
+                  <template v-if="!item.product_has_only_default_variant">
+                    <p>${ item.variant_title }</p>
+                  </template>
+                  {% endcomment %}
+                  <div class="price">
+                    <span class="dt-price-symbol">{{ cart.currency.symbol  }}</span> ${item.price}
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </template>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}

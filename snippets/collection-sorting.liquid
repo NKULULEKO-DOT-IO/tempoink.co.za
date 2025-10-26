@@ -1,0 +1,96 @@
+<div class="sortby">
+  <label for="SortBy">{{ 'collections.sorting.title' | t}} </label>
+  <select name="SortBy" id="SortBy" class="dT_SortBy">
+    {% for option in collection.sort_options %}
+    <option value="{{ option.value }}" {% if option.value == collection.sort_by %}selected{% endif %}>{{ option.name }}</option>
+    {% endfor %}
+  </select>
+</div>
+
+<style>
+.sortby {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--DTFontTypo_Body);
+}
+
+.sortby label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+  white-space: nowrap;
+}
+
+#SortBy {
+  appearance: none;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 12px 40px 12px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  min-width: 140px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+}
+
+#SortBy:hover {
+  border-color: #f17c8f;
+  box-shadow: 0 2px 4px rgba(241, 124, 143, 0.1);
+}
+
+#SortBy:focus {
+  outline: none;
+  border-color: #f17c8f;
+  box-shadow: 0 0 0 3px rgba(241, 124, 143, 0.1);
+}
+
+#SortBy option {
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #333;
+  background: #ffffff;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .sortby {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+  }
+
+  #SortBy {
+    width: 100%;
+    min-width: auto;
+  }
+}
+</style>
+
+<script>
+  // Save existing sort parameters
+//   Shopify.queryParams = {};
+//   if(location.search.length) {
+//     for(var aKeyValue, i = 0, aCouples = location.search.substr(1).split('&'); i < aCouples.length; i++) {
+//       aKeyValue = aCouples[i].split('=');
+//       if (aKeyValue.length > 1) {
+//         Shopify.queryParams[decodeURIComponent(aKeyValue[0])] = decodeURIComponent(aKeyValue[1]);
+//       }
+//     }
+//   }
+
+  // Add existing sort parameters to current URL
+//   document.querySelector('#SortBy').addEventListener('change', function(e) {
+//     var value = e.currentTarget.value;
+//     Shopify.queryParams.sort_by = value;
+//     location.search = new URLSearchParams(Shopify.queryParams).toString();
+//   });
+</script>

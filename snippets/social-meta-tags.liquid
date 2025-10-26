@@ -1,0 +1,117 @@
+{%- liquid
+  if request.page_type == 'index'
+    assign og_title = 'TEMPOINK - Premium Temporary Tattoos | 1-2 Week Lasting Designs'
+    assign og_description = 'Shop premium temporary tattoos at TEMPOINK. High-quality designs lasting 1-2 weeks. Free express shipping on orders over R1000. Browse hundreds of unique tattoo designs.'
+  elsif request.page_type == 'product'
+    assign og_title = product.title | append: ' - Premium Temporary Tattoo | TEMPOINK'
+    assign og_description = product.description | strip_html | truncate: 160
+    assign og_type = 'product'
+  elsif request.page_type == 'collection'
+    assign og_title = collection.title | append: ' - Temporary Tattoos | TEMPOINK'
+    assign og_description = collection.description | strip_html | truncate: 160
+    assign og_type = 'product.group'
+  elsif request.page_type == 'article'
+    assign og_title = article.title | append: ' - Tattoo Inspiration & Tips | TEMPOINK'
+    assign og_description = article.excerpt | strip_html | truncate: 160
+    assign og_type = 'article'
+  elsif request.page_type == 'page'
+    assign og_title = page.title | append: ' | TEMPOINK - Premium Temporary Tattoos'
+    assign og_description = page.content | strip_html | truncate: 160
+  else
+    assign og_title = page_title | append: ' | TEMPOINK'
+    assign og_description = page_description | default: 'TEMPOINK - Premium temporary tattoos that last 1-2 weeks. High-quality designs with easy application.'
+  endif
+
+  assign og_url = canonical_url | default: shop.url
+  assign og_type = og_type | default: 'website'
+
+  if request.page_type == 'password'
+    assign og_url = shop.url
+  endif
+%}
+
+{%- comment -%} Open Graph Meta Tags {%- endcomment -%}
+<meta property="og:site_name" content="TEMPOINK">
+<meta property="og:url" content="{{ og_url }}">
+<meta property="og:title" content="{{ og_title | escape }}">
+<meta property="og:type" content="{{ og_type }}">
+<meta property="og:description" content="{{ og_description | escape }}">
+<meta property="og:locale" content="en_ZA">
+
+{%- comment -%} Open Graph Images {%- endcomment -%}
+{%- if request.page_type == 'product' and product.featured_image -%}
+  <meta property="og:image" content="https:{{ product.featured_image | img_url: '1200x630' }}">
+  <meta property="og:image:secure_url" content="https:{{ product.featured_image | img_url: '1200x630' }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ product.featured_image.alt | escape }}">
+{%- elsif request.page_type == 'collection' and collection.image -%}
+  <meta property="og:image" content="https:{{ collection.image | img_url: '1200x630' }}">
+  <meta property="og:image:secure_url" content="https:{{ collection.image | img_url: '1200x630' }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ collection.title | escape }}">
+{%- elsif page_image -%}
+  <meta property="og:image" content="https:{{ page_image | img_url: '1200x630' }}">
+  <meta property="og:image:secure_url" content="https:{{ page_image | img_url: '1200x630' }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+{%- elsif settings.logo -%}
+  <meta property="og:image" content="https:{{ settings.logo | img_url: '1200x630' }}">
+  <meta property="og:image:secure_url" content="https:{{ settings.logo | img_url: '1200x630' }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="TEMPOINK Logo">
+{%- endif -%}
+
+{%- comment -%} Product Specific Meta Tags {%- endcomment -%}
+{%- if request.page_type == 'product' -%}
+  <meta property="og:price:amount" content="{{ product.price | money_without_currency | strip_html }}">
+  <meta property="og:price:currency" content="{{ cart.currency.iso_code }}">
+  <meta property="product:brand" content="TEMPOINK">
+  <meta property="product:availability" content="{% if product.available %}in stock{% else %}out of stock{% endif %}">
+  <meta property="product:condition" content="new">
+  <meta property="product:price:amount" content="{{ product.price | money_without_currency | strip_html }}">
+  <meta property="product:price:currency" content="{{ cart.currency.iso_code }}">
+  <meta property="product:retailer_item_id" content="{{ product.id }}">
+{%- endif -%}
+
+{%- comment -%} Twitter Card Meta Tags {%- endcomment -%}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@TEMPOINK">
+<meta name="twitter:creator" content="@TEMPOINK">
+<meta name="twitter:title" content="{{ og_title | escape }}">
+<meta name="twitter:description" content="{{ og_description | escape }}">
+
+{%- if request.page_type == 'product' and product.featured_image -%}
+  <meta name="twitter:image" content="https:{{ product.featured_image | img_url: '1200x630' }}">
+  <meta name="twitter:image:alt" content="{{ product.featured_image.alt | escape }}">
+{%- elsif request.page_type == 'collection' and collection.image -%}
+  <meta name="twitter:image" content="https:{{ collection.image | img_url: '1200x630' }}">
+  <meta name="twitter:image:alt" content="{{ collection.title | escape }}">
+{%- elsif page_image -%}
+  <meta name="twitter:image" content="https:{{ page_image | img_url: '1200x630' }}">
+{%- elsif settings.logo -%}
+  <meta name="twitter:image" content="https:{{ settings.logo | img_url: '1200x630' }}">
+  <meta name="twitter:image:alt" content="TEMPOINK Logo">
+{%- endif -%}
+
+{%- comment -%} Pinterest Rich Pins {%- endcomment -%}
+{%- if request.page_type == 'product' -%}
+  <meta property="og:type" content="product">
+  <meta property="product:price:amount" content="{{ product.price | money_without_currency | strip_html }}">
+  <meta property="product:price:currency" content="{{ cart.currency.iso_code }}">
+{%- endif -%}
+
+{%- comment -%} WhatsApp Sharing Optimization {%- endcomment -%}
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+{%- comment -%} Additional Social Platform Tags {%- endcomment -%}
+<meta name="format-detection" content="telephone=no">
+<meta name="msapplication-TileColor" content="#1a1a1a">
+<meta name="application-name" content="TEMPOINK">
+<meta name="apple-mobile-web-app-title" content="TEMPOINK">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent")

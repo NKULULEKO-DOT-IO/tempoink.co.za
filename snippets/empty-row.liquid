@@ -1,0 +1,27 @@
+
+<li class="swiper-slide" style="display: none !important;">
+  <div class="products" style="display: none !important;">
+    <div class="product-container" style="display: none !important;">
+      <a href="#" class="grid-link" style="display: none !important;">
+        {% if forloop.index == 3 %}
+        <div class="featured-tag" style="display: none !important;">
+          <span class="badge badge--sale" style="display: none !important;">
+            <span class="gift-tag badge__text{% if sale_text.size > 7 %} badge__text--small{% endif %}" style="display: none !important;">{{ 'products.product.sale' | t }}</span>
+          </span>
+        </div>{% endif %}
+
+        <div class="reveal" style="display: none !important;">
+          {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+          {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+        </div>
+      </a>
+
+    </div>
+    <div class="product-detail" style="display: none !important;">
+      <a href="#" class="grid-link__title" style="display: none !important;">Sample title {{ i }}</a>
+      <div class="grid-link__meta" style="display: none !important;">
+        <div class="product_price" style="display: none !important;"> <span class="money" data-currency-usd="$320.00" style="display: none !important;">$0.00</span> </div>
+        <del class="grid-link__sale_price" style="display: none !important;"><span class="money" data-currency-usd="$756.00" style="display: none !important;">$0.00</span></del> </div>
+    </div>
+  </div>
+</li>

@@ -1,0 +1,38 @@
+<div class="{{ footer_column_alignment}}">
+{% if block.settings.title != blank  and section.settings.show_footer_title %}             
+  <h5 class="footer__title ">{{ block.settings.title}}</h5> 
+  {% endif %}
+  {% if block.settings.logo %}
+
+  {%- assign footer_logo_size = block.settings.footer_logo_height | prepend: 'x' -%}  
+
+  <a href="{{ routes.root_url }}">
+    <img src="{{ block.settings.logo | img_url: footer_logo_size, scale: 2 }}" alt="{{ block.settings.logo.alt | default: shop.name }}" style="max-height:{{ block.settings.footer_logo_height}}px">
+  </a>
+  {% endif %}
+
+  <p>{{ block.settings.text }}</p>
+
+  {%- if block.settings.url  != blank and block.settings.link_text  != blank -%}
+  <a href="{{ block.settings.url }}" class="dt-sc-btn">{{ block.settings.link_text }}</a>
+  {%- endif -%}
+
+
+  {% if section.settings.social_placement == 'with_logo'  and section.settings.show_social %}
+  {% include 'social-links' %}
+  {% endif %}
+  {% if section.settings.show_payment_icons  and  section.settings.payment_placement == 'with_logo' %}
+  {% unless shop.enabled_payment_types == empty %}
+  <div class="footer__payment-icons grid__item wide--one-third post-large--one-third large--one-third medium--one-whole">
+    <ul class="dt-sc-list-inline payment-icons">
+      {% for type in shop.enabled_payment_types %}
+      <li class="icon--payment">
+        {{ type | payment_type_svg_tag }}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endunless %}
+  {% endif %}
+
+</div>

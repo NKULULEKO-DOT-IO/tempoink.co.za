@@ -1,0 +1,1099 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "16484715585d0b75d2": {
+      "type": "slideshow",
+      "blocks": {
+        "bed23b7f-3ae1-4151-b13d-f30b602334db": {
+          "type": "Slider",
+          "settings": {
+            "slider_type": "image",
+            "image": "shopify://shop_images/Artboard_1.png",
+            "mobile_image": "shopify://shop_images/Artboard_1.png",
+            "video_url": "",
+            "mobile_bg_clr": "#000000",
+            "text_alignment": "text-start",
+            "content_position": "top-left",
+            "show_image": false,
+            "show_content": true,
+            "title_2": "",
+            "subheading_color": "",
+            "subheading_size": "",
+            "title": "Premium Temporary Tattoos",
+            "heading_color": "#e4e4e4",
+            "heading_size": "94",
+            "desc": "Transform your look instantly with our premium collection of temporary tattoos. Express your unique style with designs that last days, not years.",
+            "desc_color": "#a2a2a2",
+            "desc_size": "18",
+            "button": "Shop Collection",
+            "link": "shopify://collections/all",
+            "btn_bg_color": "#ffffff",
+            "btn_txt_color": "#141414",
+            "btn_hoverbg_color": "#f8f8f8",
+            "btn_hovertxt_color": "#141414",
+            "button_2": "",
+            "link_2": "",
+            "btn_bg_color_2": "",
+            "btn_txt_color_2": "",
+            "btn_hoverbg_color_2": "",
+            "btn_hovertxt_color_2": "",
+            "slide_content_bg": ""
+          }
+        }
+      },
+      "block_order": [
+        "bed23b7f-3ae1-4151-b13d-f30b602334db"
+      ],
+      "settings": {
+        "full": true,
+        "spacing_both_ends": false,
+        "margin": "0,0",
+        "slider_height": 930,
+        "slider_height_lap": 800,
+        "slider_height_tab": 600,
+        "slider_height_mobile": 480,
+        "content_within_container": true,
+        "enable_box_shadow": false,
+        "border_radius": "0",
+        "content_border_radius": "0",
+        "autoplay": false,
+        "slideshow_speed": "5000",
+        "dots": false,
+        "carousel_pagination_alignment": "center_pagination",
+        "carousel_pagination_bottom_alignment": "inside_element",
+        "arrows": false,
+        "nav_arrow_position": "navigation-bottom-center",
+        "center_nav_arrow_alignment": "inside_container",
+        "navigation_button_color": "",
+        "navigation_button_icon_color": "",
+        "navigation_button_hover_color": "",
+        "navigation_button_hover_icon_color": "",
+        "navigation_dot_color": "",
+        "navigation_dot_active_color": "",
+        "enable_overlay": false,
+        "overlay_color_start": "#ffffff",
+        "overlay_color_end": "#ffffff",
+        "overlay_opacity": 0.1,
+        "overlay_direction": "to bottom",
+        "custom_class_name": "custom-slider"
+      }
+    },
+    "1648812039448a8739": {
+      "type": "home-grid-banner",
+      "blocks": {
+        "1648812039656ef6f1-0": {
+          "type": "content",
+          "settings": {
+            "grid_banner_type": "image",
+            "block_image": "shopify://shop_images/EdgyButterfly_1_300x_f5bb3634-6f35-4954-bbb5-c3309c583971.webp",
+            "block_video": "",
+            "show_image": true,
+            "show_content": true,
+            "block_title": "Story Behind Every Tattoo",
+            "block_sub_title": "Express Yourself Without Commitment",
+            "block_description": "<p>Discover the art of temporary self-expression with our premium collection of temporary tattoos. From traditional designs to Japanese-inspired artwork, minimal aesthetics to realistic imagery.</p>\n<p>Each design tells a story - yours to wear, yours to change. Whether you're exploring your style or making a statement, our tattoos let you express who you are today, without the permanent commitment.</p>",
+            "block_button_text": "Explore Collection",
+            "block_button_link": "shopify://collections/all",
+            "block_text_align": "text-start",
+            "content_position": "center-right",
+            "reverse_column": false,
+            "block_banner_bg": "#ffffff",
+            "block_content_box_bg": "#ffffff",
+            "block_heading_color": "#2c2c2c",
+            "block_sub_heading_color": "#666666",
+            "block_description_color": "#666666",
+            "block_button_bg_color": "#2c2c2c",
+            "block_button_text_color": "#ffffff",
+            "block_button_hover_bg_color": "#666666",
+            "block_button_hover_text_color": "#ffffff",
+            "overlay_style": "use_gradient_overlay",
+            "overlay_color": "",
+            "overlay_opacity": "0.5",
+            "rotation_degree": "180"
+          }
+        }
+      },
+      "block_order": [
+        "1648812039656ef6f1-0"
+      ],
+      "settings": {
+        "full": true,
+        "spacing_both_ends": false,
+        "padding": "30,30",
+        "margin": "0,0",
+        "show_background_image": false,
+        "background_style": "none",
+        "background_size": "auto",
+        "enable_overlay": false,
+        "background_color": "#ffffff",
+        "overlay_transparency": "0",
+        "section_heading": "",
+        "section_sub_heading": "",
+        "section_description": "",
+        "section_button_text": "",
+        "section_button_link": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_description_color": "",
+        "section_button_bg_color": "",
+        "section_button_text_color": "",
+        "section_button_hover_bg_color": "",
+        "section_button_hover_text_color": "",
+        "heading_position": "text-center",
+        "block_banner_style": "list",
+        "column_gap": "30",
+        "grid": "2",
+        "border_radius": "0",
+        "enable_box_shadow": false,
+        "equal_height": false,
+        "content_width": "53/38",
+        "lap_content_width": "40/60",
+        "overlay_style_height": 570,
+        "overlay_style_height_laptop": 500,
+        "overlay_style_height_mobile": 400,
+        "custom_class_name": "custom-about-banner"
+      }
+    },
+    "1648816451b872c30b": {
+      "type": "home-support-block",
+      "blocks": {
+        "1648816451623158f2-0": {
+          "type": "icon",
+          "settings": {
+            "title": "Premium Quality",
+            "title_link": "",
+            "desc": "Professional-grade temporary tattoos that last 3-7 days. Made with skin-safe, FDA-approved materials for worry-free application.",
+            "link_text": "",
+            "link": ""
+          }
+        },
+        "1648816451623158f2-1": {
+          "type": "icon",
+          "settings": {
+            "title": "Easy Application",
+            "title_link": "",
+            "desc": "Simple 3-step process: peel, press, and wet. Perfect results every time in under 60 seconds. No special tools required.",
+            "link_text": "",
+            "link": ""
+          }
+        },
+        "1648816451623158f2-2": {
+          "type": "icon",
+          "settings": {
+            "title": "Waterproof & Durable",
+            "title_link": "",
+            "desc": "Swim, shower, and sweat without worry. Our tattoos are designed to withstand daily activities while maintaining vibrant colors.",
+            "link_text": "",
+            "link": ""
+          }
+        },
+        "4b7972e1-0ae2-402f-93f1-5f68ff0466ca": {
+          "type": "icon",
+          "settings": {
+            "title": "Safe & Painless Removal",
+            "title_link": "",
+            "desc": "Gentle removal with baby oil or makeup remover. No damage to your skin, no permanent commitment. Pain-free process.",
+            "link_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1648816451623158f2-0",
+        "1648816451623158f2-1",
+        "1648816451623158f2-2",
+        "4b7972e1-0ae2-402f-93f1-5f68ff0466ca"
+      ],
+      "settings": {
+        "full": true,
+        "spacing_both_ends": true,
+        "padding": "70,70",
+        "margin": "0,0",
+        "show_background_image": false,
+        "background_style": "none",
+        "background_size": "cover",
+        "enable_overlay": false,
+        "background_color": "#f8f8f8",
+        "overlay_transparency": "0.5",
+        "section_heading": "",
+        "section_sub_heading": "",
+        "section_description": "",
+        "section_button_text": "",
+        "section_button_link": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_description_color": "",
+        "section_button_bg_color": "",
+        "section_button_text_color": "",
+        "section_button_hover_bg_color": "",
+        "section_button_hover_text_color": "",
+        "heading_position": "text-center",
+        "text_position": "text-center",
+        "block_style": "default-style",
+        "grid": "4",
+        "enable_grid_style": true,
+        "vertical_position": "position-vertical-center",
+        "reverse_column": false,
+        "border_radius": "0px",
+        "icon_border_radius": "0px",
+        "enable_box_shadow": false,
+        "block_icon_outer_size": "70px",
+        "block_icon_size": "70px",
+        "block_border_color": "",
+        "block_bg": "",
+        "block_icon_bg": "",
+        "block_icon_border_color": "",
+        "block_heading_color": "#e4e4e4",
+        "block_description_color": "#bababa",
+        "block_button_bg_color": "",
+        "block_button_text_color": "",
+        "block_button_hover_bg_color": "",
+        "block_button_hover_text_color": "",
+        "custom_class_name": "custom-support-block"
+      }
+    },
+    "1648884977aa4cb3ff": {
+      "type": "home-product-carousel",
+      "blocks": {
+        "2ca43f0b-9c7c-4493-a2a5-18b19c4d513c": {
+          "type": "banner",
+          "settings": {
+            "show_image": false,
+            "block_title": "Traditional Tattoo Style",
+            "block_sub_title": "Creative Tattos",
+            "block_description": "",
+            "block_button_text": "",
+            "block_button_link": "",
+            "block_banner_style": "overlay",
+            "block_text_align": "text-center",
+            "grid_banner_box_shadow": false,
+            "grid_banner_border_radius": "0",
+            "overlay_style_height": "",
+            "content_position": "center",
+            "grid_banner_heading_color": "#2c2c2c",
+            "grid_banner_sub_heading_color": "#666666",
+            "grid_banner_description_color": "",
+            "grid_banner_button_bg_color": "",
+            "grid_banner_button_text_color": "",
+            "grid_banner_button_hover_bg_color": "",
+            "grid_banner_button_hover_text_color": "",
+            "grid_banner_content_bg": "#ffffff",
+            "banner_image_overlay_style": "with-overlay",
+            "banner_image_overlay_color": "",
+            "banner_image_overlay_opacity": "0.5",
+            "banner_image_rotation_degree": "180"
+          }
+        }
+      },
+      "block_order": [
+        "2ca43f0b-9c7c-4493-a2a5-18b19c4d513c"
+      ],
+      "settings": {
+        "full": false,
+        "spacing_both_ends": false,
+        "padding": "120,80",
+        "margin": "0,0",
+        "show_background_image": false,
+        "background_style": "none",
+        "background_size": "cover",
+        "enable_overlay": true,
+        "background_color": "#ffffff",
+        "overlay_transparency": "1",
+        "section_heading": "Featured Collection",
+        "section_sub_heading": "Best Sellers",
+        "section_description": "",
+        "section_button_text": "",
+        "section_button_link": "",
+        "section_heading_color": "#2c2c2c",
+        "section_sub_heading_color": "#666666",
+        "section_description_color": "#666666",
+        "section_button_bg_color": "",
+        "section_button_text_color": "",
+        "section_button_hover_bg_color": "",
+        "section_button_hover_text_color": "",
+        "heading_position": "text-center",
+        "grouped_content_bg": "",
+        "grouped_column_gap": "30",
+        "grouped_content_padding": "0",
+        "group_border_radius": "",
+        "enable_group_box_shadow": false,
+        "reverse_column": false,
+        "content_width": "30/70",
+        "lap_content_width": "30/70",
+        "additional_block_background_color": "",
+        "additional_block_box_shadow": false,
+        "additional_content_padding": "0",
+        "additional_block_border_radius": "0",
+        "enable_main_content": true,
+        "main_block_background_color": "rgba(0,0,0,0)",
+        "enable_main_block_box_shadow": false,
+        "main_block_border_radius": "0",
+        "main_content_padding": "0",
+        "collection": "best-sellers",
+        "column_gap": "30",
+        "border_radius": "0",
+        "enable_list_view": true,
+        "grid": "1",
+        "post_limit": 1,
+        "enable_slider": true,
+        "items_per_view": 1,
+        "items_laptop_view": 1,
+        "items_tablet_view": 1,
+        "items_mobile_view": 1,
+        "enable_center_mode": true,
+        "rows": 1,
+        "slider_autoplay": 0,
+        "enable_auto_height": false,
+        "dots": false,
+        "carousel_pagination_alignment": "center_pagination",
+        "carousel_pagination_bottom_alignment": "outside_element",
+        "arrows": true,
+        "nav_arrow_position": "navigation-bottom-right",
+        "center_nav_arrow_alignment": "inside_container",
+        "navigation_button_color": "",
+        "navigation_button_icon_color": "",
+        "navigation_button_hover_color": "#666666",
+        "navigation_button_hover_icon_color": "#ffffff",
+        "navigation_dot_color": "",
+        "navigation_dot_active_color": "",
+        "custom_class_name": "custom-product"
+      }
+    },
+    "16478478798dbd62f0": {
+      "type": "home-grid-banner",
+      "blocks": {
+        "1647847879ee510ded-0": {
+          "type": "content",
+          "settings": {
+            "grid_banner_type": "image",
+            "block_image": "shopify://shop_images/SerenityTemporaryTattoo_77645190-f82e-44fa-9cdb-ddb2a6885ae4.webp",
+            "block_video": "",
+            "show_image": true,
+            "show_content": true,
+            "block_title": "",
+            "block_sub_title": "",
+            "block_description": "",
+            "block_button_text": "show more",
+            "block_button_link": "shopify://collections/best-sellers",
+            "block_text_align": "text-center",
+            "content_position": "center",
+            "reverse_column": false,
+            "block_banner_bg": "rgba(0,0,0,0)",
+            "block_content_box_bg": "",
+            "block_heading_color": "",
+            "block_sub_heading_color": "",
+            "block_description_color": "",
+            "block_button_bg_color": "",
+            "block_button_text_color": "#dedede",
+            "block_button_hover_bg_color": "",
+            "block_button_hover_text_color": "#141414",
+            "overlay_style": "use_overlay",
+            "overlay_color": "#f17c8f",
+            "overlay_opacity": "0.5",
+            "rotation_degree": "180"
+          }
+        },
+        "4c364efd-873e-4c2b-bda5-10138f3d0b43": {
+          "type": "content",
+          "settings": {
+            "grid_banner_type": "image",
+            "block_image": "shopify://shop_images/BalancedSoulTemporaryTattoo_3fd2a65f-c7df-4c58-a16d-124383c227b6.webp",
+            "block_video": "",
+            "show_image": true,
+            "show_content": true,
+            "block_title": "",
+            "block_sub_title": "",
+            "block_description": "",
+            "block_button_text": "show",
+            "block_button_link": "shopify://collections/new-arrivals",
+            "block_text_align": "text-center",
+            "content_position": "center",
+            "reverse_column": false,
+            "block_banner_bg": "",
+            "block_content_box_bg": "",
+            "block_heading_color": "",
+            "block_sub_heading_color": "",
+            "block_description_color": "",
+            "block_button_bg_color": "",
+            "block_button_text_color": "#dedede",
+            "block_button_hover_bg_color": "",
+            "block_button_hover_text_color": "#141414",
+            "overlay_style": "use_overlay",
+            "overlay_color": "#f17c8f",
+            "overlay_opacity": "0.5",
+            "rotation_degree": "180"
+          }
+        },
+        "be8dcd86-44d8-4488-94e8-77e8640dbd6a": {
+          "type": "content",
+          "settings": {
+            "grid_banner_type": "image",
+            "block_image": "shopify://shop_images/Edgybutterflytemporarytattoo_1.webp",
+            "block_video": "",
+            "show_image": true,
+            "show_content": true,
+            "block_title": "",
+            "block_sub_title": "",
+            "block_description": "",
+            "block_button_text": "show",
+            "block_button_link": "shopify://collections/japanese-tattoos",
+            "block_text_align": "text-center",
+            "content_position": "center",
+            "reverse_column": false,
+            "block_banner_bg": "",
+            "block_content_box_bg": "",
+            "block_heading_color": "",
+            "block_sub_heading_color": "",
+            "block_description_color": "",
+            "block_button_bg_color": "",
+            "block_button_text_color": "#dedede",
+            "block_button_hover_bg_color": "",
+            "block_button_hover_text_color": "#141414",
+            "overlay_style": "use_overlay",
+            "overlay_color": "#f17c8f",
+            "overlay_opacity": "0.5",
+            "rotation_degree": "180"
+          }
+        },
+        "a843a090-683a-4f00-aa69-56f218ac3f2b": {
+          "type": "content",
+          "settings": {
+            "grid_banner_type": "image",
+            "block_image": "shopify://shop_images/DeathGlassTemporaryTattoo.webp",
+            "block_video": "",
+            "show_image": true,
+            "show_content": true,
+            "block_title": "",
+            "block_sub_title": "",
+            "block_description": "",
+            "block_button_text": "show",
+            "block_button_link": "shopify://collections/dragon-tattoos",
+            "block_text_align": "text-center",
+            "content_position": "center",
+            "reverse_column": true,
+            "block_banner_bg": "",
+            "block_content_box_bg": "",
+            "block_heading_color": "",
+            "block_sub_heading_color": "",
+            "block_description_color": "",
+            "block_button_bg_color": "",
+            "block_button_text_color": "#dedede",
+            "block_button_hover_bg_color": "",
+            "block_button_hover_text_color": "#141414",
+            "overlay_style": "use_overlay",
+            "overlay_color": "#f17c8f",
+            "overlay_opacity": "0.5",
+            "rotation_degree": "180"
+          }
+        },
+        "1647847879ee510ded-1": {
+          "type": "content",
+          "settings": {
+            "grid_banner_type": "image",
+            "block_image": "shopify://shop_images/viking.png",
+            "block_video": "",
+            "show_image": true,
+            "show_content": true,
+            "block_title": "",
+            "block_sub_title": "",
+            "block_description": "",
+            "block_button_text": "show",
+            "block_button_link": "shopify://collections/all-tattoos",
+            "block_text_align": "text-center",
+            "content_position": "center",
+            "reverse_column": false,
+            "block_banner_bg": "",
+            "block_content_box_bg": "",
+            "block_heading_color": "",
+            "block_sub_heading_color": "",
+            "block_description_color": "",
+            "block_button_bg_color": "",
+            "block_button_text_color": "#dedede",
+            "block_button_hover_bg_color": "",
+            "block_button_hover_text_color": "#141414",
+            "overlay_style": "use_overlay",
+            "overlay_color": "#f17c8f",
+            "overlay_opacity": "0.5",
+            "rotation_degree": "180"
+          }
+        },
+        "2b8a1203-2146-4390-8cd8-5ffb88306bbd": {
+          "type": "content",
+          "settings": {
+            "grid_banner_type": "image",
+            "block_image": "shopify://shop_images/geisha_58ae7976-bb3e-4cf6-82de-524e7c0b629f.png",
+            "block_video": "",
+            "show_image": true,
+            "show_content": true,
+            "block_title": "",
+            "block_sub_title": "",
+            "block_description": "",
+            "block_button_text": "show",
+            "block_button_link": "shopify://collections/large-tattoos",
+            "block_text_align": "text-center",
+            "content_position": "center",
+            "reverse_column": false,
+            "block_banner_bg": "",
+            "block_content_box_bg": "",
+            "block_heading_color": "",
+            "block_sub_heading_color": "",
+            "block_description_color": "",
+            "block_button_bg_color": "",
+            "block_button_text_color": "#dedede",
+            "block_button_hover_bg_color": "",
+            "block_button_hover_text_color": "#141414",
+            "overlay_style": "use_overlay",
+            "overlay_color": "#f17c8f",
+            "overlay_opacity": "0.5",
+            "rotation_degree": "180"
+          }
+        }
+      },
+      "block_order": [
+        "1647847879ee510ded-0",
+        "4c364efd-873e-4c2b-bda5-10138f3d0b43",
+        "be8dcd86-44d8-4488-94e8-77e8640dbd6a",
+        "a843a090-683a-4f00-aa69-56f218ac3f2b",
+        "1647847879ee510ded-1",
+        "2b8a1203-2146-4390-8cd8-5ffb88306bbd"
+      ],
+      "settings": {
+        "full": false,
+        "spacing_both_ends": false,
+        "padding": "0,0",
+        "margin": "55,0",
+        "show_background_image": false,
+        "background_image": "shopify://shop_images/FadedMeadowTemporaryTattoo_300x_6ebcbaa8-d1bb-444a-a4a1-99403fb54115.webp",
+        "background_style": "none",
+        "background_size": "auto",
+        "enable_overlay": true,
+        "background_color": "#ffffff",
+        "overlay_transparency": "1",
+        "section_heading": "Design Gallery",
+        "section_sub_heading": "Stunning Temporary Tattoo Collection",
+        "section_description": "",
+        "section_button_text": "",
+        "section_button_link": "",
+        "section_heading_color": "#e4e4e4",
+        "section_sub_heading_color": "#f17c8f",
+        "section_description_color": "",
+        "section_button_bg_color": "",
+        "section_button_text_color": "",
+        "section_button_hover_bg_color": "",
+        "section_button_hover_text_color": "",
+        "heading_position": "text-center",
+        "block_banner_style": "overlay",
+        "column_gap": "16",
+        "grid": "4",
+        "border_radius": "0",
+        "enable_box_shadow": false,
+        "equal_height": false,
+        "content_width": "50/50",
+        "lap_content_width": "40/60",
+        "overlay_style_height": 310,
+        "overlay_style_height_laptop": 310,
+        "overlay_style_height_mobile": 270,
+        "custom_class_name": "custom-grid-gallery"
+      }
+    },
+    "1648196779d78838a4": {
+      "type": "home-testimonial",
+      "blocks": {
+        "1648196779f30028a2-0": {
+          "type": "content",
+          "settings": {
+            "quote": "<p>Absolutely love my Japanese Dragon sleeve tattoo! The detail is incredible and it lasted exactly 2 weeks as promised. Got so many compliments. Will definitely be ordering more designs from TEMPOINK!</p>",
+            "author": "Sarah M.",
+            "job": "Cape Town",
+            "star": "5"
+          }
+        },
+        "7a18d368-8321-4b72-9d4f-b921e19c669a": {
+          "type": "content",
+          "settings": {
+            "quote": "<p>Perfect for testing out tattoo ideas! The Geisha design was beautiful and the application was so easy. Great quality and fast shipping to Durban. Highly recommend TEMPOINK!</p>",
+            "author": "Thabo K.",
+            "job": "Durban",
+            "star": "5"
+          }
+        },
+        "2e180669-0755-49f6-9c86-e53ef0432bc3": {
+          "type": "content",
+          "settings": {
+            "quote": "<p>Amazing experience! Ordered the 3 Sleeve Mystery Pack and loved every design. The tattoos looked so realistic, my friends thought they were real. Customer service was excellent too!</p>",
+            "author": "Jessica P.",
+            "job": "Johannesburg",
+            "star": "5"
+          }
+        }
+      },
+      "block_order": [
+        "1648196779f30028a2-0",
+        "7a18d368-8321-4b72-9d4f-b921e19c669a",
+        "2e180669-0755-49f6-9c86-e53ef0432bc3"
+      ],
+      "settings": {
+        "full": false,
+        "spacing_both_ends": false,
+        "padding": "100,100",
+        "margin": "0,0",
+        "show_background_image": true,
+        "background_style": "none",
+        "background_size": "auto",
+        "enable_overlay": false,
+        "background_color": "#ffffff",
+        "overlay_transparency": "0.5",
+        "section_heading": "",
+        "section_sub_heading": "",
+        "section_description": "",
+        "section_button_text": "",
+        "section_button_link": "",
+        "content_with_head": true,
+        "content_heading": "What Our Customers Say",
+        "content_heading_color": "#2c2c2c",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_description_color": "rgba(0,0,0,0)",
+        "section_button_bg_color": "",
+        "section_button_text_color": "",
+        "section_button_hover_bg_color": "",
+        "section_button_hover_text_color": "",
+        "heading_position": "text-center",
+        "grid": "1",
+        "block_style": "style_3",
+        "boxed_styles": "default",
+        "enable_box_shadow": false,
+        "reverse_column": false,
+        "text_position": "text-center",
+        "quote_style": "quote-icon-in-content",
+        "author_info_style": "style_2",
+        "border_radius": "0px",
+        "boxed_border_radius": "0",
+        "column_gap": "30",
+        "content_width": "30/70",
+        "lap_content_width": "20/80",
+        "vertical_position": "vertical-center",
+        "testimonial_border_color": "",
+        "testimonial_background_color": "",
+        "testimonial_content_color": "#666666",
+        "testimonial_review_color": "",
+        "testimonial_author_text_color": "",
+        "testimonial_author_designation_color": "#2c2c2c",
+        "testimonial_author_separator_color": "#f17c8f",
+        "testimonial_quote_icon_color": "#c1c1c1",
+        "enable_slider": true,
+        "enable_auto_height": true,
+        "items_per_view": 1,
+        "items_laptop_view": 1,
+        "items_tablet_view": 1,
+        "items_mobile_view": 1,
+        "enable_center_mode": true,
+        "slider_autoplay": 0,
+        "dots": true,
+        "carousel_pagination_alignment": "center_pagination",
+        "carousel_pagination_bottom_alignment": "outside_element",
+        "arrows": false,
+        "nav_arrow_position": "center-navigation",
+        "center_nav_arrow_alignment": "outside_container",
+        "navigation_button_color": "",
+        "navigation_button_icon_color": "",
+        "navigation_button_hover_color": "",
+        "navigation_button_hover_icon_color": "",
+        "navigation_dot_color": "",
+        "navigation_dot_active_color": "",
+        "custom_class_name": "custom-testimonial"
+      }
+    },
+    "1649045154b20ca8a8": {
+      "type": "home-video-banner",
+      "settings": {
+        "full": true,
+        "spacing_both_ends": false,
+        "padding": "0,0",
+        "margin": "30,50",
+        "show_background_image": false,
+        "background_style": "none",
+        "background_size": "auto",
+        "enable_overlay": false,
+        "background_color": "",
+        "overlay_transparency": "0.5",
+        "section_heading": "",
+        "section_sub_heading": "",
+        "section_description": "",
+        "section_button_text": "",
+        "section_button_link": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_description_color": "",
+        "section_button_bg_color": "",
+        "section_button_text_color": "",
+        "section_button_hover_bg_color": "",
+        "section_button_hover_text_color": "",
+        "heading_position": "text-center",
+        "block_title": "",
+        "block_sub_title": "",
+        "block_description": "",
+        "block_button_text": "",
+        "block_button_link": "",
+        "content_position": "center",
+        "block_text_align": "text-center",
+        "layout_style": "default",
+        "reverse_column": false,
+        "show_image": true,
+        "video_format": "modal",
+        "video_icon_text": "PLAY",
+        "video_url": "",
+        "iframe_url": "https://www.youtube.com/embed/kxLoycj4pJY",
+        "video_height": "730",
+        "overlay_style": "with-overlay",
+        "enable_box_shadow": false,
+        "border_radius": "0",
+        "banner_heading_color": "",
+        "banner_sub_heading_color": "",
+        "banner_description_color": "",
+        "banner_button_bg_color": "",
+        "banner_button_text_color": "",
+        "banner_button_hover_bg_color": "",
+        "banner_button_hover_text_color": "",
+        "video_overlay_color": "",
+        "video_overlay_transparency": "0.5",
+        "icon_bg_color": "rgba(0,0,0,0)",
+        "icon_color": "",
+        "icon_bg_color_hover": "rgba(0,0,0,0)",
+        "icon_color_hover": "",
+        "custom_class_name": "custom-videobanner"
+      }
+    },
+    "1649046267a0d89ece": {
+      "type": "home-product-carousel",
+      "settings": {
+        "full": false,
+        "spacing_both_ends": false,
+        "padding": "80,80",
+        "margin": "0,0",
+        "show_background_image": false,
+        "background_style": "none",
+        "background_size": "auto",
+        "enable_overlay": false,
+        "background_color": "#ffffff",
+        "overlay_transparency": "0.5",
+        "section_heading": "Latest Designs",
+        "section_sub_heading": "Fresh Temporary Tattoo Art",
+        "section_description": "",
+        "section_button_text": "",
+        "section_button_link": "",
+        "section_heading_color": "#2c2c2c",
+        "section_sub_heading_color": "#666666",
+        "section_description_color": "",
+        "section_button_bg_color": "",
+        "section_button_text_color": "",
+        "section_button_hover_bg_color": "",
+        "section_button_hover_text_color": "",
+        "heading_position": "text-center",
+        "grouped_content_bg": "",
+        "grouped_column_gap": "30",
+        "grouped_content_padding": "0",
+        "group_border_radius": "",
+        "enable_group_box_shadow": false,
+        "reverse_column": false,
+        "content_width": "30/70",
+        "lap_content_width": "35/65",
+        "additional_block_background_color": "",
+        "additional_block_box_shadow": false,
+        "additional_content_padding": "0",
+        "additional_block_border_radius": "0",
+        "enable_main_content": true,
+        "main_block_background_color": "",
+        "enable_main_block_box_shadow": false,
+        "main_block_border_radius": "0",
+        "main_content_padding": "0",
+        "collection": "all-tattoos",
+        "column_gap": "30",
+        "border_radius": "0",
+        "enable_list_view": false,
+        "grid": "4",
+        "post_limit": 4,
+        "enable_slider": true,
+        "items_per_view": 4,
+        "items_laptop_view": 3,
+        "items_tablet_view": 2,
+        "items_mobile_view": 1,
+        "enable_center_mode": false,
+        "rows": 1,
+        "slider_autoplay": 0,
+        "enable_auto_height": true,
+        "dots": false,
+        "carousel_pagination_alignment": "center_pagination",
+        "carousel_pagination_bottom_alignment": "outside_element",
+        "arrows": true,
+        "nav_arrow_position": "center-navigation",
+        "center_nav_arrow_alignment": "outside_container",
+        "navigation_button_color": "",
+        "navigation_button_icon_color": "#e9e9e9",
+        "navigation_button_hover_color": "",
+        "navigation_button_hover_icon_color": "#f17c8f",
+        "navigation_dot_color": "",
+        "navigation_dot_active_color": "",
+        "custom_class_name": "custom-shop"
+      }
+    },
+    "1649050613734ee857": {
+      "type": "home-brand-logos",
+      "blocks": {
+        "spx-tattoo-141": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/141.png",
+            "title": "",
+            "link": "shopify://collections/all-tattoos"
+          }
+        },
+        "spx-tattoo-142": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/142.png",
+            "title": "",
+            "link": "shopify://collections/all-tattoos"
+          }
+        },
+        "spx-tattoo-143": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/143.png",
+            "title": "",
+            "link": "shopify://collections/all-tattoos"
+          }
+        },
+        "spx-tattoo-144": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/144.png",
+            "title": "",
+            "link": "shopify://collections/all-tattoos"
+          }
+        },
+        "spx-tattoo-145": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/145.png",
+            "title": "",
+            "link": "shopify://collections/all-tattoos"
+          }
+        },
+        "spx-tattoo-146": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/146.png",
+            "title": "",
+            "link": "shopify://collections/all-tattoos"
+          }
+        },
+        "spx-tattoo-147": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/147.png",
+            "title": "",
+            "link": "shopify://collections/all-tattoos"
+          }
+        },
+        "spx-tattoo-148": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/148.png",
+            "title": "",
+            "link": "shopify://collections/all-tattoos"
+          }
+        },
+        "spx-tattoo-149": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/149.png",
+            "title": "",
+            "link": "shopify://collections/all-tattoos"
+          }
+        },
+        "spx-tattoo-150": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/150.png",
+            "title": "",
+            "link": "shopify://collections/all-tattoos"
+          }
+        },
+        "spx-tattoo-151": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/151.png",
+            "title": "",
+            "link": "shopify://collections/all-tattoos"
+          }
+        },
+        "spx-tattoo-152": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/152.png",
+            "title": "",
+            "link": "shopify://collections/all-tattoos"
+          }
+        },
+        "spx-tattoo-153": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/153.png",
+            "title": "",
+            "link": "shopify://collections/all-tattoos"
+          }
+        },
+        "spx-tattoo-154": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/154.png",
+            "title": "",
+            "link": "shopify://collections/all-tattoos"
+          }
+        },
+        "spx-tattoo-155": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/155.png",
+            "title": "",
+            "link": "shopify://collections/all-tattoos"
+          }
+        },
+        "spx-tattoo-156": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/156.png",
+            "title": "",
+            "link": "shopify://collections/all-tattoos"
+          }
+        },
+        "spx-tattoo-157": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/157.png",
+            "title": "",
+            "link": "shopify://collections/all-tattoos"
+          }
+        },
+        "spx-tattoo-158": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/158.png",
+            "title": "",
+            "link": "shopify://collections/all-tattoos"
+          }
+        },
+        "spx-tattoo-159": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/159.png",
+            "title": "",
+            "link": "shopify://collections/all-tattoos"
+          }
+        },
+        "spx-tattoo-160": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/160.png",
+            "title": "",
+            "link": "shopify://collections/all-tattoos"
+          }
+        }
+      },
+      "block_order": [
+        "spx-tattoo-141",
+        "spx-tattoo-142",
+        "spx-tattoo-143",
+        "spx-tattoo-144",
+        "spx-tattoo-145",
+        "spx-tattoo-146",
+        "spx-tattoo-147",
+        "spx-tattoo-148",
+        "spx-tattoo-149",
+        "spx-tattoo-150",
+        "spx-tattoo-151",
+        "spx-tattoo-152",
+        "spx-tattoo-153",
+        "spx-tattoo-154",
+        "spx-tattoo-155",
+        "spx-tattoo-156",
+        "spx-tattoo-157",
+        "spx-tattoo-158",
+        "spx-tattoo-159",
+        "spx-tattoo-160"
+      ],
+      "settings": {
+        "full": false,
+        "spacing_both_ends": false,
+        "padding": "110,110",
+        "margin": "0,0",
+        "show_background_image": false,
+        "background_style": "none",
+        "background_size": "auto",
+        "enable_overlay": true,
+        "background_color": "#ffffff",
+        "overlay_transparency": "1",
+        "section_heading": "",
+        "section_sub_heading": "",
+        "section_description": "",
+        "section_button_text": "",
+        "section_button_link": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_description_color": "",
+        "section_button_bg_color": "",
+        "section_button_text_color": "",
+        "section_button_hover_bg_color": "",
+        "section_button_hover_text_color": "",
+        "heading_position": "text-center",
+        "grid": "3",
+        "block_style": "style-1",
+        "enable_box_shadow": false,
+        "column_gap": "30",
+        "border_radius": "0",
+        "block_border_color": "",
+        "block_background_color": "rgba(0,0,0,0)",
+        "enable_slider": true,
+        "enable_auto_height": true,
+        "items_per_view": 5,
+        "items_laptop_view": 3,
+        "items_tablet_view": 2,
+        "items_mobile_view": 1,
+        "enable_center_mode": false,
+        "slider_autoplay": 1,
+        "dots": false,
+        "carousel_pagination_alignment": "center_pagination",
+        "arrows": false,
+        "nav_arrow_position": "navigation-bottom-center",
+        "center_nav_arrow_alignment": "outside_container",
+        "navigation_button_color": "",
+        "navigation_button_icon_color": "",
+        "navigation_button_hover_color": "",
+        "navigation_button_hover_icon_color": "",
+        "navigation_dot_color": "",
+        "navigation_dot_active_color": "",
+        "custom_class_name": "custom-brandlogo"
+      }
+    }
+  },
+  "order": [
+    "16484715585d0b75d2",
+    "1648812039448a8739",
+    "1648816451b872c30b",
+    "1648884977aa4cb3ff",
+    "16478478798dbd62f0",
+    "1648196779d78838a4",
+    "1649045154b20ca8a8",
+    "1649046267a0d89ece",
+    "1649050613734ee857"
+  ]
+}

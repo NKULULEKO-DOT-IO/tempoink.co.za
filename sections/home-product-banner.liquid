@@ -1,0 +1,365 @@
+{% assign margin = section.settings.margin | split: ',' %}
+{% assign margin_top = margin[0] %}
+{% assign margin_bottom = margin[1] %} 
+{% assign padding = section.settings.padding | split: ',' %}
+{% assign padding_top = padding[0] %}
+{% assign padding_bottom = padding[1] %} 
+
+{% if section.settings.enable_overlay %}
+{% assign section_overlay = 'dt-sc-overlay' %}
+{% endif %}
+
+{% if section.settings.show_background_image %}
+{% assign lazyScript = "lazyload" %}
+{% endif %}
+<div class="dt-sc-section-wrapper  {{lazyScript}} {{ section_overlay }} {% if section.settings.background_style == 'parallax' %} parallax-initiated{% endif %}" {% if section.settings.background_style == 'parallax' %} data-speed="2" data-style="parallax"{% endif %} style="{% render 'bg-color-image-padding' %} background-size: {{- section.settings.background_size -}}; {% if section.settings.background_style == 'fixed' %}background-attachment: fixed;{% endif %} background-repeat:{% if section.settings.background_size == 'repeat' %}repeat{% else %}no-repeat;{% endif %}" {% include 'bg_image' %}>  
+  <div class="{% render 'container-settings' %}"> 
+    <div class="row {{ section.settings.custom_class_name }}">
+      {% render 'section-heading', class: section.id %} 
+        <div class="dt-sc-product-banner">
+          {% for block in section.blocks %}
+          <div class="dt-sc-product-banner-section {{block.type}}-{{block.id}}">
+            {% if block.settings.block_heading != blank  or block.settings.text_link != blank %}
+            <h3 class="dt-sc-product-title"><a href="{{block.settings.text_link}}">{{block.settings.block_heading}}</a></h3>
+            {% endif %}
+            {% if block.settings.image != blank %}
+            <div class="dt-sc-product">
+				<img class="dt-sc-product-image" src="{{ block.settings.image | img_url: 'master' }}" alt="{{block.settings.image.alt}}" />            
+			</div>
+            {% else %}
+            <div class="dt-sc-product">
+              {{ 'image' | placeholder_svg_tag }}
+            </div>
+            {% endif %}  
+          </div>
+          {% endfor %}
+        </div>
+    </div>
+  </div>
+</div>
+<style type="text/css">
+
+  #shopify-section-{{section.id}}.home-product-banner .dt-sc-heading .dt-sc-main-heading { color: var(--DTColor_Heading); color:{{ section.settings.section_heading_color }}; } 
+  #shopify-section-{{section.id}}.home-product-banner .dt-sc-heading .dt-sc-sub-heading { color: var(--DTColor_Heading); color:{{ section.settings.section_sub_heading_color }}; } 
+  #shopify-section-{{section.id}}.home-product-banner .dt-sc-heading .dt-sc-heading-description { color: var(--DTColor_Body); color:{{ section.settings.section_description_color }}; } 
+  #shopify-section-{{section.id}}.home-product-banner .dt-sc-heading .dt-sc-btn { 
+    background: var(--DT_Button_BG_Color); background:{{ section.settings.section_button_bg_color }}; 
+      color: var(--DT_Button_Text_Color); color:{{ section.settings.section_button_text_color }}; }
+  #shopify-section-{{section.id}}.home-product-banner .dt-sc-heading .dt-sc-btn:hover { 
+    background: var(--DT_Button_BG_Hover_Color); background:{{ section.settings.section_button_hover_bg_color }}; 
+      color: var(--DT_Button_Text_Hover_Color); color:{{ section.settings.section_button_hover_text_color }}; }
+  #shopify-section-{{section.id}}.home-product-banner .dt-sc-overlay:before  { 
+    color: var(--DTTertiaryColor); 
+      color: {{ section.settings.background_color }};    
+      background: currentcolor; 
+      opacity: {{ section.settings.overlay_transparency }}; }
+
+  #shopify-section-{{section.id}}.home-product-banner .dt-sc-product-banner-section .dt-sc-product-title { 
+    z-index: 1; margin: 0;
+      }
+  #shopify-section-{{section.id}}.home-product-banner .dt-sc-product-banner-section .dt-sc-product-title a { 
+    z-index: 2; text-transform: uppercase; font-weight: 900; font-size: calc( var(--DTFontSize_H1) * 3); word-break: break-all; opacity: .35;
+      line-height: calc( var(--DTFontSize_H1) * 2); }
+  #shopify-section-{{section.id}}.home-product-banner .dt-sc-product-banner-section .dt-sc-product-title:hover a {
+    opacity: 1; 
+  }
+
+  #shopify-section-{{section.id}}.home-product-banner .dt-sc-product-banner-section .dt-sc-product { display: inline-block; opacity: 0; 
+    position: absolute; right: -200px; bottom: 0; -webkit-transition: right .5s ease, opacity .1s ease; transition: right .5s ease, opacity .1s ease;
+    pointer-events: none; z-index: 1;  }
+  #shopify-section-{{section.id}}.home-product-banner .dt-sc-product-banner-section .dt-sc-product-title:hover ~ .dt-sc-product { opacity: 1;  
+    right: 0; transition-duration: .6s; }
+  #shopify-section-{{section.id}}.home-product-banner .dt-sc-product-banner-section .dt-sc-product img.dt-sc-product-image {
+    max-width: 50vw; 
+  }
+
+
+  {% for block in section.blocks %}
+
+  #shopify-section-{{section.id}}.home-product-banner .dt-sc-product-banner-section.{{block.type}}-{{block.id}} .dt-sc-product-title a { 
+    color: var(--DTColor_Heading); color:{{ block.settings.title_color }}; text-stroke: 2px {{ block.settings.title_color }}; 
+      -webkit-text-stroke: 2px {{ block.settings.title_color }}; }
+  #shopify-section-{{section.id}}.home-product-banner .dt-sc-product-banner-section.{{block.type}}-{{block.id}} .dt-sc-product-title:hover a {
+    color: rgba(0,0,0,0); 
+  }
+
+  {% endfor %}
+
+  #shopify-section-{{section.id}}.home-product-banner .dt-sc-product-banner {  position: relative; display: grid; gap: {{section.settings.column_gap}}px; }
+  #shopify-section-{{section.id}}.home-product-banner .dt-sc-product-banner-section { display: block; transition: var(--DTBaseTransition); }
+
+  @media only screen and (min-width: 1200px) {
+    #shopify-section-{{section.id}}.home-product-banner .dt-sc-section-wrapper { margin-top:{{margin_top}}px; margin-bottom:{{margin_bottom}}px;padding-top:{{padding_top}}px; padding-bottom:{{padding_bottom}}px; }
+  }
+
+  @media only screen and (max-width: 1199px) {
+    
+    #shopify-section-{{section.id}}.home-product-banner .dt-sc-section-wrapper { margin-top:{{margin_top | divided_by: 2 }}px; margin-bottom:{{margin_bottom | divided_by: 2}}px;padding-top:{{padding_top | divided_by: 2}}px; padding-bottom:{{padding_bottom | divided_by: 2}}px;}
+    #shopify-section-{{section.id}}.home-product-banner .dt-sc-product-banner-section .dt-sc-product-title a { font-size: 12.5vw; line-height: 12.5vw; }
+
+  }
+  
+  @media only screen and (max-width: 767px) {
+
+    text-stroke: 2px {{ block.settings.title_color }}; 
+    -webkit-text-stroke: 2px {{ block.settings.title_color }};
+    
+  }
+
+</style>
+{% schema %}
+{
+"name": "Product banner",
+"class": "index-section home-product-banner",
+"settings": [
+{
+"type": "checkbox",
+"id": "full",
+"label": "Show Full width"
+},
+{
+"type": "checkbox",
+"id": "spacing_both_ends",
+"label": "Enable Right & Left Spacing (Works only on Fullwidth)",
+"default": false
+},
+{
+"type": "text",
+"id": "padding",
+"label": "Style value (Padding)",
+"default":"0,0",
+"info":"Top(px),Bottom(px)"
+},
+{
+"type": "text",
+"id": "margin",
+"label": "Style value (Margin)",
+"default":"0,0",
+"info":"Top(px),Bottom(px)"
+},
+{
+"type": "checkbox",
+"id": "show_background_image",
+"label": "Enable Background image"
+},
+{
+"type": "image_picker",
+"id": "background_image",
+"label": "Background image",
+"info": "Size: 1920x1280"
+},
+{
+"type": "select",
+"id": "background_style",
+"label": "Background Style",
+"default": "none",
+"options": [
+{
+"value": "fixed",
+"label": "Fixed"
+},
+{
+"value": "parallax",
+"label": "Parallax"
+},
+{
+"value": "none",
+"label": "None"
+}
+]
+},
+{
+"type": "select",
+"id": "background_size",
+"label": "Background Size",
+"info": "This will not apply for parallax",
+"default": "auto",
+"options": [
+{
+"value": "auto",
+"label": "Auto"
+},
+{
+"value": "cover",
+"label": "Cover"
+},
+{
+"value": "contain",
+"label": "Contain"
+},
+{
+"value": "repeat",
+"label": "Repeat"
+}
+]
+},
+{
+"type": "checkbox",
+"id": "enable_overlay",
+"label": "Enable Background Color (Used as Background Image Overlay Color too)"
+},
+{
+"type": "color",
+"id": "background_color",
+"label":"Background color"
+},
+{
+"type": "text",
+"id": "overlay_transparency",
+"label": "Overlay Transparency (0.01 to 1)",
+"default": "0.5"
+},
+{
+"type": "text",
+"id": "section_heading",
+"label": "Main Heading",
+"default": "Html Text"
+},  
+{
+"type": "text",
+"id": "section_sub_heading",
+"label": "Sub Heading",
+"default": "Sub Heading"
+},  
+{
+"type": "text",
+"id": "section_description",
+"label": "Description",
+"default": "Use this text to share the information which you like!."
+},  
+{
+"type": "text",
+"id": "section_button_text",
+"label": "Link text"
+},
+{
+"type": "url",
+"id": "section_button_link",
+"label": "Link URL"
+},
+{
+"type": "header",
+"content": "Section Color settings"
+},
+{
+"type": "color",
+"id": "section_heading_color",
+"label": "Heading color"
+},    
+{
+"type": "color",
+"id": "section_sub_heading_color",
+"label": "Sub heading color"
+},   
+{
+"type": "color",
+"id": "section_description_color",
+"label": "Description color"
+},  
+{
+"type": "color",
+"id": "section_button_bg_color",
+"label": "Button bg color"
+},   
+{
+"type": "color",
+"id": "section_button_text_color",
+"label": "Button text color"
+},   
+{
+"type": "color",
+"id": "section_button_hover_bg_color",
+"label": "Button hover bg color"
+},   
+{
+"type": "color",
+"id": "section_button_hover_text_color",
+"label": "Button hover text color"
+},
+{
+"type": "select",
+"id": "heading_position",
+"label": "Heading Position",
+"options": [
+{
+"value": "text-center",
+"label": "Center"
+},
+{
+"value": "text-start",
+"label": "Left"
+},
+{
+"value": "text-end",
+"label": "Right"
+}
+]
+},
+{
+"type": "text",
+"id": "column_gap",
+"label": "Column Gap (unit's not needed)",
+"default":"30"
+},
+{
+"type": "header",
+"content": "Custom class"
+},
+{
+"type": "text",
+"id": "custom_class_name",
+"label": "Add your custom class name here"
+}
+],
+"blocks": [
+{
+"type": "Image",
+"name": "products",
+"settings": [
+{
+"type": "text",
+"id": "block_heading",
+"label": "Heading",
+"default": "Heading"
+},
+{
+"type": "url",
+"id": "text_link",
+"label": "Link"          
+},
+{
+"type": "image_picker",
+"id": "image",
+"label": "Image",
+"info": "Size: 650x760"
+},
+{
+"type": "text",
+"id": "title",
+"label": "Alt Text"	
+},
+{
+"type": "header",
+"content": "Item Color settings"
+}, 
+{
+"type": "color",
+"id": "title_color",
+"label":"Title color"
+}
+]
+}
+],
+"presets": [
+{
+"name": "Home Product banner",
+"category": "Text",
+"blocks": [
+{
+"type": "Image"
+}
+]
+}
+]
+}
+{% endschema %}  

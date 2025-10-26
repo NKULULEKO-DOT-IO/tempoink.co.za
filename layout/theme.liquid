@@ -1,0 +1,77 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1.0,user-scalable=0">  
+    <meta name="theme-color" content="{{ settings.color_primary }}">    
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.shopify.com" crossorigin>
+    <link rel="preconnect" href="https://monorail-edge.shopifysvc.com">
+
+    {% include 'meta' %}
+    <!-- Social meta  -->
+    {% include 'social-meta-tags' %}    
+    <!-- CSS  -->
+    {% include 'header-css' %}
+    <!-- Primary JS files  -->
+    {% include 'header-js' %}
+    <!-- SEO Tools and Analytics -->
+    {% include 'seo-tools' %}
+    
+    <!-- content for header -->
+    {{ content_for_header }}       
+    <!-- content for header -->
+    
+  </head>
+  <body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }} {% unless tempate contains 'index' %} others {% endunless %}">
+    
+    <!-- Google Tag Manager (noscript) -->
+    {% if settings.gtm_id != blank %}
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ settings.gtm_id }}"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    {% endif %}
+    
+    {% if settings.preloader_enable %}    
+    <div class="se-pre-con"></div>
+    {% endif %}
+    
+    <div class="mobile-menu" data-menu="dt-main-menu"> </div>
+    <div class="mobile-menu-overlay"></div> 
+    
+    <div id="video_modal" class="video_overlay">
+      <div class="inner">
+      <span id="close_icon" class="dt-sc-btn close-icon" style=" position: absolute; right: 10px; top: 10px;"></span>
+      </div>
+    </div>
+    
+    <div class="off-canvas--viewport">
+      {% if settings.ajax_cart_method == 'drawer' %}
+      {% include 'timber-cart' %}
+      {% endif %}
+       <!-- Theme Header====== -->
+      {% section 'header' %}        
+      {% include 'breadcrumb' %}     
+      
+      <div class="clearfix"></div>
+      <div class="shifter-page {% if settings.ajax_cart_method == 'drawer' %}is-moved-by-drawer{% endif %}" id="container">       
+        <!-- content for layout -->
+        {{content_for_layout}}
+        <!-- content for layout -->        
+      </div>
+      <div class="clearfix"></div>      
+    </div>
+    <!-- Theme Footer ====== -->
+    {% section 'footer' %}     
+    <!-- Footer JS files  -->
+    {% include 'footer-js' %}    
+    <!-- Popup newsletter  -->
+    {% section 'modal-newsletter' %}     
+    <!-- GDPR Cookies  -->
+    {% section 'gdpr-cookies' %}     
+    <!-- Cutomer who last purchased tiny popup -->
+    {% section 'customer-purchased' %}
+    {% render 'dT_loading-overlay' %}
+    {% include 'scroll-to-top' %}
+  </body>
+</html>

@@ -1,0 +1,117 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "faq-template-1",
+      "blocks": {
+        "22ffc720-2f10-49ce-b2eb-a24ac5ef1321": {
+          "type": "class",
+          "settings": {
+            "class": "fa fa-clock-o",
+            "title": "How long do TEMPOINK tattoos last?",
+            "desc": "Our premium temporary tattoos last 1-2 weeks depending on placement, skin type, and care. They are designed to look realistic and fade naturally."
+          }
+        },
+        "dbdcd908-4a6a-47d1-bd66-1af6afb04b81": {
+          "type": "class",
+          "settings": {
+            "class": "fa fa-shield",
+            "title": "Are they safe for sensitive skin?",
+            "desc": "Yes! Our tattoos are made with high-quality, non-toxic materials that are safe for most skin types. However, we recommend doing a small patch test if you have very sensitive skin."
+          }
+        },
+        "cd427c2b-ddff-455c-b4b3-cd4f131e5fd4": {
+          "type": "class",
+          "settings": {
+            "class": "fa fa-hand-o-right",
+            "title": "How do I apply my tattoo?",
+            "desc": "Clean and dry the skin area. Remove the clear protective sheet. Place the tattoo face-down on skin. Press and hold a wet cloth over the backing for 10-20 seconds. Slowly peel off the backing paper."
+          }
+        },
+        "53e3d098-4939-451b-98c2-d2015f1949da": {
+          "type": "class",
+          "settings": {
+            "class": "fa fa-eraser",
+            "title": "How do I remove the tattoo?",
+            "desc": "Temporary tattoos can be easily removed with baby oil, makeup remover, or rubbing alcohol. Apply the product to a cotton pad and gently rub over the tattoo until it comes off."
+          }
+        },
+        "shipping-question": {
+          "type": "class",
+          "settings": {
+            "class": "fa fa-truck",
+            "title": "What are your shipping options?",
+            "desc": "We offer next day shipping in Durban and free express shipping on orders over R1000. Standard shipping is available nationwide with tracking included."
+          }
+        },
+        "quality-question": {
+          "type": "class",
+          "settings": {
+            "class": "fa fa-star",
+            "title": "What makes TEMPOINK different?",
+            "desc": "Our tattoos are designed by professional artists and printed with premium inks for maximum realism. Each design is carefully crafted to look like real tattoo artwork with intricate details and vibrant colors."
+          }
+        }
+      },
+      "block_order": [
+        "22ffc720-2f10-49ce-b2eb-a24ac5ef1321",
+        "dbdcd908-4a6a-47d1-bd66-1af6afb04b81",
+        "cd427c2b-ddff-455c-b4b3-cd4f131e5fd4",
+        "53e3d098-4939-451b-98c2-d2015f1949da",
+        "shipping-question",
+        "quality-question"
+      ],
+      "settings": {
+        "full": false,
+        "spacing_both_ends": false,
+        "padding": "0,0",
+        "margin": "0,0",
+        "show_background_image": false,
+        "background_style": "none",
+        "background_size": "auto",
+        "enable_overlay": false,
+        "background_color": "",
+        "overlay_transparency": "0.5",
+        "section_heading": "Frequently Asked Questions",
+        "section_sub_heading": "Everything you need to know",
+        "section_description": "Get answers to the most common questions about TEMPOINK temporary tattoos, from application to removal and everything in between.",
+        "section_button_text": "",
+        "section_button_link": "",
+        "section_heading_color": "",
+        "section_sub_heading_color": "",
+        "section_description_color": "",
+        "section_button_bg_color": "",
+        "section_button_text_color": "",
+        "section_button_hover_bg_color": "",
+        "section_button_hover_text_color": "",
+        "heading_position": "text-center",
+        "block_style": "default-style",
+        "text_position": "text-start",
+        "border_radius": "8",
+        "grid_gap": "30",
+        "enable_box_shadow": true,
+        "enable_heading_icons": true,
+        "faq_icon_size": "30",
+        "enable_segmented_layout": true,
+        "segmented_layout_gap": "15",
+        "faq_border_color": "#e0e0e0",
+        "faq_heading_color": "#333333",
+        "faq_heading_bg_color": "#ffffff",
+        "faq_content_color": "#666666",
+        "faq_content_bg_color": "#f9f9f9",
+        "custom_class_name": "custom-faq"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

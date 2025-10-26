@@ -1,0 +1,532 @@
+{%- assign dt_mega = false -%}
+{%- assign primary = false -%}
+{%- if link.levels == 1 -%}
+{%- assign primary = true -%}
+{%- endif -%}
+{%- assign secondary = false -%}
+{%- if link.levels == 2 -%}
+{%- assign secondary = true -%}
+{%- endif -%}
+
+{% if section.settings.enable_new %}
+{% assign new_tag =  section.settings.new_tags | split:"," | map: 'strip' | map: 'downcase' | map: 'handle' %} 
+{% assign new_label = section.settings.new_txt %}
+{% endif %}
+
+{% if section.settings.enable_sale %}
+{% assign sale_tag = section.settings.sale_tags | split:"," | map: 'strip' | map: 'downcase' | map: 'handle' %} 
+{% assign sale_label = section.settings.sale_txt %}
+{% endif %}
+
+{% if section.settings.enable_hot %}
+{% assign hot_tag = section.settings.hot_tags | split:"," | map: 'strip' | map: 'downcase' | map: 'handle' %} 
+{% assign hot_label = section.settings.hot_txt %}
+{% endif %}
+
+
+
+{%- for block in section.blocks -%} 
+{% for i in (1..5) %}
+{%- assign megamenu_title = '' -%}
+{%- assign link_title = link.title | escape | strip | handleize -%}
+{%- assign dt_menu_pick = i | prepend: 'mega_' -%}
+{% if block.settings[dt_menu_pick] != blank %}
+{% assign megamenu_title = block.settings[dt_menu_pick] | handleize %}
+
+{%- if  link_title == megamenu_title -%}
+{% assign columnSize = block.settings.mega_columns %} 
+{% if  block.settings.row_reverse %}
+{% assign reverse = true %}
+{% endif %}
+
+
+
+{% assign blockType = block.type %}
+
+{%- assign dt_mega = true -%}
+
+{%- capture megaPromo -%}
+{% render 'dt-megaPromo', block: block %}
+{%- endcapture -%}
+
+{%- capture megaBanner1 -%}
+{% render 'dt-megaBanner-1', block: block %}
+{%- endcapture -%}
+
+{%- capture shopBrands -%}
+{% render 'dt-megaBrands', block: block %}
+{%- endcapture -%}
+
+{%- capture megaBanner2 -%}
+{% render 'dt-megaBanner-2', block: block %}
+{%- endcapture -%}
+<!-- Product -->
+{%- capture megaProduct -%}
+{% render 'dt-megaProduct', block: block %}
+{%- endcapture -%}
+<!-- Product End -->
+
+{%- endif -%}
+{%- endif -%}
+{%- endfor -%}
+{%- endfor -%}
+
+{%- comment -%} COMPLETE NAVIGATION SYSTEM LIKE EZINK {%- endcomment -%}
+
+{%- comment -%} TATTOOS MEGA MENU {%- endcomment -%}
+{%- if link_title == 'tattoos' -%}
+{% assign columnSize = 'three-column' %} 
+{% assign blockType = 'tattoos_mega' %}
+{%- assign dt_mega = true -%}
+{%- endif -%}
+
+{%- comment -%} ON SALE MEGA MENU {%- endcomment -%}
+{%- if link_title == 'on-sale' or link_title == 'sale' -%}
+{% assign columnSize = 'four-column' %} 
+{% assign blockType = 'sale_mega' %}
+{%- assign dt_mega = true -%}
+{%- endif -%}
+
+
+{%- comment -%} TATTOO PACKS MEGA MENU {%- endcomment -%}
+{%- if link_title == 'tattoo-packs' or link_title == 'packs' -%}
+{% assign columnSize = 'four-column' %} 
+{% assign blockType = 'packs_mega' %}
+{%- assign dt_mega = true -%}
+{%- endif -%}
+
+{%- comment -%} CATEGORIES MEGA MENU {%- endcomment -%}
+{%- if link_title == 'categories' or link_title == 'shop' or link_title == 'all-tattoos' -%}
+{% assign columnSize = 'eight-column' %} 
+{% assign blockType = 'categories_mega' %}
+{%- assign dt_mega = true -%}
+{%- endif -%}
+
+{%- comment -%} CATALOG DEMO MEGA MENU (temporary) {%- endcomment -%}
+{%- if link_title == 'catalog' -%}
+{% assign columnSize = 'four-column' %} 
+{% assign blockType = 'demo_menu' %}
+{%- assign dt_mega = true -%}
+{%- endif -%}
+
+<li class="{{link.levels}} {% if blockType == "promo_image" %}promo_image{% elsif blockType == "product" %}megaProduct{% elsif blockType == "promo_banner" %}promo_banner{% else %}text-menu{% endif %}
+           top-level-link 
+           {% if dt_mega %} has-mega-menu dt-sc-primary
+           {% elsif secondary %} dt-sc-secondary
+           {% else %} dt-sc-child
+           {%endif%}
+           {% if link.active %}active{% endif %} {% if primary or secondary or dt_mega %}menu-item-has-children{% endif %}">
+  <a href="{{ link.url }}" class=" {% if dt_mega %}mega-menu{% endif %} dt-sc-nav-link dropdown"> 
+
+    <span>
+      {{ link.title | escape }} 
+      {% assign mainTag = link.handle  %}   
+      {% if sale_tag contains mainTag %}
+      <em class="sale tag">{{ sale_label }}</em>
+      {% elsif new_tag contains mainTag %}
+      <em class="new tag">{{ new_label }}</em>
+      {% elsif hot_tag contains mainTag %}
+      <em class="hot tag">{{ hot_label }}</em>
+      {% endif %}     
+    </span>
+
+    {%- if section.settings.enable_menu_indicator -%}
+    {% if primary or secondary or dt_mega %}<span class="dt-sc-caret"></span>
+    {% endif %}
+    {% endif %}
+
+  </a>
+
+  {% if  dt_mega %}
+  <div class="sub-menu-block is-hidden">
+    <div class="go-back">
+      <a href="javascript:void(0);"></a>
+    </div>
+    <div class="see-all"></div>
+    <div class="dt-sc-dropdown-menu{% if dt_mega %} dt-sc--main-menu--mega{% endif %} {% if primary or secondary %} dt-sc_main-menu--has-links{% endif %}">
+
+      <ul class="sub-menu-lists {% if dt_mega %} dt-sc-column  {{columnSize}}  {% if reverse %}row-reverse{% endif %} {% endif %} ">        
+
+        {% if blockType == "promo_banner"  %}
+        {{ megaBanner1 }}
+        {% endif %}
+
+        {%- if link.links != blank -%}
+        {%- for child_link in link.links  limit: 5  -%}
+        <li class="{% if child_link.active %}active{% endif %}">
+          <h5> <a href="{{ child_link.url }}" {% if child_link.active %}aria-current="page"{% endif %}>
+            {{ child_link.title }}
+            </a>
+          </h5>
+          {%- if child_link.links != blank -%}
+          <ul>
+            {%- for grandchild_link in child_link.links -%}
+            <li class="{% if grandchild_link.active %}active{% endif %}">
+              <a href="{{ grandchild_link.url }}" {% if grandchild_link.active %}aria-current="page"{% endif %}>
+                <span>
+                  {{ grandchild_link.title }}   
+
+                  {% assign mapTag = grandchild_link.handle  %}
+
+                  {% if sale_tag contains mapTag %}
+                  <em class="tag sale">{{ sale_label }}</em>
+                  {% endif %}
+
+                  {% if new_tag contains mapTag %}
+                  <em class="tag new">{{ new_label }}</em>
+                  {% endif %}
+
+                  {% if hot_tag contains mapTag %}
+                  <em class="tag hot">{{ hot_label }}</em>
+                  {% endif %}
+                </span>
+              </a>
+            </li>
+            {%- endfor -%}
+          </ul>
+          {%- endif -%}
+        </li>
+        {%- endfor -%}              
+        {% endif %}  
+
+
+        {% if blockType == "promo_image" %}
+        {{ megaPromo }}
+        {% endif %}       
+        {% if blockType == "product" %} 
+        {{ megaProduct }}
+        {% endif %}
+
+
+        {% if blockType == "promo_banner"  %}    
+        {{ megaBanner2 }}      
+        {% endif %}
+
+        {% if blockType == "demo_menu" %}
+        <!-- DEMO MEGA MENU CONTENT -->
+        <li>
+          <h5><a href="/collections/large-tattoos">By Size</a></h5>
+          <ul>
+            <li><a href="/collections/extra-small"><span>Extra Small</span></a></li>
+            <li><a href="/collections/extra-small"><span>Small</span></a></li>
+            <li><a href="/collections/large-tattoos"><span>Medium</span></a></li>
+            <li><a href="/collections/large-tattoos"><span>Large</span></a></li>
+            <li><a href="/collections/large-tattoos"><span>Sleeve</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/japanese-tattoos">By Style</a></h5>
+          <ul>
+            <li><a href="/collections/celtic-tattoos"><span>Traditional</span></a></li>
+            <li><a href="/collections/japanese"><span>Japanese</span></a></li>
+            <li><a href="/collections/fineline"><span>Minimal</span></a></li>
+            <li><a href="/collections/blackwork"><span>Blackwork</span></a></li>
+            <li><a href="/collections/fineline"><span>Fineline</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/all-tattoos">By Product</a></h5>
+          <ul>
+            <li><a href="/collections/all-tattoos"><span>New Arrivals</span></a></li>
+            <li><a href="/collections/best-sellers"><span>Best Sellers</span></a></li>
+            <li><a href="/collections/on-sale"><span>On Sale</span></a></li>
+            <li><a href="/collections/bundle-tattoos"><span>Tattoo Packs</span></a></li>
+            <li><a href="/collections/all-tattoos"><span>Shop All</span></a></li>
+          </ul>
+        </li>
+        <li class="mega-menu-promo">
+          <h4>MORE INK MORE SAVINGS</h4>
+          <p>Spend R750 or more to unlock a FREE exclusive tattoo pack (including 4 free tattoos and free shipping).</p>
+          <a href="/collections/all-tattoos" class="btn">SAVE NOW →</a>
+        </li>
+        {% endif %}
+
+        {% if blockType == "tattoos_mega" %}
+        <!-- TATTOOS MEGA MENU CONTENT -->
+        <li>
+          <h5><a href="/collections/large-tattoos">By Size</a></h5>
+          <ul>
+            <li><a href="/collections/extra-small"><span>Extra Small</span></a></li>
+            <li><a href="/collections/extra-small"><span>Small</span></a></li>
+            <li><a href="/collections/large-tattoos"><span>Medium</span></a></li>
+            <li><a href="/collections/large-tattoos"><span>Large</span></a></li>
+            <li><a href="/collections/large-tattoos"><span>Sleeve</span></a></li>
+            <li><a href="/collections/all-sizes"><span>Shop All Sizes</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/japanese-tattoos">By Style</a></h5>
+          <ul>
+            <li><a href="/collections/celtic-tattoos"><span>Traditional</span></a></li>
+            <li><a href="/collections/japanese"><span>Japanese</span></a></li>
+            <li><a href="/collections/fineline"><span>Minimal</span></a></li>
+            <li><a href="/collections/neo-traditional"><span>Neo Traditional</span></a></li>
+            <li><a href="/collections/blackwork"><span>Blackwork</span></a></li>
+            <li><a href="/collections/fineline"><span>Fineline</span></a></li>
+            <li><a href="/collections/geometric"><span>Geometric</span></a></li>
+            <li><a href="/collections/watercolor"><span>Watercolor</span></a></li>
+            <li><a href="/collections/realism"><span>Realism</span></a></li>
+            <li><a href="/collections/cute"><span>Cute</span></a></li>
+            <li><a href="/collections/astrology"><span>Astrology</span></a></li>
+            <li><a href="/collections/patchwork"><span>Patchwork</span></a></li>
+            <li><a href="/collections/american"><span>American Traditional</span></a></li>
+            <li><a href="/collections/all-styles"><span>Shop All Styles</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/by-body-part">By Body Part</a></h5>
+          <ul>
+            <li><a href="/collections/arm-tattoos"><span>Arm Tattoos</span></a></li>
+            <li><a href="/collections/leg-tattoos"><span>Leg Tattoos</span></a></li>
+            <li><a href="/collections/back-tattoos"><span>Back Tattoos</span></a></li>
+            <li><a href="/collections/chest-tattoos"><span>Chest Tattoos</span></a></li>
+            <li><a href="/collections/hand-tattoos"><span>Hand Tattoos</span></a></li>
+            <li><a href="/collections/neck-tattoos"><span>Neck Tattoos</span></a></li>
+            <li><a href="/collections/foot-tattoos"><span>Foot Tattoos</span></a></li>
+            <li><a href="/collections/face-tattoos"><span>Face Tattoos</span></a></li>
+          </ul>
+        </li>
+        {% endif %}
+
+        {% if blockType == "categories_mega" %}
+        <!-- EZINK-STYLE CATEGORIES MEGA MENU CONTENT -->
+        <li>
+          <h5><a href="/collections/all-tattoos">BODY PART</a></h5>
+          <ul>
+            <li><a href="/collections/hand-tattoos"><span>Hand</span></a></li>
+            <li><a href="/collections/arm-tattoos"><span>Arm</span></a></li>
+            <li><a href="/collections/large-tattoos"><span>Leg</span></a></li>
+            <li><a href="/collections/chest-tattoos"><span>Chest</span></a></li>
+            <li><a href="/collections/finger-tattoos"><span>Finger</span></a></li>
+            <li><a href="/collections/arm-tattoos"><span>Shoulder</span></a></li>
+            <li><a href="/collections/ankle-tattoos"><span>Ankle</span></a></li>
+            <li><a href="/collections/chest-tattoos"><span>Rib</span></a></li>
+            <li><a href="/collections/back-tattoos"><span>Back</span></a></li>
+            <li><a href="/collections/forearm"><span>Forearm</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/animal">ANIMAL</a></h5>
+          <ul>
+            <li><a href="/collections/butterfly"><span>Butterfly</span></a></li>
+            <li><a href="/collections/tiger"><span>Tiger</span></a></li>
+            <li><a href="/collections/snake"><span>Snake</span></a></li>
+            <li><a href="/collections/fish"><span>Fish</span></a></li>
+            <li><a href="/collections/bee"><span>Bee</span></a></li>
+            <li><a href="/collections/dog"><span>Dog</span></a></li>
+            <li><a href="/collections/dragonfly"><span>Dragonfly</span></a></li>
+            <li><a href="/collections/lion"><span>Lion</span></a></li>
+            <li><a href="/collections/wolf"><span>Wolf</span></a></li>
+            <li><a href="/collections/eagle"><span>Eagle</span></a></li>
+            <li><a href="/collections/moth"><span>Moth</span></a></li>
+            <li><a href="/collections/bird"><span>Bird</span></a></li>
+            <li><a href="/collections/spider"><span>Spider</span></a></li>
+            <li><a href="/collections/panda"><span>Panda</span></a></li>
+            <li><a href="/collections/octopus"><span>Octopus</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/nature">NATURE</a></h5>
+          <ul>
+            <li><a href="/collections/flower"><span>Flower</span></a></li>
+            <li><a href="/collections/rose"><span>Rose</span></a></li>
+            <li><a href="/collections/insect"><span>Insect</span></a></li>
+            <li><a href="/collections/moon"><span>Moon</span></a></li>
+            <li><a href="/collections/sun"><span>Sun</span></a></li>
+            <li><a href="/collections/ocean"><span>Ocean</span></a></li>
+            <li><a href="/collections/heart"><span>Heart</span></a></li>
+            <li><a href="/collections/anatomy"><span>Anatomy</span></a></li>
+            <li><a href="/collections/paw"><span>Paw</span></a></li>
+            <li><a href="/collections/compass"><span>Compass</span></a></li>
+            <li><a href="/collections/plant"><span>Plant</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/pop-culture">POP CULTURE</a></h5>
+          <ul>
+            <li><a href="/collections/anime"><span>Anime</span></a></li>
+            <li><a href="/collections/movie"><span>Movie</span></a></li>
+            <li><a href="/collections/cartoon"><span>Cartoon</span></a></li>
+            <li><a href="/collections/tv-show"><span>TV Show</span></a></li>
+            <li><a href="/collections/celebrity"><span>Celebrity</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/fantasy">FANTASY</a></h5>
+          <ul>
+            <li><a href="/collections/dagger"><span>Dagger</span></a></li>
+            <li><a href="/collections/dragon"><span>Dragon</span></a></li>
+            <li><a href="/collections/gaming"><span>Gaming</span></a></li>
+            <li><a href="/collections/gangster"><span>Gangster</span></a></li>
+            <li><a href="/collections/king"><span>King</span></a></li>
+            <li><a href="/collections/queen"><span>Queen</span></a></li>
+            <li><a href="/collections/mask"><span>Mask</span></a></li>
+            <li><a href="/collections/viking"><span>Viking</span></a></li>
+            <li><a href="/collections/skull"><span>Skull</span></a></li>
+            <li><a href="/collections/sword"><span>Sword</span></a></li>
+            <li><a href="/collections/clock"><span>Clock</span></a></li>
+            <li><a href="/collections/celtic"><span>Celtic</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/symbol-quote">SYMBOL & QUOTE</a></h5>
+          <ul>
+            <li><a href="/collections/symbol"><span>Symbol</span></a></li>
+            <li><a href="/collections/quote"><span>Quote</span></a></li>
+            <li><a href="/collections/script"><span>Script</span></a></li>
+            <li><a href="/collections/angel-number"><span>Angel Number</span></a></li>
+            <li><a href="/collections/star-sign"><span>Star Sign</span></a></li>
+            <li><a href="/collections/love"><span>Love</span></a></li>
+            <li><a href="/collections/lucky"><span>Lucky</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/spiritual">SPIRITUAL</a></h5>
+          <ul>
+            <li><a href="/collections/angel"><span>Angel</span></a></li>
+            <li><a href="/collections/cross"><span>Cross</span></a></li>
+            <li><a href="/collections/infinity"><span>Infinity</span></a></li>
+            <li><a href="/collections/jesus"><span>Jesus</span></a></li>
+            <li><a href="/collections/prayer"><span>Prayer</span></a></li>
+            <li><a href="/collections/faith"><span>Faith</span></a></li>
+            <li><a href="/collections/religious"><span>Religious</span></a></li>
+            <li><a href="/collections/rosary"><span>Rosary</span></a></li>
+            <li><a href="/collections/christmas"><span>Christmas</span></a></li>
+          </ul>
+        </li>
+        {% endif %}
+
+        {% if blockType == "sale_mega" %}
+        <!-- ON SALE MEGA MENU CONTENT -->
+        <li>
+          <h5><a href="/collections/flash-sale">Flash Sales</a></h5>
+          <ul>
+            <li><a href="/collections/24-hour-sale"><span>24 Hour Flash Sale</span></a></li>
+            <li><a href="/collections/weekend-special"><span>Weekend Special</span></a></li>
+            <li><a href="/collections/midnight-deals"><span>Midnight Deals</span></a></li>
+            <li><a href="/collections/lightning-deals"><span>Lightning Deals</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/seasonal-sale">Seasonal Sales</a></h5>
+          <ul>
+            <li><a href="/collections/summer-sale"><span>Summer Sale</span></a></li>
+            <li><a href="/collections/winter-special"><span>Winter Special</span></a></li>
+            <li><a href="/collections/holiday-deals"><span>Holiday Deals</span></a></li>
+            <li><a href="/collections/back-to-school"><span>Back to School</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/bundle-deals">Bundle Deals</a></h5>
+          <ul>
+            <li><a href="/collections/buy-2-get-1"><span>Buy 2 Get 1 Free</span></a></li>
+            <li><a href="/collections/starter-packs"><span>Starter Packs</span></a></li>
+            <li><a href="/collections/mega-bundles"><span>Mega Bundles</span></a></li>
+            <li><a href="/collections/value-packs"><span>Value Packs</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/clearance">Clearance</a></h5>
+          <ul>
+            <li><a href="/collections/end-of-line"><span>End of Line</span></a></li>
+            <li><a href="/collections/discontinued"><span>Discontinued Items</span></a></li>
+            <li><a href="/collections/last-chance"><span>Last Chance</span></a></li>
+            <li><a href="/collections/final-sale"><span>Final Sale</span></a></li>
+          </ul>
+        </li>
+        {% endif %}
+
+
+        {% if blockType == "packs_mega" %}
+        <!-- TATTOO PACKS MEGA MENU CONTENT -->
+        <li>
+          <h5><a href="/collections/starter-packs">Starter Packs</a></h5>
+          <ul>
+            <li><a href="/collections/beginner-pack"><span>Beginner Pack</span></a></li>
+            <li><a href="/collections/first-tattoo-pack"><span>First Tattoo Pack</span></a></li>
+            <li><a href="/collections/trial-pack"><span>Trial Pack</span></a></li>
+            <li><a href="/collections/sampler-pack"><span>Sampler Pack</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/themed-packs">Themed Packs</a></h5>
+          <ul>
+            <li><a href="/collections/festival-pack"><span>Festival Pack</span></a></li>
+            <li><a href="/collections/party-pack"><span>Party Pack</span></a></li>
+            <li><a href="/collections/vacation-pack"><span>Vacation Pack</span></a></li>
+            <li><a href="/collections/photoshoot-pack"><span>Photoshoot Pack</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/size-packs">By Size Packs</a></h5>
+          <ul>
+            <li><a href="/collections/mini-pack"><span>Mini Pack</span></a></li>
+            <li><a href="/collections/medium-pack"><span>Medium Pack</span></a></li>
+            <li><a href="/collections/large-pack"><span>Large Pack</span></a></li>
+            <li><a href="/collections/mega-pack"><span>Mega Pack</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h5><a href="/collections/premium-packs">Premium Packs</a></h5>
+          <ul>
+            <li><a href="/collections/vip-pack"><span>VIP Pack</span></a></li>
+            <li><a href="/collections/exclusive-pack"><span>Exclusive Pack</span></a></li>
+            <li><a href="/collections/limited-edition-pack"><span>Limited Edition Pack</span></a></li>
+            <li><a href="/collections/collector-pack"><span>Collector Pack</span></a></li>
+          </ul>
+        </li>
+        {% endif %}
+
+      </ul>
+
+
+      {% if blockType == "brands"  %}
+      <ul class="sub-menu-lists mega-menu-brands">
+        {{shopBrands }}
+      </ul>
+      {% endif %}
+    </div> 
+  </div>
+  {% else %}
+  {%- if link.links != blank -%}
+  <div class="sub-menu-block is-hidden">
+    <div class="go-back">
+      <a href="javascript:void(0);"></a>
+    </div>
+    <div class="see-all"></div>
+    <div class="dt-sc-dropdown-menu{% if primary or secondary %} dt-sc_main-menu--has-links{% endif %}">
+      <ul class="sub-menu-lists">
+
+        {%- for child_link in link.links -%}
+        <li class="{% if primary or secondary %}  {%- if child_link.links != blank -%}menu-item-has-children{% endif %}{% endif %}{% if child_link.active %} active{% endif %}">
+          <a href="{{ child_link.url }}" {% if child_link.active %}aria-current="page"{% endif %}>
+            {{ child_link.title }}
+          </a>
+
+          {%- if child_link.links != blank -%}
+          <div class="sub-menu-block is-hidden">
+            <div class="go-back">
+              <a href="javascript:void(0);"></a>
+            </div>
+            <div class="see-all"></div>
+            <div class="dt-sc_main-menu--has-links">
+              <ul class="sub-menu-lists">
+                {%- for grandchild_link in child_link.links -%}
+                <li class="{% if grandchild_link.active %} active{% endif %}">
+                  <a href="{{ grandchild_link.url }}" {% if grandchild_link.active %}aria-current="page"{% endif %}>
+                    {{ grandchild_link.title }}
+                  </a>
+                </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+          </div>
+          {%- endif -%}
+        </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  </div>  
+  {% endif %}
+  {%- endif -%}
+</li>
