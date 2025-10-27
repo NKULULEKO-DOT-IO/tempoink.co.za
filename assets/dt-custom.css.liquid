@@ -166,56 +166,162 @@
       --DT_Gradient_Hover: {{ settings.gradient_hover }};
       }
 
-/* ========= CSS OVERRIDES =============== */
+/* ========= MINIMALISTIC BLACK & WHITE DESIGN SYSTEM =============== */
+/* Version 2.0 - Mobile-First | Monochrome | Clean */
 
 :root {
-  
-  /* Heading font*/--DTFontTypo_Heading:'Kurale', serif;;--font-style-header: normal;
-  --font-weight-header: 400;
-  --font-size-header: ;
 
-  /* Body font*/--DTFontTypo_Body:'Roboto', sans-serif;;--font-style-body: normal;
-  --font-weight-body: 300;          
+  /* ===== TYPOGRAPHY (Roboto Throughout) ===== */
+
+  /* All fonts use Roboto - No serif fonts */
+  --DTFontTypo_Heading: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --DTFontTypo_Body: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --DTFontTypo_Custom: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Font Weights */
+  --font-weight-header: 700;  /* Bold for headlines */
+  --font-weight-body: 400;    /* Regular for body */
   --font-weight-body--bold: 700;
-  --font-weight-body--bolder: 400;
-  --font-size-body: 18px;     
+  --font-weight-body--bolder: 900;
+  --font-style-header: normal;
+  --font-style-body: normal;
+  --font-style-additional: normal;
+  --font-weight-additional: 500;
 
-  /* Custom font*/--DTFontTypo_Custom: 'Jomolhari', serif;;--font-style-additional: normal;
-  --font-weight-additional: 300;    
-  --font-size-additional: 20; 
+  /* Fluid Typography - Mobile First */
+  --font-size-body: clamp(16px, 2vw, 18px);
+  --font-size-header: clamp(32px, 7vw, 56px);
+  --font-size-additional: clamp(16px, 2vw, 18px);
 
-  /* Other colors */
-  --swiper-theme-color:  #666666 !important;
-  --DTPrimaryColor: #666666;
-  --DTSecondaryColor: #e4e4e4;
-  --DTTertiaryColor: #bababa;
-  --DTBodyBGColor: #ffffff;
-  --DTOverlayColor: rgba(97, 97, 97, 0.5);
-  /*--DTOverlayColor: rgb(255 255 255 / 50%);*/
+  /* Heading Sizes - Responsive */
+  --DTFontSize_H1: clamp(32px, 7vw, 56px);
+  --DTFontSize_H2: clamp(24px, 5vw, 40px);
+  --DTFontSize_H3: clamp(20px, 4vw, 32px);
+  --DTFontSize_H4: clamp(18px, 3vw, 24px);
+  --DTFontSize_H5: clamp(16px, 2.5vw, 20px);
+  --DTFontSize_H6: clamp(14px, 2vw, 18px);
 
-    /* Blog section */
+  /* Line Heights - Optimized */
+  --DT_Heading_Line_Height: 1.2em;
+  --DT_Body_Line_Height: 1.5em; /* Changed from 2em for better mobile */
+
+  /* ===== COLORS (Black & White Only) ===== */
+
+  /* Brand Colors - Strict Monochrome */
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-gray-light: #F5F5F5;
+  --color-gray-border: #E0E0E0;
+  --color-gray-text: #333333;
+
+  /* Primary Colors */
+  --DTPrimaryColor: #000000;
+  --DTSecondaryColor: #F5F5F5;
+  --DTTertiaryColor: #E0E0E0;
+  --DTBodyBGColor: #FFFFFF;
+  --DTOverlayColor: rgba(0, 0, 0, 0.5);
+  --swiper-theme-color: #000000 !important;
+
+  /* Text Colors */
+  --DTColor_Body: #333333;
+  --DTColor_Heading: #000000;
+  --DTColor_Border: #E0E0E0;
+  --DTLinkColor: #000000;
+  --DTLinkHoverColor: #333333;
+
+  /* Product Colors */
+  --DT_product_bg_color: #FFFFFF;
+  --DT_product_text_color: #333333;
+  --DT_product_title_color: #000000;
+  --DT_product_title_hover_color: #333333;
+
+  /* Blog Section - Monochrome */
   --DT_Blog_Border_Radius: 0px;
-  --DT_Blog_Gutter_Width: 30px;
-  --DT_Blog_BG_Color:rgba(0,0,0,0);
-  --DT_Blog_Link_Color:#dedede;
-  --DT_Blog_Link_Hover_Color:#666666;
-  --DT_Blog_Text_Color: #a2a2a2;
-  --DT_Blog_Icon_Color: #666666;
-  --DT_Blog_Button_BG_Color: rgba(0,0,0,0);
-  --DT_Blog_Button_Text_Color:#a2a2a2;  
-  --DT_Blog_Button_BG_Hover_Color: rgba(0,0,0,0);
-  --DT_Blog_Button_Text_Hover_Color:#666666;
+  --DT_Blog_Gutter_Width: 24px;
+  --DT_Blog_BG_Color: #FFFFFF;
+  --DT_Blog_Link_Color: #000000;
+  --DT_Blog_Link_Hover_Color: #333333;
+  --DT_Blog_Text_Color: #333333;
+  --DT_Blog_Icon_Color: #000000;
+  --DT_Blog_Button_BG_Color: #000000;
+  --DT_Blog_Button_Text_Color: #FFFFFF;
+  --DT_Blog_Button_BG_Hover_Color: #FFFFFF;
+  --DT_Blog_Button_Text_Hover_Color: #000000;
 
-    /* Button Style */
-  --DTPadding_Btn: 12px 32px 12px 32px;
+  /* Blog Overlay (same as regular) */
+  --DT_Blog_Link_Color_Overlay: #000000;
+  --DT_Blog_Link_Hover_Color_Overlay: #333333;
+  --DT_Blog_Text_Color_overlay: #333333;
+  --DT_Blog_Icon_Color_overlay: #000000;
+  --DT_Blog_Button_BG_Color_overlay: #000000;
+  --DT_Blog_Button_Text_Color_overlay: #FFFFFF;
+  --DT_Blog_Button_BG_Hover_Color_overlay: #FFFFFF;
+  --DT_Blog_Button_Text_Hover_Color_overlay: #000000;
+
+  /* ===== BUTTONS (Black & White) ===== */
+  --DTPadding_Btn: 14px 32px;
   --DT_Button_BG_Color: #000000 !important;
-  --DT_Button_Text_Color: #eaeaea;  
-  --DT_Button_BG_Hover_Color: #eaeaea;
-  --DT_Button_border_Color: ;
-  --DT_Button_hover_border_Color: ;
+  --DT_Button_Text_Color: #FFFFFF;
+  --DT_Button_BG_Hover_Color: #FFFFFF;
+  --DT_Button_border_Color: #000000;
+  --DT_Button_hover_border_Color: #000000;
   --DT_Button_Text_Hover_Color: #000000;
   --DT_Button_Border_Radius: 0px;
-  --DT_Button_border_width: 0px;
+  --DT_Button_border_width: 2px;
+
+  /* ===== SPACING (8px Grid System) ===== */
+  --space-unit: 8px;
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+
+  /* Section Spacing - Mobile First */
+  --section-padding-mobile: 48px 16px;
+  --section-padding-tablet: 64px 32px;
+  --section-padding-desktop: 96px 48px;
+
+  /* Grid Gaps */
+  --DTGutter_Width: clamp(16px, 2.5vw, 24px);
+  --grid-gap-mobile: 16px;
+  --grid-gap-tablet: 24px;
+  --grid-gap-desktop: 32px;
+
+  /* ===== BORDERS & RADIUS ===== */
+  --DTRadius: 0px;
+  --overall_border_radius: 0px;
+
+  /* ===== CONTAINERS (Mobile First) ===== */
+  --DTContainer: 1200px;
+  --DT_Lap_Container: 1024px;
+  --DT_Tab_Container: 768px;
+  --container-padding-mobile: 16px;
+  --container-padding-tablet: 32px;
+  --container-padding-desktop: 48px;
+
+  /* ===== INTERACTIONS ===== */
+  --DTBaseTransition: 0.2s ease;
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.2s ease;
+
+  /* ===== ACCESSIBILITY ===== */
+  --touch-target-min: 44px; /* iOS minimum */
+
+  /* Remove box shadows - Minimalism */
+  --DTboxShadow: none;
+  --DTboxShadow_light: none;
+  --DTboxShadowcolor: transparent;
+  --DTboxShadowcolor_light: transparent;
+
+  /* ===== FORMS ===== */
+  --DTInputPadding: 12px 16px;
+  --DTInputBackground: #FFFFFF;
+  --DTform_BG: #F5F5F5;
+  --input_bg: #FFFFFF;
+  --form_bg: #F5F5F5;
 
 }
 
@@ -2253,3 +2359,329 @@ select[name="sort_by"] option:checked {
     max-width: 100% !important;
   }
 }
+
+/* ========= MOBILE-FIRST UTILITIES & ENHANCEMENTS =============== */
+/* Version 2.0 - Accessibility | Touch-Friendly | Performance */
+
+/* ===== TOUCH TARGETS (iOS 44px minimum) ===== */
+button,
+.button,
+.dt-sc-btn,
+a.button,
+input[type="button"],
+input[type="submit"],
+.site-header__links a,
+.mobile-nav a {
+  min-height: var(--touch-target-min);
+  min-width: var(--touch-target-min);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== TYPOGRAPHY ENHANCEMENTS ===== */
+
+/* All headings use Roboto Bold */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--DTFontTypo_Heading) !important;
+  font-weight: var(--font-weight-header) !important;
+  line-height: var(--DT_Heading_Line_Height) !important;
+  color: var(--DTColor_Heading) !important;
+  letter-spacing: -0.02em;
+}
+
+/* Body text optimization */
+body, p, li, td, th {
+  font-family: var(--DTFontTypo_Body) !important;
+  font-weight: var(--font-weight-body) !important;
+  line-height: var(--DT_Body_Line_Height) !important;
+  color: var(--DTColor_Body) !important;
+}
+
+/* Buttons get uppercase treatment */
+button, .button, .dt-sc-btn {
+  font-family: var(--DTFontTypo_Body) !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ===== MOBILE-FIRST RESPONSIVE TYPOGRAPHY ===== */
+
+/* Base font size adjustment for mobile */
+@media (max-width: 767px) {
+  html {
+    font-size: 16px;
+  }
+  
+  body {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Reduce excessive heading sizes on mobile */
+  h1, .h1 {
+    font-size: clamp(32px, 7vw, 40px) !important;
+    margin-bottom: 16px !important;
+  }
+
+  h2, .h2 {
+    font-size: clamp(24px, 5vw, 32px) !important;
+    margin-bottom: 12px !important;
+  }
+
+  h3, .h3 {
+    font-size: clamp(20px, 4vw, 28px) !important;
+  }
+
+  /* Tighter spacing on mobile */
+  p {
+    margin-bottom: 16px !important;
+  }
+}
+
+/* ===== MOBILE NAVIGATION ENHANCEMENTS ===== */
+
+@media (max-width: 767px) {
+  /* Ensure hamburger menu is touch-friendly */
+  .menu-trigger {
+    min-width: 48px !important;
+    min-height: 48px !important;
+    padding: 12px !important;
+  }
+
+  /* Mobile menu links */
+  .mobile-nav-container a {
+    min-height: 48px !important;
+    padding: 14px 20px !important;
+    font-size: 16px !important;
+    display: flex !important;
+    align-items: center;
+  }
+
+  /* Header padding optimization */
+  .site-header {
+    padding: 12px 16px !important;
+  }
+}
+
+/* ===== BUTTON ENHANCEMENTS (Black & White) ===== */
+
+/* Primary Button - Black */
+.dt-sc-btn-primary,
+.button-primary,
+button[type="submit"],
+input[type="submit"] {
+  background: #000000 !important;
+  color: #FFFFFF !important;
+  border: 2px solid #000000 !important;
+  padding: 14px 32px !important;
+  transition: all var(--transition-base) !important;
+}
+
+.dt-sc-btn-primary:hover,
+.button-primary:hover,
+button[type="submit"]:hover {
+  background: #FFFFFF !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+}
+
+/* Secondary Button - White */
+.dt-sc-btn-secondary,
+.button-secondary {
+  background: #FFFFFF !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+  padding: 14px 32px !important;
+}
+
+.dt-sc-btn-secondary:hover,
+.button-secondary:hover {
+  background: #000000 !important;
+  color: #FFFFFF !important;
+}
+
+/* Mobile button optimization */
+@media (max-width: 767px) {
+  button, .button, .dt-sc-btn {
+    padding: 12px 24px !important;
+    font-size: 14px !important;
+    min-height: 44px !important;
+  }
+}
+
+/* ===== FORM ENHANCEMENTS ===== */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="search"],
+textarea,
+select {
+  font-size: 16px !important; /* Prevents zoom on iOS */
+  font-family: var(--DTFontTypo_Body) !important;
+  background: #FFFFFF !important;
+  border: 2px solid #E0E0E0 !important;
+  color: #000000 !important;
+  padding: 12px 16px !important;
+  transition: border-color var(--transition-fast) !important;
+  border-radius: 0 !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #000000 !important;
+  outline: none !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #999999 !important;
+}
+
+/* ===== CARD/PRODUCT GRID ENHANCEMENTS ===== */
+
+.product-item,
+.product-grid-item,
+.card {
+  background: #FFFFFF !important;
+  border: 1px solid #E0E0E0 !important;
+  transition: border-color var(--transition-base) !important;
+}
+
+.product-item:hover,
+.product-grid-item:hover,
+.card:hover {
+  border-color: #000000 !important;
+}
+
+/* Remove shadows - Minimalism */
+.product-item,
+.product-grid-item,
+.card,
+.site-header {
+  box-shadow: none !important;
+}
+
+/* ===== MOBILE-FIRST GRID SYSTEM ===== */
+
+/* 2-column grid on mobile for products */
+@media (max-width: 767px) {
+  .product-grid,
+  .collection-products {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+}
+
+/* 3-column on tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .product-grid,
+  .collection-products {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+  }
+}
+
+/* 4-column on desktop */
+@media (min-width: 1024px) {
+  .product-grid,
+  .collection-products {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 32px !important;
+  }
+}
+
+/* ===== ACCESSIBILITY ENHANCEMENTS ===== */
+
+/* Focus visible for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid #000000 !important;
+  outline-offset: 2px !important;
+}
+
+/* Remove outline for mouse users */
+*:focus:not(:focus-visible) {
+  outline: none !important;
+}
+
+/* Screen reader only class */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* ===== MOBILE PERFORMANCE OPTIMIZATIONS ===== */
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ===== UTILITY CLASSES ===== */
+
+/* Mobile-first spacing utilities */
+.mt-mobile { margin-top: var(--space-md); }
+.mb-mobile { margin-bottom: var(--space-md); }
+.py-mobile { padding-top: var(--space-md); padding-bottom: var(--space-md); }
+.px-mobile { padding-left: var(--space-sm); padding-right: var(--space-sm); }
+
+@media (min-width: 768px) {
+  .mt-mobile { margin-top: var(--space-lg); }
+  .mb-mobile { margin-bottom: var(--space-lg); }
+  .py-mobile { padding-top: var(--space-xl); padding-bottom: var(--space-xl); }
+  .px-mobile { padding-left: var(--space-lg); padding-right: var(--space-lg); }
+}
+
+/* Text alignment utilities */
+.text-mobile-center {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .text-mobile-center {
+    text-align: left;
+  }
+}
+
+/* Hide/show utilities */
+.mobile-only {
+  display: block;
+}
+
+.desktop-only {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none;
+  }
+  
+  .desktop-only {
+    display: block;
+  }
+}
+
+/* ===== END MOBILE-FIRST UTILITIES ===== */
