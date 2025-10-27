@@ -1,68 +1,28 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main": {
-      "type": "contact",
+      "type": "contact-minimal",
       "settings": {
-        "full": false,
-        "spacing_both_ends": true,
-        "padding": "0,0",
-        "margin": "0,0",
-        "show_background_image": false,
-        "background_style": "none",
-        "background_size": "auto",
-        "enable_overlay": true,
-        "background_color": "#e9e9e9",
-        "overlay_transparency": "0.5",
-        "section_heading": "",
-        "section_sub_heading": "",
-        "section_description": "",
-        "section_button_text": "",
-        "section_button_link": "",
-        "section_heading_color": "#141414",
-        "section_sub_heading_color": "#bababa",
-        "section_description_color": "#e4e4e4",
-        "section_button_bg_color": "#e4e4e4",
-        "section_button_text_color": "#f17c8f",
-        "section_button_hover_bg_color": "#f17c8f",
-        "section_button_hover_text_color": "#e4e4e4",
-        "heading_position": "text-center",
-        "contact_layout": "form_only",
-        "enable_gmap": false,
-        "contact_iframe_code": "",
-        "enable_contact_info": false,
-        "contactborder_color": "#e4e4e4",
-        "contact_hvrborder_color": "#e4e4e4",
-        "icontactheading_color": "#141414",
-        "contacticon_bg_color": "#141414",
-        "contacticon_color": "#e4e4e4",
-        "contacticon_hoverbg_color": "#f17c8f",
-        "contacticonhover_color": "#ffffff",
-        "contact_phone": true,
-        "contact_module_contact_phonetitle": "Phone",
-        "contact_icon_1": "fa fa-phone",
-        "contact_phone1": "0000 - 123 - 456789",
-        "contact_phone2": "0000 - 123 - 456789",
-        "contact_module_email": true,
-        "contact_module_contact_title": "Email",
-        "contact_icon_2": "fa fa-envelope",
-        "contact_module_email1": "mail@example.com",
-        "contact_module_email2": "support@example.com",
-        "contact_module_address": true,
-        "contact_module_address_title": "Address",
-        "contact_icon_3": "fa fa-location-arrow",
-        "contact_module_address1": "No: 58 A, East Madison Street,",
-        "contact_module_address2": "Baltimore, MD, USA 4508",
+        "section_heading": "Contact Us",
+        "section_sub_heading": "Get in Touch",
+        "section_description": "Have questions about our temporary tattoos? We're here to help! Reach out to us and we'll get back to you as soon as possible.",
+        "enable_contact_info": true,
+        "show_phone": true,
+        "phone_number": "+27 (0) 31 123 4567",
+        "show_email": true,
+        "email_address": "hello@tempoink.co.za",
+        "show_address": true,
+        "address_line_1": "123 Tattoo Street",
+        "address_line_2": "Durban, South Africa",
         "enable_contact_form": true,
-        "contact_form_title": "Get in Touch"
+        "contact_form_title": "Send Us a Message",
+        "form_name_placeholder": "Your Name",
+        "form_email_placeholder": "Your Email",
+        "form_phone_placeholder": "Your Phone (Optional)",
+        "form_message_placeholder": "Your Message",
+        "form_submit_text": "SEND MESSAGE",
+        "enable_map": false,
+        "map_iframe_code": ""
       }
     }
   },
